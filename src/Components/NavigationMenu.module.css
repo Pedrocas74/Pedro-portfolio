@@ -12,23 +12,25 @@
     z-index: 100;
 }
 
-.logoMenu {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    border: 2px solid;
-    border-radius: 20px;
-}
-
-ul {
+.menuList {
+    /* border: 2px solid rgb(6, 41, 14); */
+    padding: 0;
     display: flex;
     flex-direction: column;
-    
+    list-style-type: none;
+    height: 350px;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 70px;
 }
 
-button {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    font-size: 1.5rem;
+.menuList li {
+    /* border: 1px solid red; */
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.menuList a {
+    text-decoration: none;
 }

@@ -1,6 +1,7 @@
-//full-screen overlay menu
 import styles from './NavigationMenu.module.css';
 import { Link } from "react-router-dom";
+import WavesSVG from './WavesSVG';
+import NavButton from './NavButton';
 
 
 function NavigationMenu({ menuOpen, setMenuOpen }) {
@@ -8,19 +9,14 @@ function NavigationMenu({ menuOpen, setMenuOpen }) {
 
     return (
         <div className={styles.menuContainer}>
-            
-                <span className={styles.logoMenu}>LOGO</span>
-                {/* <button onClick={() => setMenuOpen(false)}> X </button> */}
-                      
-                <ul>
+                <ul className={styles.menuList}>
                     <li><Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link></li>
                     <li><Link to="/work" onClick={() => setMenuOpen(false)}>WORK</Link></li>
                     <li><Link to="/about" onClick={() => setMenuOpen(false)}>ABOUT</Link></li>
                     <li><Link to="/contact" onClick={() => setMenuOpen(false)}>CONTACT</Link></li>
                 </ul>
                 
-
-                <svg></svg>
+                <WavesSVG />
         </div>
         
     );

@@ -31,17 +31,18 @@
     bottom: 5px;
 }
 
-a {
+.linksContainer a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    background-color: rgba(19, 19, 100, 0.938);
-    border: 2.5px solid rgb(0, 0, 0);
+    color: rgb(10, 10, 10);
+    /* background-color: rgba(24, 24, 88, 0.938); */
+    border-bottom: 2.5px solid rgba(0, 0, 0, 0.788);
     width: 160px;
     height: 35px;
     text-align: center;
     font-size: 1.2rem;
     padding-top: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-weight: 500;
 }
 
 /* --------------SVGs---------------- */
@@ -53,11 +54,4 @@ a {
     height: 200px;
 }
 
-.waves {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: auto;
-    z-index: -111;
-}
+
