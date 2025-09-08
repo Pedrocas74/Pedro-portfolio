@@ -1,5 +1,5 @@
-* {
-    margin: 0;
+.homePage {
+    background-color: #E2DDD7;
 }
 
 .home {
@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* border: 1px solid red; */
+    /* border: 1px solid rgb(72, 165, 44); */
     
 }
 
@@ -18,43 +18,61 @@
     display: flex;
     flex-direction: column;
     height: 50%;
-    justify-content: space-around;
+    position: relative;
+    bottom: 80px;
 }
 
 .linksContainer {
     /* border: 1px solid orange; */
     width: 100%;
-    margin: 0 auto;
+    /* height: 100%; */
+    /* margin: 0 auto; */
     display: flex;
     justify-content: space-evenly;
-    position: relative;
-    bottom: 5px;
+    align-items: center;
 }
 
 .linksContainer a {
     text-decoration: none;
-    color: rgb(10, 10, 10);
-    /* background-color: rgba(24, 24, 88, 0.938); */
+    color: #E2DDD7;
+    background-color: #14162F;
     border-bottom: 2.5px solid rgba(0, 0, 0, 0.788);
-    width: 160px;
-    height: 35px;
+    border-left: 2.5px solid rgba(0, 0, 0, 0.788);
+    width: 15%;
+    height: 30px;
+    padding-top: 3px;
     text-align: center;
-    font-size: 1.2rem;
-    padding-top: 5px;
-    border-radius: 10px;
+    font-size: 1.3rem;
+    border-radius: 3px;
     font-weight: 500;
+}
+
+.titleRole, .titleDev {
+    text-align: center;
+    font-family: "Platypi", sans-serif;
+    font-size: 5rem;
+    color: #14162f;
+    /* opacity: 0.8; */
+}
+
+.titleDev {
+    position: relative;
+    bottom: 15px;
+    
 }
 
 /* --------------SVGs---------------- */
 
 .logo {
-    border-bottom: 3px groove rgba(0, 0, 0, 0.781);
+    /* border: 1px solid rgb(182, 47, 137); */
+    border-bottom: 4px solid #14162f;
     /* border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px; */
     margin: 0 auto;
-    width: 250px;
-    height: 170px;
+    width: clamp(250px, 300px, 400px);
+    height: clamp(170px, 220px, 320px);
     overflow: hidden;
+    position: relative;
+    top: 0;
 }
-
 
