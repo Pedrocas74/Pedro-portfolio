@@ -1,0 +1,23 @@
+
+.contactPage {
+    border: 1px solid red;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts {
+    border: 1px solid green;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.title {
+    writing-mode: vertical-lr;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
