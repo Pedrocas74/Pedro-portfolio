@@ -30,12 +30,15 @@ function Home() {
         </svg>
                   
         <div className={styles.linksContainer}>
-          <Link to="/contact">Let's talk</Link>
+          
           <div className={styles.titleHome}>
             <h2 className={styles.titleRole}>FRONTEND</h2>
             <h2 className={styles.titleDev}>DEVELOPER</h2>
           </div>
-          <Link to="/work">See my work</Link>
+          <div className={styles.links}>
+            <Link to="/contact">Let's talk</Link>
+            <Link to="/work">See my work</Link>
+          </div>
         </div>
       </section>  
 

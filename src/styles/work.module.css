@@ -1,6 +1,15 @@
 .title {
     writing-mode: vertical-lr;
     position: absolute;
+    font-family: "Platypi", sans-serif;
+    font-size: 2rem;
+    color: #14162f;
+    margin-top: 0.2em;
+    
+}
+
+.workPage {
+    background-color: #E2DDD7;
 }
 
 .workContainer {
@@ -10,11 +19,30 @@
     margin: 0 auto;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    padding-top: 6.9em;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #14162f #E2DDD7; /* thumb color, track color */
+   
+}
+/* For Chrome, Edge, Safari */
+.workContainer::-webkit-scrollbar {
+    width: 8px;
+}
+.workContainer::-webkit-scrollbar-thumb {
+    background: #14162f; /* Scrollbar thumb */
+    border-radius: 10px;
+}
+.workContainer::-webkit-scrollbar-track {
+    background: #E2DDD7; /* Scrollbar track */
 }
 
+
+
 .projects {
-    height: 200px;
-    border: 1px solid;
+    height: 12.5rem;
+    /* border: 1px solid #14162f; */
+    border-radius: 20px;
+    margin-bottom: 1.5em;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -26,11 +54,14 @@
 
 .projectsText {
     width: 50%;
-    border: 1px solid blueviolet;
+    /* border: 1px solid blueviolet; */
+    background-color: white;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
 }
 

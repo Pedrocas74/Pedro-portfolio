@@ -4,32 +4,40 @@
 
 .home {
     height: 100vh;
-    width: 85%;
+    width: 100vw;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     /* border: 1px solid rgb(72, 165, 44); */
-    
+    font-family: "Montserrat", sans-serif;
 }
 
 .introContainer {
-    /* border: 1px solid blue; */
+    /* border: 1px solid rgb(224, 152, 142); */
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 65%;
     position: relative;
-    bottom: 80px;
+    bottom: 15px;
 }
 
 .linksContainer {
-    /* border: 1px solid orange; */
+    /* border: 2px solid rgb(23, 126, 28); */
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
     /* margin: 0 auto; */
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.links {
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .linksContainer a {
@@ -38,41 +46,60 @@
     background-color: #14162F;
     border-bottom: 2.5px solid rgba(0, 0, 0, 0.788);
     border-left: 2.5px solid rgba(0, 0, 0, 0.788);
-    width: 15%;
-    height: 30px;
-    padding-top: 3px;
+    padding: 0.3em;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     border-radius: 3px;
-    font-weight: 500;
+    width: 8.5em;
+    
+}
+
+.titleHome {
+    border: 1px solid;
+    height: 50%;
+    position: relative;
+    bottom: 30px;
 }
 
 .titleRole, .titleDev {
     text-align: center;
     font-family: "Platypi", sans-serif;
-    font-size: 5rem;
-    color: #14162f;
-    /* opacity: 0.8; */
+    font-size: 2.7rem;
+    text-transform: lowercase;
+    background: linear-gradient(0deg, #14162f, #F9A801);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 1px #F9A801;
+    position: relative;
+    
 }
 
 .titleDev {
     position: relative;
     bottom: 15px;
-    
 }
 
 /* --------------SVGs---------------- */
 
 .logo {
     /* border: 1px solid rgb(182, 47, 137); */
-    border-bottom: 4px solid #14162f;
-    /* border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px; */
+    border-bottom: 3px solid #14162f;
     margin: 0 auto;
-    width: clamp(250px, 300px, 400px);
-    height: clamp(170px, 220px, 320px);
-    overflow: hidden;
-    position: relative;
-    top: 0;
+    width: 300px;
+    height: 220px;
 }
 
+
+
+/* -------------MEDIA QUERIES----------- */
+
+/* Mobile L */
+@media ( width >= 425px) {
+    .linksContainer a {
+        font-size: 1.1rem;
+    }
+
+    .titleRole, .titleDev {
+        font-size: 3rem;  
+    }
+}

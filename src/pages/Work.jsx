@@ -7,9 +7,8 @@ function Work() {
 
 
     return(
-    <>
+    <section className={styles.workPage}>
         <h1 className={styles.title}>WORK</h1>
-
         <div className={styles.workContainer}>
             <section className={styles.projects}>
                 <img src="src\assets\AnjodaFlecha.jpeg" alt="" />
@@ -44,7 +43,7 @@ function Work() {
             </section>
         
         </div>
-    </>
+    </section>
     );
 }
 

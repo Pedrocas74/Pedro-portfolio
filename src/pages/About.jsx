@@ -7,26 +7,28 @@ function About() {
       <h1 className={styles.title}>ABOUT</h1>
 
       <section className={styles.aboutSection}>
-        <div className={styles.descriptionContainer}>
+
           <div className={styles.text}>
-            <span>I'm enjoying the unique life.</span>
-            <span>I'm enjoying the learning.</span>
-            <span>I'm enjoying the creativity, the exploration.</span>
-            <span>I'm enjoying the freedom to discover.</span>
-            <span>I'm enjoying the challenges, the searching for a solution. </span>
-            <span>I'm enjoying the dopamine rush after a problem is resolved.</span>
-            <span>I'm enjoying the asynchronous promise of destiny. </span>
-            <span>Enjoying the future that is being built, one line at a time. </span>
-            <span>Turning ideas into reality - by someone who enjoys. </span>
-            <span>My name is Pedro. </span>
-           </div>
-            <a href="">resume</a>     
-        </div>
+            <span>I'm enjoying the <strong>unique life</strong>.</span>
+            <span>I'm enjoying the <strong>learning</strong>.</span>
+            <span>I'm enjoying the <strong>creativity</strong>, the <strong>exploration</strong>.</span>
+            <span>I'm enjoying the <strong>freedom to discover</strong>.</span>
+            <span>I'm enjoying the <strong>challenges</strong>, the <strong>searching for a solution</strong>. </span>
+            <span>I'm enjoying the <strong>dopamine rush after a problem is resolved</strong>.</span>
+            <span>Enjoying the <strong>future that is being built, one line at a time</strong>.</span>
+            <br />
+            <span><em>Turning ideas into reality - by someone who enjoys.</em></span>
+            <br />
+            <span className={styles.pedro}>Pedro </span>
+          </div>
+
         <img
           className={styles.avatar}
           src="src\assets\Avatar_noBackground_blue_upscaled.png"
           alt=""
         />
+
+         <span className={styles.resume}><a href="">resume</a></span>
       </section>
     </div>
   );

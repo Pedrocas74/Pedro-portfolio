@@ -1,32 +1,66 @@
 .aboutPage {
     width: 100vw;
     height: 100vh;
-    
+    background-color: #E2DDD7;
+    overflow: hidden;
 }
 
 .title {
     writing-mode: vertical-lr;
     position: absolute;
+    font-family: "Platypi", sans-serif;
+    font-size: 2rem;
+    color: #14162f;
+    margin-top: 0.2em;
 }
 
 .avatar {
-    width: 40%;
-    border: 1px solid red;
-    position: absolute;
-    right: 100px;
-    bottom: 0;
-    
+    width: 80%;
+    position: relative;
+    right: 127px;
+    bottom: 60px;
 }
 
 .text {
-    border: 1px solid blue;
+    /* border: 1px solid rgb(0, 0, 255); */
     display: flex;
     flex-direction: column;
-    width: 50%;
-    height: 500px;
+    width: 80%;
+    text-align: right;
+    height: max-content;
     position: relative;
-    left: 150px;
-    padding-top: 100px;
-    font-size: 1.5rem;
+    right: 20px;
+    margin-top: 7.4em;
+    font-size: 0.9rem;
+    font-family: "Montserrat", sans-serif;
+    color: #14162f;
 }
 
+.pedro {
+    letter-spacing: 2px;
+    text-emphasis: circle ;
+}
+
+.aboutSection {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid purple; */
+    align-items: flex-end;
+    height: 100vh;
+
+}
+
+.resume {
+    position: absolute;
+    bottom: 1.5em;
+    right: 1.2em;
+}
+
+.resume a {
+    color: #E2DDD7;
+    text-decoration: none;
+    border:  1px solid #14162f;
+    padding: 0.2em;
+    background-color: #14162f;
+    border-radius: 3px;
+}
