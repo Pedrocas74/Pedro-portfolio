@@ -15,14 +15,13 @@
 .workContainer {
     /* border: 1px solid rgb(255, 49, 49); */
     height: 100vh;
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    padding-top: 6.9em;
+    padding-top: 40px;
     scrollbar-width: thin; /* For Firefox */
     scrollbar-color: #14162f #E2DDD7; /* thumb color, track color */
-   
 }
 /* For Chrome, Edge, Safari */
 .workContainer::-webkit-scrollbar {
@@ -30,32 +29,31 @@
 }
 .workContainer::-webkit-scrollbar-thumb {
     background: #14162f; /* Scrollbar thumb */
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .workContainer::-webkit-scrollbar-track {
     background: #E2DDD7; /* Scrollbar track */
 }
 
 
-
 .projects {
     height: 12.5rem;
-    /* border: 1px solid #14162f; */
-    border-radius: 20px;
-    margin-bottom: 1.5em;
+    /* border: 1px solid #46a023; */
+    border-radius: 10px;
+    margin-top: 5em;
+    margin-bottom: 20em;
     overflow: hidden;
     display: flex;
     align-items: center;
 }
-
 .projects img {
     width: 50%;
 }
-
 .projectsText {
     width: 50%;
     /* border: 1px solid blueviolet; */
-    background-color: white;
+    background-color: #14162f;
+    color: #E2DDD7;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -63,5 +61,52 @@
     align-items: center;
     font-family: "Montserrat", sans-serif;
     font-size: 0.7rem;
+    line-height: 2;
 }
 
+
+/* -------------MEDIA QUERIES----------- */
+
+/* DEFAULT */
+/* .workContainer ===> padding-top: 40px; */ 
+
+/* .projects ===>  margin-top: 5em;
+                   margin-bottom: 20em;*/
+
+/* .projectsText ===> font-size: 0.7rem; */
+
+/* Mobile L */
+@media (600px <= width <= 767px) {
+    .projectsText {
+        font-size: 0.8rem;
+    }
+}
+
+/* Tablet */
+@media (768px <= width <= 1023px) {
+    .projectsText {
+        font-size: 0.9rem;
+    }
+}
+
+/* Desktop S */
+@media (1024px <= width <= 1279px) {
+    .projectsText {
+        font-size: 1rem;
+    }
+}
+
+
+/* Desktop M/L */
+@media (1280px <= width <= 1599px) {
+    .projectsText {
+        font-size: 1.1rem;
+    }
+}
+
+/* Extra Large Screens */
+@media (width >= 1600px) {
+    .projectsText {
+        font-size: 1.2rem;
+    }
+}
