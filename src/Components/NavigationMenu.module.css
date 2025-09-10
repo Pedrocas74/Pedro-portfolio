@@ -4,7 +4,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: #E2DDD7;
     color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
@@ -13,21 +13,26 @@
 }
 
 .menuList {
-    /* border: 2px solid rgb(6, 41, 14); */
+    border: 2px solid rgb(6, 41, 14);
     padding: 0;
     display: flex;
     flex-direction: column;
     height: 350px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     position: relative;
-    bottom: 70px;
+    bottom: 50px;
 }
 
-.menuList h1 {
-    /* border: 1px solid red; */
+.menuList h2, .menuList a {
+    border: 1px solid red;
     width: 100%;
-    font-size: 2.7rem;
+    font-size: 3.2rem;
     text-align: center;
+    font-family: "Platypi", sans-serif;
+    color: #14162F;
+    font-weight: 900;
+    position: relative;
+    z-index: 2;
 }
 
 .menuList a {

@@ -15,22 +15,23 @@
 }
 
 .avatar {
-    width: 80%;
-    position: relative;
-    right: 127px;
-    bottom: 60px;
+    width: 65%;
+    height: auto;
+    position: fixed;
+    left: -75px;
+    bottom: -50px;
 }
 
 .text {
     /* border: 1px solid rgb(0, 0, 255); */
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 87%;
     text-align: right;
     height: max-content;
     position: relative;
     right: 20px;
-    margin-top: 7.4em;
+    margin-top: 11em;
     font-size: 0.9rem;
     font-family: "Montserrat", sans-serif;
     color: #14162f;
@@ -38,7 +39,8 @@
 
 .pedro {
     letter-spacing: 2px;
-    text-emphasis: circle ;
+    text-emphasis: circle;
+    
 }
 
 .aboutSection {
@@ -47,20 +49,33 @@
     /* border: 1px solid purple; */
     align-items: flex-end;
     height: 100vh;
-
-}
-
-.resume {
-    position: absolute;
-    bottom: 1.5em;
-    right: 1.2em;
 }
 
 .resume a {
     color: #E2DDD7;
     text-decoration: none;
-    border:  1px solid #14162f;
-    padding: 0.2em;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.8);
+    border-left: 2px solid rgba(0, 0, 0, 0.8);
+    border-right: 0.5px solid rgb(0, 0, 0);
+    border-top: 0.5px solid rgb(0, 0, 0);
     background-color: #14162f;
+    position: absolute;
+    bottom: 1.5em;
+    right: 20px;
+    padding: 0.3em;
+    text-align: center;
     border-radius: 3px;
+    width: 8.5em;
+    letter-spacing: 3px;
+    transition: 
+        letter-spacing 0.3s ease,
+        transform 0.3s cubic-bezier(0.4,0,0.2,1);     
+
 }
+.resume a:hover {
+    letter-spacing: 0px;
+    transform: scale(1.07);
+}
+
+
+

@@ -2,7 +2,7 @@ import styles from "../styles/about.module.css";
 
 function About() {
   return (
-    
+
     <div className={styles.aboutPage}>
       <h1 className={styles.title}>ABOUT</h1>
 
@@ -28,7 +28,7 @@ function About() {
           alt=""
         />
 
-         <span className={styles.resume}><a href="">resume</a></span>
+         <span className={styles.resume}><a href="">see resume</a></span>
       </section>
     </div>
   );

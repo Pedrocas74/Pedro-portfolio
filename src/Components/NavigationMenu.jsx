@@ -10,10 +10,10 @@ function NavigationMenu({ menuOpen, setMenuOpen }) {
     return (
         <div className={styles.menuContainer}>
                 <section className={styles.menuList}>
-                    <h1><Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link></h1>
-                    <h1><Link to="/work" onClick={() => setMenuOpen(false)}>WORK</Link></h1>
-                    <h1><Link to="/about" onClick={() => setMenuOpen(false)}>ABOUT</Link></h1>
-                    <h1><Link to="/contact" onClick={() => setMenuOpen(false)}>CONTACT</Link></h1>
+                    <h2><Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link></h2>
+                    <h2><Link to="/work" onClick={() => setMenuOpen(false)}>WORK</Link></h2>
+                    <h2><Link to="/about" onClick={() => setMenuOpen(false)}>ABOUT</Link></h2>
+                    <h2><Link to="/contact" onClick={() => setMenuOpen(false)}>CONTACT</Link></h2>
                 </section>
                 
                 <WavesSVG />
