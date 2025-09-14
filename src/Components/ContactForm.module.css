@@ -1,0 +1,48 @@
+form {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: #14162f;
+    color: #E2DDD7;
+    border-radius: 5px;
+    border-bottom: 2px solid #0f1024;
+    border-left: 1.5px solid #0f1024;
+    border-top: 1px solid #0f1024;
+    border-right: 1px solid #0f1024;
+    padding: 2em 1.5em;
+    margin-bottom: 1.5em;
+}
+
+form button {
+    width: 5em;
+    background-color: #E2DDD7;
+    border: #14162f;
+    color: #14162f;
+    border-radius: 3px;
+}
+form button:hover {
+    cursor: pointer;
+}
+form button:active {
+    background-color: #14162f;
+    color: #E2DDD7;
+}
+
+form input {
+    width: 100%;
+    margin-bottom: 0.7em;
+}
+
+form textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 25px;
+    max-height: 235px;
+}
+
+.messageBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}

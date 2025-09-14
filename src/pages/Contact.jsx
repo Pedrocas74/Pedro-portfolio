@@ -1,20 +1,28 @@
-
 import styles from '../styles/contact.module.css';
+import githubIcon from "../assets/github-mark-white.png";
+import linkedinIcon from "../assets/InBug-White.png";
+import ContactForm from '../Components/ContactForm';
 
-function Contact() {
+export default function Contact() {
 
     return(
-        <div className={styles.contactPage}>
-            <h1 className={styles.title}>CONTACT</h1>
+    <section className={styles.contactSection}>
+      <h1 className={styles.title}>CONTACT</h1>
+        <div className={styles.contactsContainer}>
             <div className={styles.contacts}>
-                <a href="mailto:pmig.magalhaes@gmail.com">Send me an email</a>
-                <a href="">Github</a>
-                <a href="">Linkedin</a>
-
+                <ContactForm />
+                <div className={styles.socials}>
+                    <span>Socials</span>
+                    <div className={styles.socialsIcons}>
+                        <a href=""><img src={githubIcon} alt="Github link" /></a>
+                        <a href=""><img src={linkedinIcon} alt="Linkedin link" /></a>
+                    </div>
+                </div>
             </div>
-            
         </div>
+            
+    </section>
+    
     );
 }
 
-export default Contact;

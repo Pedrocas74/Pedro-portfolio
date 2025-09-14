@@ -1,8 +1,8 @@
-.aboutPage {
+.aboutSection {
     width: 100vw;
     height: 100vh;
     background-color: #E2DDD7;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .title {
@@ -15,20 +15,20 @@
 }
 
 .avatar {
-    width: 65%;
+    max-width: 270px;
     height: auto;
     position: fixed;
-    left: -75px;
-    bottom: -50px;
+    left: -65px;
+    bottom: -45px;
 }
 
 .text {
     /* border: 1px solid rgb(0, 0, 255); */
     display: flex;
     flex-direction: column;
-    width: 87%;
+    width: 89%;
     text-align: right;
-    height: max-content;
+    /* height: max-content; */
     position: relative;
     right: 20px;
     margin-top: 11em;
@@ -43,7 +43,7 @@
     
 }
 
-.aboutSection {
+.aboutContainer {
     display: flex;
     flex-direction: column;
     /* border: 1px solid purple; */
@@ -79,3 +79,89 @@
 
 
 
+/* -------------MEDIA QUERIES----------- */
+
+/* DEFAULT */
+
+/*AVATAR
+    width: 65%;
+    height: auto;
+    position: fixed;
+    left: -75px;
+    bottom: -50px; */
+
+/* TEXT
+    width: 89%;
+    margin-top: 11em;
+    font-size: 0.9rem; */
+
+/* Mobile L */
+@media (600px <= width <= 767px) {
+    .avatar {
+        left: -83px;
+        bottom: -65px;
+        max-width: 380px;
+    }
+    .text {
+        font-size: 1rem;
+        width: 83%;
+        margin-top: 9em;
+    }
+}
+
+/* Tablet */
+@media (768px <= width <= 1023px) {
+    .avatar {
+        left: -92px;
+        bottom: -80px;
+        max-width: 430px;
+    }
+    .text {
+        font-size: 1.1rem;
+        width: 82%;
+        margin-top: 8em;
+    }
+}
+
+/* Desktop S */
+@media (1024px <= width <= 1279px) {
+    .avatar {
+        left: -135px;
+        bottom: -100px;
+        max-width: 550px;
+    }
+    .text {
+        font-size: 1.2rem;
+        width: 82%;
+        margin-top: 8em;
+    }
+}
+
+
+/* Desktop M/L */
+@media (1280px <= width <= 1599px) {
+    .avatar {
+        left: -130px;
+        bottom: -100px;
+        max-width: 580px;
+    }
+    .text {
+        font-size: 1.3rem;
+        width: 60%;
+        margin-top: 8em;
+    }
+}
+
+/* Extra Large Screens */
+@media (width >= 1600px) {
+    .avatar {
+        left: -140px;
+        bottom: -100px;
+        max-width: 600px;
+    }
+    .text {
+        font-size: 1.4rem;
+        width: 60%;
+        margin-top: 8em;
+    }
+}

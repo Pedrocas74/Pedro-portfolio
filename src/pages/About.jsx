@@ -1,12 +1,13 @@
 import styles from "../styles/about.module.css";
+import avatarImg from "../assets/Avatar_noBackground_blue_upscaled.png"; 
 
 function About() {
   return (
 
-    <div className={styles.aboutPage}>
+    <section className={styles.aboutSection}>
       <h1 className={styles.title}>ABOUT</h1>
 
-      <section className={styles.aboutSection}>
+      <div className={styles.aboutContainer}>
 
           <div className={styles.text}>
             <span>I'm enjoying the <strong>unique life</strong>.</span>
@@ -24,13 +25,13 @@ function About() {
 
         <img
           className={styles.avatar}
-          src="src\assets\Avatar_noBackground_blue_upscaled.png"
-          alt=""
+          src={avatarImg}
+          alt="Pedro Avatar"
         />
 
          <span className={styles.resume}><a href="">see resume</a></span>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
 

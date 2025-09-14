@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '../styles/work.module.css';
-import { style } from 'framer-motion/client';
 import { Link } from 'react-router-dom';
+import workImg from "../assets/AnjodaFlecha_upscaled.png"; 
 
 function Work() {
     
@@ -13,7 +13,7 @@ function Work() {
         <div className={styles.workContainer}>
 
             <section className={styles.projects}>
-                <img src="src\assets\AnjodaFlecha.jpeg" alt="" />
+                <img src={workImg} alt="Work Cover" />
                 <section className={styles.projectsText}>
                     <h2>Name</h2>
                     <h3>Type of project</h3>
@@ -21,7 +21,7 @@ function Work() {
             </section>
 
             <section className={styles.projects}>
-                <img src="src\assets\AnjodaFlecha.jpeg" alt="" />
+                <img src={workImg} alt="Work Cover" />
                 <section className={styles.projectsText}>
                     <h2>Name</h2>
                     <h3>Type of project</h3>
@@ -29,7 +29,7 @@ function Work() {
             </section>
 
             <section className={styles.projects}>
-                <img src="src\assets\AnjodaFlecha.jpeg" alt="" />
+                <img src={workImg} alt="Work Cover" />
                 <section className={styles.projectsText}>
                     <h2>Name</h2>
                     <h3>Type of project</h3>
@@ -37,7 +37,7 @@ function Work() {
             </section>
 
             <section className={styles.projects}>
-                <img src="src\assets\AnjodaFlecha.jpeg" alt="" />
+                <img src={workImg} alt="Work Cover" />
                 <section className={styles.projectsText}>
                     <h2>Name</h2>
                     <h3>Type of project</h3>
@@ -45,7 +45,7 @@ function Work() {
             </section>
 
             <section className={styles.projects}>
-                <img src="src\assets\AnjodaFlecha.jpeg" alt="" />
+                <img src={workImg} alt="Work Cover" />
                 <section className={styles.projectsText}>
                     <h2>Name</h2>
                     <h3>Type of project</h3>
