@@ -31,11 +31,11 @@ export default function ContactForm() {    //Powered by Formspree
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">
         Name:
-        <input type="text" name="name" id='name' required />
+        <input type="text" name="name" id='name' placeholder='Enter your name' required />
       </label>
       <label htmlFor='email'>
         Email:
-        <input type="email" name="email" id='email' required />
+        <input type="email" name="email" id='email' placeholder='Enter your email' required />
       </label>
       <label htmlFor='message' className={styles.messageBox}>
         Message:

@@ -20,6 +20,7 @@ form button {
     border: #14162f;
     color: #14162f;
     border-radius: 3px;
+    margin: 0 auto;
 }
 form button:hover {
     cursor: pointer;
@@ -31,18 +32,19 @@ form button:active {
 
 form input {
     width: 100%;
-    margin-bottom: 0.7em;
+    margin: 0.1em 0 0.7em 0;
+    padding: 0.3em 0;
 }
 
 form textarea {
     min-width: 100%;
     max-width: 100%;
-    min-height: 25px;
+    min-height: 60px;
     max-height: 235px;
 }
 
 .messageBox {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.7em;
 }

@@ -15,10 +15,10 @@
 }
 
 .avatar {
-    max-width: 270px;
+    max-width: 300px;
     height: auto;
     position: fixed;
-    left: -65px;
+    left: -69px;
     bottom: -45px;
 }
 
