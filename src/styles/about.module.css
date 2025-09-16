@@ -15,10 +15,10 @@
 }
 
 .avatar {
-    max-width: 300px;
+    max-width: 240px;
     height: auto;
     position: fixed;
-    left: -69px;
+    left: -67px;
     bottom: -45px;
 }
 
@@ -31,7 +31,7 @@
     /* height: max-content; */
     position: relative;
     right: 20px;
-    margin-top: 11em;
+    margin-top: 9em;
     font-size: 0.9rem;
     font-family: "Montserrat", sans-serif;
     color: #14162f;
@@ -135,6 +135,9 @@
         width: 82%;
         margin-top: 8em;
     }
+    .resume a {
+        font-size: 1.2rem;
+    }
 }
 
 
@@ -150,6 +153,9 @@
         width: 60%;
         margin-top: 8em;
     }
+    .resume a {
+        font-size: 1.2rem;
+    }
 }
 
 /* Extra Large Screens */
@@ -163,5 +169,8 @@
         font-size: 1.4rem;
         width: 60%;
         margin-top: 8em;
+    }
+    .resume a {
+        font-size: 1.2rem;
     }
 }

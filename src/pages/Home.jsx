@@ -1,16 +1,15 @@
-
+import { motion } from 'framer-motion';
 import styles from '../styles/home.module.css';
 import { Link } from 'react-router-dom';
 import WavesSVG from '../Components/WavesSVG';
 
-function Home() {
-
+export default function Home() {
 
     return (
   <div className={styles.homePage}>
     <div className={styles.home}>
       <section className={styles.introContainer}>     
-        <svg className={styles.logo} viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className={styles.logo} viewBox="0 0 11 7" xmlns="http://www.w3.org/2000/svg">
             <g id="logo">
             <g id="flag">
               <mask id="path-1-inside-1_1_38" fill="white">
@@ -48,9 +47,6 @@ function Home() {
   </div>
     );
 }
-
-export default Home;
-
 
 
 

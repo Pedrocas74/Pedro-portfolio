@@ -1,53 +1,73 @@
 //button to open/close it
 
-import { easeIn, easeInOut, motion } from "framer-motion";
-import SailingIcon from "./SailingIcon";
+import { motion } from "framer-motion";
+
 
 function NavButton({ menuOpen, setMenuOpen }) {
+  const lineProps = {
+    stroke: "#14162F", 
+    strokeWidth: 3.5,
+    strokeLinecap: "round",
+    transition: { duration: 0.3, ease: "easeInOut" },
+    transformOrigin: "center",
+    whileHover: { stroke: "#F9A801" }
+  };
+
   return (
-    <motion.button
+    <button
       onClick={() => setMenuOpen(!menuOpen)}
+      aria-label="Toggle menu"
       style={{
+        background: "none",
+        border: "none",
+        padding: 0,
+        cursor: "pointer",
         position: "fixed",
         top: "20px",
         right: "20px",
-        zIndex: 1001,
-        cursor: "pointer",
-        border: "none",
-        padding: "7px",
-        borderRadius: "20px",
-        background: "white",
-        overflow: "hidden", // ensures border fits nicely
+        zIndex: 1000,
+        
       }}
-      animate={{
-        backgroundColor: menuOpen ? "transparent" : "#14162F",
-      }}
-      transition={{ duration: 1.5, ease: easeIn }}
+      
     >
-      {/* Border animation */}
-      <motion.div
-        style={{
-          position: "absolute",
-          inset: 4,
-          border: "2px dashed #14162F",
-          borderRadius: "8px",
-          pointerEvents: "none",
-        }}
-        initial={false}
-        animate={menuOpen ? { scale: 1, opacity: 1} : { scale: 0, opacity: 0.5 }}
-        transition={{ duration: 0.4}}
-      />
+      <motion.svg
+        width="30"
+        height="24"
+        viewBox="0 0 30 24"
+      >
+        {/* Top line */}
+        <motion.line
+          x1="3"
+          y1="6"
+          x2="27"
+          y2="6"
+          {...lineProps}
+          animate={menuOpen ? { rotate: 410, y: 6 } : { rotate: 0, y: 0 }}
+        />
 
-      {/* SVG icon */}
-      <SailingIcon
-        style={{
-          width: 40,
-          height: 40,
-        }}
-        fill="#14162F"
-      />
-    </motion.button>
+        {/* Middle line */}
+        <motion.line
+          x1="3"
+          y1="12"
+          x2="27"
+          y2="12"
+          {...lineProps}
+          animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
+        />
+
+        {/* Bottom line */}
+        <motion.line
+          x1="3"
+          y1="18"
+          x2="27"
+          y2="18"
+          {...lineProps}
+          animate={menuOpen ? { rotate: -410, y: -6 } : { rotate: 0, y: 0 }}
+        />
+      </motion.svg>
+    </button>
   );
 }
+
 
 export default NavButton;

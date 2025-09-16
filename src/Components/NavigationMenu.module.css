@@ -13,7 +13,7 @@
 }
 
 .menuList {
-    border: 2px solid rgb(6, 41, 14);
+    /* border: 2px solid rgb(6, 41, 14); */
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
 }
 
 .menuList h2, .menuList a {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     font-size: 3.2rem;
     text-align: center;

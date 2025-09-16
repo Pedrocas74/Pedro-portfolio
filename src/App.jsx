@@ -17,8 +17,8 @@ import Contact from './pages/Contact.jsx';
 
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);  //state 
-
+  const [menuOpen, setMenuOpen] = useState(false);  
+  
 
   return (
       <BrowserRouter>
