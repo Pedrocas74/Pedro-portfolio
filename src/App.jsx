@@ -16,18 +16,31 @@ import Contact from './pages/Contact.jsx';
 
 
 
-function App() {
-  const [menuOpen, setMenuOpen] = useState(false);  
-  
+export default function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [showMenu, setShowMenu] = useState(false); 
+
 
   return (
       <BrowserRouter>
         <NavButton  menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <NavigationMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <NavigationMenu 
+            menuOpen={menuOpen} 
+            setMenuOpen={setMenuOpen} 
+            showMenu={showMenu}
+            setShowMenu={setShowMenu}
+        />
 
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home 
+                                      menuOpen={menuOpen} 
+                                      setMenuOpen={setMenuOpen} 
+                                      showMenu={showMenu}
+                                      setShowMenu={setShowMenu}
+                                      />} />
+                                      
+          
           <Route path="/work" element={<Work />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
@@ -36,4 +49,4 @@ function App() {
   )
 }
 
-export default App;
+

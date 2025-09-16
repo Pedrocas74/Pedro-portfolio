@@ -95,8 +95,7 @@
 /* --------------SVGs---------------- */
 
 .logo {
-    /* border: 1px solid rgb(182, 47, 137); */
-    border-bottom: 3px solid #14162f;
+    border-bottom: 2px solid #14162f;
     margin: 0 auto;
     width: 300px;
     height: auto;
