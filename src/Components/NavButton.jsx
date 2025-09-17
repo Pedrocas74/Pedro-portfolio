@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 
-function NavButton({ menuOpen, setMenuOpen }) {
+export default function NavButton({ menuOpen, setMenuOpen }) {
   const lineProps = {
     stroke: "#14162F", 
     strokeWidth: 3.5,
@@ -70,4 +70,3 @@ function NavButton({ menuOpen, setMenuOpen }) {
 }
 
 
-export default NavButton;

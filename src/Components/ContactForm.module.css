@@ -1,4 +1,4 @@
-form {
+.form {
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@ form {
     margin-bottom: 1.5em;
 }
 
-form button {
+.form button {
     width: 5em;
     background-color: #E2DDD7;
     border: #14162f;
@@ -22,21 +22,21 @@ form button {
     border-radius: 3px;
     margin: 0 auto;
 }
-form button:hover {
+.form button:hover {
     cursor: pointer;
 }
-form button:active {
+.form button:active {
     background-color: #14162f;
     color: #E2DDD7;
 }
 
-form input {
+.form input {
     width: 100%;
     margin: 0.1em 0 0.7em 0;
     padding: 0.3em 0;
 }
 
-form textarea {
+.form textarea {
     min-width: 100%;
     max-width: 100%;
     min-height: 60px;

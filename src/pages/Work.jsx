@@ -3,7 +3,7 @@ import styles from '../styles/work.module.css';
 import { Link } from 'react-router-dom';
 import workImg from "../assets/AnjodaFlecha_upscaled.png"; 
 
-function Work() {
+export default function Work() {
     
 
 
@@ -58,5 +58,3 @@ function Work() {
     </section>
     );
 }
-
-export default Work;

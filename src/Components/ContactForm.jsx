@@ -28,7 +28,7 @@ export default function ContactForm() {    //Powered by Formspree
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <label htmlFor="name">
         Name:
         <input type="text" name="name" id='name' placeholder='Enter your name' required />

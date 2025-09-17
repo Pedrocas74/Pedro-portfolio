@@ -18,7 +18,7 @@ import Contact from './pages/Contact.jsx';
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showMenu, setShowMenu] = useState(false); 
+
 
 
   return (
@@ -27,8 +27,6 @@ export default function App() {
         <NavigationMenu 
             menuOpen={menuOpen} 
             setMenuOpen={setMenuOpen} 
-            showMenu={showMenu}
-            setShowMenu={setShowMenu}
         />
 
 
@@ -36,9 +34,8 @@ export default function App() {
           <Route path="/" element={<Home 
                                       menuOpen={menuOpen} 
                                       setMenuOpen={setMenuOpen} 
-                                      showMenu={showMenu}
-                                      setShowMenu={setShowMenu}
-                                      />} />
+      
+                                    />} />
                                       
           
           <Route path="/work" element={<Work />} />

@@ -4,13 +4,8 @@ import { Link } from "react-router-dom";
 import WavesSVG from './WavesSVG';
 
 
-export default function NavigationMenu({ menuOpen, setMenuOpen, showMenu, setShowMenu }) {
-    // if (!menuOpen) return null;
-    if (!menuOpen && showMenu) {
-        setMenuOpen(false); //hides menu
-        setShowMenu(false);
-    }
-
+export default function NavigationMenu({ menuOpen, setMenuOpen }) {
+    
     return (
 
     <AnimatePresence>

@@ -1,7 +1,7 @@
 import styles from "../styles/about.module.css";
 import avatarImg from "../assets/Avatar_noBackground_blue_upscaled.png"; 
 
-function About() {
+export default function About() {
   return (
 
     <section className={styles.aboutSection}>
@@ -35,4 +35,3 @@ function About() {
   );
 }
 
-export default About;
