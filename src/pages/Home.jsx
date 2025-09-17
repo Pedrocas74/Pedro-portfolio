@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import styles from '../styles/home.module.css';
 import { Link } from 'react-router-dom';
-import WavesSVG from '../Components/WavesSVG';
 import BoatSVG from '../Components/BoatSVG';
 
 
@@ -27,8 +26,6 @@ export default function Home( { menuOpen, setMenuOpen, showMenu, setShowMenu } )
           </div>
         </div>
       </section>  
-      
-      <WavesSVG />
       
     </div>
   </div>

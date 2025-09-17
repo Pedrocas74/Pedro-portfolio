@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import styles from './NavigationMenu.module.css';
 import { Link } from "react-router-dom";
-import WavesSVG from './WavesSVG';
+
 
 
 export default function NavigationMenu({ menuOpen, setMenuOpen }) {
@@ -25,7 +25,7 @@ export default function NavigationMenu({ menuOpen, setMenuOpen }) {
                     <h2><Link to="/contact" onClick={() => setMenuOpen(false)}>CONTACT</Link></h2>
                 </section>
                 
-                <WavesSVG />
+                
         </motion.div>
       )}
     </AnimatePresence>      

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
 //style
@@ -7,6 +7,7 @@ import './App.css';
 //components
 import NavButton from './Components/NavButton.jsx';
 import NavigationMenu from './Components/NavigationMenu.jsx';
+import WavesSVG from './Components/WavesSVG.jsx';
 
 //pages
 import Home from './pages/Home.jsx';
@@ -18,32 +19,31 @@ import Contact from './pages/Contact.jsx';
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
+  //only show waves when the location is the homepage or the navigation menu
+  const showWaves = location.pathname === '/' || menuOpen;   
 
 
   return (
-      <BrowserRouter>
+      <>
         <NavButton  menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <NavigationMenu 
-            menuOpen={menuOpen} 
-            setMenuOpen={setMenuOpen} 
-        />
+        <NavigationMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+             
+          
+        
 
 
         <Routes>
-          <Route path="/" element={<Home 
-                                      menuOpen={menuOpen} 
-                                      setMenuOpen={setMenuOpen} 
-      
-                                    />} />
-                                      
-          
+          <Route path="/" element={<Home menuOpen={menuOpen} setMenuOpen={setMenuOpen} />} />                                                                                                                                                
           <Route path="/work" element={<Work />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </BrowserRouter>
-  )
+
+        {showWaves && <WavesSVG />}
+      </>
+  );
 }
 
 
