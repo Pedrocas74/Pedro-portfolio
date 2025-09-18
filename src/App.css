@@ -6,3 +6,48 @@
 }
 
 
+/* BOAT in NavMenu */
+.boatLayer {
+  position: fixed;
+  left: 0;
+  bottom: 22px;   
+  z-index: 600;
+  pointer-events: none;
+}
+
+@media (600px <= width <= 767px) {
+    .boatLayer {
+        bottom: 30px;
+    }
+}
+
+/* Tablet */
+@media (768px <= width <= 1023px) {
+    .boatLayer {
+        bottom: 47px;
+    }
+}
+
+/* Desktop S */
+@media (1024px <= width <= 1279px) {
+    .boatLayer {
+        bottom: 65px;
+    }
+}
+
+/* Desktop M/L */
+@media (1280px <= width <= 1599px) {
+    .boatLayer {
+        bottom: 83px;
+    }
+}
+
+/* Extra Large Screens */
+@media (width >= 1600px) {
+    .boatLayer {
+        bottom: 125px;
+    }
+}
+
+
+

@@ -1,14 +1,20 @@
 import { motion, AnimatePresence } from "framer-motion";
 import styles from './NavigationMenu.module.css';
 import { Link } from "react-router-dom";
+import BoatSVG from "./BoatSVG.jsx";
 
 
 
 export default function NavigationMenu({ menuOpen, setMenuOpen }) {
     
+  
+
+
+
     return (
 
-    <AnimatePresence>
+    // Slide in and out of the menu
+    <AnimatePresence>  
       { menuOpen && (
         <motion.div 
             className={styles.menuContainer}
@@ -18,15 +24,23 @@ export default function NavigationMenu({ menuOpen, setMenuOpen }) {
             transition={{ duration: 0.7, ease: "easeInOut",  }} // delay slightly for smooth timing
 
         >
-                <section className={styles.menuList}>
-                    <h2><Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link></h2>
-                    <h2><Link to="/work" onClick={() => setMenuOpen(false)}>WORK</Link></h2>
-                    <h2><Link to="/about" onClick={() => setMenuOpen(false)}>ABOUT</Link></h2>
-                    <h2><Link to="/contact" onClick={() => setMenuOpen(false)}>CONTACT</Link></h2>
-                </section>
+
+
+       
+
+
+
+    <section className={styles.menuList}>
+        <h2><Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link></h2>
+        <h2><Link to="/work" onClick={() => setMenuOpen(false)}>WORK</Link></h2>
+        <h2><Link to="/about" onClick={() => setMenuOpen(false)}>ABOUT</Link></h2>
+        <h2><Link to="/contact" onClick={() => setMenuOpen(false)}>CONTACT</Link></h2>
+    </section>
                 
-                
+             
+
         </motion.div>
+        
       )}
     </AnimatePresence>      
     );

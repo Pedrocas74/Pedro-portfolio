@@ -1,4 +1,4 @@
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -9,6 +9,7 @@ import './App.css';
 import NavButton from './Components/NavButton.jsx';
 import NavigationMenu from './Components/NavigationMenu.jsx';
 import WavesSVG from './Components/WavesSVG.jsx';
+import BoatSVG from './Components/BoatSVG.jsx';
 
 //pages
 import Home from './pages/Home.jsx';
@@ -46,6 +47,24 @@ export default function App() {
         {/* key is constant while in sea context → no remount when toggling Home/Menu */}
       </AnimatePresence>
       
+        {menuOpen && (
+          <motion.div
+            className="boatLayer"        
+            animate={{ x: ["-30vw", "112vw"] }}
+            transition={{
+              duration: 20,
+              ease: "linear",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+          >
+
+    <BoatSVG style={{ width: "100px" }} />
+  </motion.div>
+)}
+
+
+
       </>
   );
 }
