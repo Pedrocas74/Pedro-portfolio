@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import BoatSVG from '../Components/BoatSVG';
 
 
-export default function Home( { menuOpen, setMenuOpen, showMenu, setShowMenu } ) {
+export default function Home(  ) {
 
     return (
   <div className={styles.homePage}>

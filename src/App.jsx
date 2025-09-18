@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -21,7 +22,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  //only show waves when the location is the homepage or the navigation menu
+  //only show the sea when the location is the homepage or the navigation menu
   const showWaves = location.pathname === '/' || menuOpen;   
 
 
@@ -30,9 +31,6 @@ export default function App() {
         <NavButton  menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <NavigationMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
              
-          
-        
-
 
         <Routes>
           <Route path="/" element={<Home menuOpen={menuOpen} setMenuOpen={setMenuOpen} />} />                                                                                                                                                
@@ -41,7 +39,13 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
 
-        {showWaves && <WavesSVG />}
+      
+        {/* Presence handles enter/exit only when showSea flips true/false */}
+      <AnimatePresence mode="wait" >
+        {showWaves && <WavesSVG  key="sea"/>} 
+        {/* key is constant while in sea context → no remount when toggling Home/Menu */}
+      </AnimatePresence>
+      
       </>
   );
 }
