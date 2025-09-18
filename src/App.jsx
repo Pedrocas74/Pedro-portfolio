@@ -20,6 +20,7 @@ import Contact from './pages/Contact.jsx';
 
 
 export default function App() {
+
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -59,7 +60,7 @@ export default function App() {
             }}
           >
 
-    <BoatSVG style={{ width: "100px" }} />
+    <BoatSVG style={{ width: "110px" }} />
   </motion.div>
 )}
 

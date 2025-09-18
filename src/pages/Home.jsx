@@ -7,26 +7,43 @@ import BoatSVG from '../Components/BoatSVG';
 export default function Home(  ) {
 
     return (
-  <div className={styles.homePage}>
-    
-    <div className={styles.home}>
-      
-      <section className={styles.introContainer}>     
-        <BoatSVG className={styles.logo} />
+  <div className={styles.homePage}> 
+    <div className={styles.home}>   
+      <div className={styles.introContainer}> 
+        <motion.div 
+          className={styles.boatContainer}
+          initial={{ scaleY: 0 }}
+          animate={{ scaleY: 1}}
+          transition={{ type: "spring", damping: 15, stiffness: 150 }}
+          style={{ originY: 1 }} // pivot from bottom
+        >
                  
+            <BoatSVG className={styles.logo} />  
+        </motion.div>
+            
         <div className={styles.linksContainer}>
           
-          <div className={styles.titleHome}>
-            <h2 className={styles.titleRole}>FRONTEND</h2>
-            <h2 className={styles.titleDev}>DEVELOPER</h2>
-          </div>
-          <div className={styles.links}>
+          <motion.section 
+            className={styles.titleHome}
+            initial={{  y: 20,  opacity: 0 }}
+            animate={{  y: 0,  opacity: 1 }}
+            transition={{ type: "tween", ease: "easeIn" }}
+          >
+            <h2 className={styles.titleRole}>frontend</h2>
+            <h2 className={styles.titleDev}>developer</h2>             
+          </motion.section>
+
+          <motion.div 
+            className={styles.links}
+            initial={{  y: 70,  opacity: 0 }}
+            animate={{  y: 0,  opacity: 1 }}
+            transition={{ type: "spring", ease: "easeIn" }}
+          >
             <Link to="/contact">let's talk</Link>
             <Link to="/work">my work</Link>
-          </div>
+          </motion.div>
         </div>
-      </section>  
-      
+      </div>     
     </div>
   </div>
     );
