@@ -10,7 +10,7 @@ export default function NavButton({ menuOpen, setMenuOpen }) {
     strokeLinecap: "round",
     transition: { duration: 0.3, ease: "easeInOut" },
     transformOrigin: "center",
-    whileHover: { stroke: "#F9A801" }
+
   };
 
   return (

@@ -26,7 +26,7 @@
 .menuList h2, .menuList a {
     /* border: 1px solid red; */
     width: 100%;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     text-align: center;
     font-family: "Platypi", sans-serif;
     color: #14162F;
@@ -37,4 +37,31 @@
 
 .menuList a {
     text-decoration: none;
+    transition: all 0.2s ease; 
+    display: inline-block;
+    width: max-content;
+}
+.menuList a:hover {
+    background: linear-gradient(0deg, #14162f, #F9A801);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 3px 1px #F9A801;
+    transform: scale(1.1);
+}
+.menuList a:active {
+    transform: scale(0.8);
+}
+
+
+/* ------------ MEDIA QUERIES ---------------------*/
+/* Desktop M/L */
+@media (1280px <= width <= 1599px) {
+    .menuList h2, .menuList a {
+        font-size: 3.4rem;
+    }
+}
+
+/* Extra Large Screens */
+@media (width >= 1600px) {
+    
 }

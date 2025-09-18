@@ -5,6 +5,13 @@
     margin: 0;
 }
 
+html {
+  -webkit-tap-highlight-color: transparent; /* removes gray flash */
+}
+
+
+
+
 
 /* BOAT in NavMenu */
 .boatLayer {
@@ -38,7 +45,7 @@
 /* Desktop M/L */
 @media (1280px <= width <= 1599px) {
     .boatLayer {
-        bottom: 83px;
+        bottom: 80px;
     }
 }
 

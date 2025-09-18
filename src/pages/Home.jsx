@@ -14,7 +14,7 @@ export default function Home(  ) {
           className={styles.boatContainer}
           initial={{ scaleY: 0 }}
           animate={{ scaleY: 1}}
-          transition={{ type: "spring", damping: 15, stiffness: 150 }}
+          transition={{ type: "spring", damping: 15, stiffness: 150, delay: 1 }}
           style={{ originY: 1 }} // pivot from bottom
         >
                  

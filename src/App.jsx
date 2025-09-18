@@ -51,16 +51,16 @@ export default function App() {
         {menuOpen && (
           <motion.div
             className="boatLayer"        
-            animate={{ x: ["-30vw", "112vw"] }}
+            animate={{ x: ["-27vw", "112vw"], y: ["15%", "0%", "15%"] }}
             transition={{
-              duration: 20,
+              duration: 17,
               ease: "linear",
               repeat: Infinity,
               repeatType: "loop",
             }}
           >
 
-    <BoatSVG style={{ width: "110px" }} />
+    <BoatSVG style={{ width: "100px", borderBottom: "1px solid #14162F" }} />
   </motion.div>
 )}
 
