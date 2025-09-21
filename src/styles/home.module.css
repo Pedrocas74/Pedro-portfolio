@@ -50,6 +50,7 @@
 }
 
 .linksContainer a {
+    font-weight: 300;
     text-decoration: none;
     color: #E2DDD7;
     background-color: #14162F;
@@ -63,15 +64,14 @@
     width: 8.5em;
     /* height: auto; */
     letter-spacing: 3px;
-    /* transition: 
-        letter-spacing 0.4s ease,
-        transform 0.2s cubic-bezier(0.4,0,0.2,1); */
-        
+    transition: 
+        letter-spacing 0.3s ease,
+        transform 0.3s cubic-bezier(0.4,0,0.2,1);      
 }
-/* .linksContainer a:hover {
+.linksContainer a:hover, .linksContainer a:active {
     letter-spacing: 0px;
     transform: scale(1.07);
-} */
+}
 
 
 .titleHome {

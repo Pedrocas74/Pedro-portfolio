@@ -15,7 +15,7 @@
 }
 
 .avatar {
-    max-width: 240px;
+    max-width: 300px;
     height: auto;
     position: fixed;
     left: -67px;
@@ -31,10 +31,11 @@
     /* height: max-content; */
     position: relative;
     right: 20px;
-    margin-top: 9em;
-    font-size: 0.9rem;
+    margin-top: 11em;
+    font-size: 1rem;
     font-family: "Montserrat", sans-serif;
     color: #14162f;
+    z-index: 10;
 }
 
 .pedro {
@@ -52,19 +53,21 @@
 }
 
 .resume a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
     color: #E2DDD7;
     text-decoration: none;
-    border-bottom: 3px solid rgba(0, 0, 0, 0.8);
-    border-left: 2px solid rgba(0, 0, 0, 0.8);
-    border-right: 0.5px solid rgb(0, 0, 0);
-    border-top: 0.5px solid rgb(0, 0, 0);
+    border-bottom: 3px solid #0f1024;
+    border-left: 2px solid #0f1024;
+    border-right: 0.5px solid #0f1024;
+    border-top: 0.5px solid #0f1024;
     background-color: #14162f;
     position: absolute;
     bottom: 1.5em;
     right: 20px;
     padding: 0.3em;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 10px;
     width: 8.5em;
     letter-spacing: 3px;
     transition: 
@@ -103,7 +106,7 @@
         max-width: 380px;
     }
     .text {
-        font-size: 1rem;
+        font-size: 1.1rem;
         width: 83%;
         margin-top: 9em;
     }
@@ -112,14 +115,14 @@
 /* Tablet */
 @media (768px <= width <= 1023px) {
     .avatar {
-        left: -92px;
+        left: -105px;
         bottom: -80px;
-        max-width: 430px;
+        max-width: 460px;
     }
     .text {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         width: 82%;
-        margin-top: 8em;
+        margin-top: 7em;
     }
 }
 
@@ -144,17 +147,17 @@
 /* Desktop M/L */
 @media (1280px <= width <= 1599px) {
     .avatar {
-        left: -130px;
+        left: -140px;
         bottom: -100px;
-        max-width: 580px;
+        max-width: 600px;
     }
     .text {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         width: 60%;
-        margin-top: 8em;
+        margin-top: 6em;
     }
     .resume a {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -166,7 +169,7 @@
         max-width: 600px;
     }
     .text {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         width: 60%;
         margin-top: 8em;
     }

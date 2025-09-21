@@ -12,13 +12,13 @@ export default function About() {
           <div className={styles.text}>
             <span>I'm enjoying the <strong>unique life</strong>.</span>
             <span>I'm enjoying the <strong>learning</strong>.</span>
-            <span>I'm enjoying the <strong>creativity</strong>, the <strong>exploration</strong>.</span>
+            <span>The <strong>creativity</strong>, the <strong>exploration</strong>.</span>
             <span>I'm enjoying the <strong>freedom to discover</strong>.</span>
             <span>I'm enjoying the <strong>challenges</strong>, the <strong>searching for a solution</strong>. </span>
-            <span>I'm enjoying the <strong>dopamine rush after a problem is resolved</strong>.</span>
-            <span>Enjoying the <strong>future that is being built, one line at a time</strong>.</span>
+            <span>The <strong>butterflies when a problem is resolved</strong>.</span>
+            <span>Enjoying the <strong>future, built one line at a time</strong>.</span>
             <br />
-            <span><em>Turning ideas into reality - by someone who enjoys.</em></span>
+            <span><strong>Turning ideas into reality</strong> - <em>by someone who enjoys.</em></span>
             <br />
             <span className={styles.pedro}>Pedro </span>
           </div>
