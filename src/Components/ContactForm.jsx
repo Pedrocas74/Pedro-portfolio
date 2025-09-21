@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styles from './ContactForm.module.css';
 import { useState } from "react";
 
@@ -28,7 +29,13 @@ export default function ContactForm() {    //Powered by Formspree
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <motion.form 
+        className={styles.form} 
+        onSubmit={handleSubmit}
+        initial={{ y: -100, opacity: 0}}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+    >
       <label htmlFor="name">
         Name:
         <input type="text" name="name" id='name' placeholder='Enter your name' required />
@@ -41,8 +48,8 @@ export default function ContactForm() {    //Powered by Formspree
         Message:
         <textarea name="message" id='message' required />
       </label>
-      <button type="submit">Send</button>
+      <button type="submit">send</button>
       {status && <p>{status}</p>}
-    </form>
+    </motion.form>
   );
 }

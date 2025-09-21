@@ -16,18 +16,23 @@
 
 .form button {
     width: 5em;
-    background-color: #E2DDD7;
-    border: #14162f;
-    color: #14162f;
-    border-radius: 3px;
+    background-color: #14162f;
+    border: 2px solid #E2DDD7;
+    color: #E2DDD7;
+    border-radius: 5px;
+    padding: 0.3em;
     margin: 0 auto;
+    letter-spacing: 3px;
+    transition: letter-spacing 0.2s ease-in;
 }
 .form button:hover {
     cursor: pointer;
+    letter-spacing: 0px;
 }
 .form button:active {
-    background-color: #14162f;
-    color: #E2DDD7;
+    background-color: #E2DDD7;
+    color: #14162f;
+    scale: 0.9;
 }
 
 .form input {

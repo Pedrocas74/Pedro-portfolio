@@ -89,9 +89,9 @@ export default function About() {
           className={styles.avatar}
           src={avatarImg}
           alt="Pedro Avatar"
-          initial={{ x: -300, y: 300, opacity: 0, zoom: 2}}
-          animate={{ x: 0, y: 0, opacity: 1, zoom: 1}}
-          transition={{ ease: "easeIn", duration: 6, delay: 1}}
+          initial={{ scaleX: 60, scaleY: 40, y: 0, opacity: 0, }}
+          animate={{ scaleX: 1, scaleY: 1, y: 0, opacity: 1, }}
+          transition={{ ease: "easeInOut", duration: 6, delay: 1}}
         />
 
          <motion.span 

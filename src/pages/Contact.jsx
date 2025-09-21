@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styles from '../styles/contact.module.css';
 import githubIcon from "../assets/github-mark-white.png";
 import linkedinIcon from "../assets/InBug-White.png";
@@ -11,13 +12,28 @@ export default function Contact() {
         <div className={styles.contactsContainer}>
             <div className={styles.contacts}>
                 <ContactForm />
-                <div className={styles.socials}>
+                <motion.div 
+                  className={styles.socials}
+                  initial={{ y: 100, opacity: 0}}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
                     <span>Socials</span>
                     <div className={styles.socialsIcons}>
-                        <a href=""><img src={githubIcon} alt="Github link" /></a>
-                        <a href=""><img src={linkedinIcon} alt="Linkedin link" /></a>
+                        <motion.a 
+                            href=""
+                            initial={{ scaleX: 0.5, opacity: 0 }}
+                            animate={{ scaleX: 1, opacity: 1 }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                        ><img src={githubIcon} alt="Github link" /></motion.a>
+                        <motion.a 
+                            href=""
+                            initial={{ scaleX: 0.5, opacity: 0 }}
+                            animate={{ scaleX: 1, opacity: 1 }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                        ><img src={linkedinIcon} alt="Linkedin link" /></motion.a>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
             

@@ -45,7 +45,7 @@
     background: linear-gradient(0deg, #14162f, #F9A801);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 1px 2px 1px #F9A801;
+    text-shadow: 2px 2px 1px #F9A801;
     transform: scale(1.1);
 }
 .menuList a:active {

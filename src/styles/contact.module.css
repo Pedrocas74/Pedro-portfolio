@@ -62,6 +62,12 @@
 .socialsIcons img {
     width: 3em;
 }
+.socialsIcons a:hover {
+    scale: 1.1;
+}
+.socialsIcons a:active {
+    scale: 0.9;
+}
 
 
 
