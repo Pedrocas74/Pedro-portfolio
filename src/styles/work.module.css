@@ -49,6 +49,7 @@
 }
 .projects img {
     width: 50%;
+    cursor: pointer;
 }
 .projectsText {
     width: 50%;
