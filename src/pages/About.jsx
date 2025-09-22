@@ -14,33 +14,38 @@ export default function About() {
             <motion.span
                 initial={{ x: 25, opacity: 0}}
                 animate={{ x: 0, opacity: 1}}
-                transition={{ delay: 1 }}
+                transition={{ delay: 0.5 }}
             >I'm enjoying the <strong>unique life</strong>.</motion.span>
             <motion.span
                 initial={{ x: 25, opacity: 0}}
                 animate={{ x: 0, opacity: 1}}
-                transition={{ delay: 1.5 }}
+                transition={{ delay: 1 }}
             >I'm enjoying the <strong>learning</strong>.</motion.span>
             <motion.span
                 initial={{ x: 25, opacity: 0}}
                 animate={{ x: 0, opacity: 1}}
-                transition={{ delay: 2 }}
+                transition={{ delay: 1.5 }}
             >The <strong>creativity</strong>, the <strong>exploration</strong>.</motion.span>
             <motion.span
                 initial={{ x: 25, opacity: 0}}
                 animate={{ x: 0, opacity: 1}}
-                transition={{ delay: 2.5 }}
+                transition={{ delay: 2 }}
             >I'm enjoying the <strong>freedom to discover</strong>.</motion.span>
             <motion.span
                 initial={{ x: 25, opacity: 0}}
                 animate={{ x: 0, opacity: 1}}
+                transition={{ delay: 2.5 }}
+            >I'm enjoying the <strong>challenges</strong>. </motion.span>
+            <motion.span
+                initial={{ x: 25, opacity: 0}}
+                animate={{ x: 0, opacity: 1}}
                 transition={{ delay: 3 }}
-            >I'm enjoying the <strong>challenges</strong>, the <strong>searching for a solution</strong>. </motion.span>
+            >The <strong>search for a solution</strong>. </motion.span>
             <motion.span
                 initial={{ x: 25, opacity: 0}}
                 animate={{ x: 0, opacity: 1}}
                 transition={{ delay: 3.5 }}
-            >The <strong>butterflies when a problem is resolved</strong>.</motion.span>
+            >The <strong>feeling when a problem is resolved</strong>.</motion.span>
             <motion.span
                 initial={{ x: 25, opacity: 0}}
                 animate={{ x: 0, opacity: 1}}
@@ -50,11 +55,11 @@ export default function About() {
             <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1.7, delay: 4.5 }}
+                transition={{ duration: 1.7, delay: 5 }}
             ><strong>Turning ideas into reality</strong></motion.span><motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 3, delay: 5.5 }}
+                transition={{ duration: 3, delay: 6 }}
             > - <em>by someone who enjoys.</em></motion.span>
             
             <br />
@@ -89,9 +94,9 @@ export default function About() {
           className={styles.avatar}
           src={avatarImg}
           alt="Pedro Avatar"
-          initial={{ scaleX: 60, scaleY: 40, y: 0, opacity: 0, }}
-          animate={{ scaleX: 1, scaleY: 1, y: 0, opacity: 1, }}
-          transition={{ ease: "easeInOut", duration: 6, delay: 1}}
+          initial={{ scaleY: 0.1, y: 300, opacity: 0, }}
+          animate={{ scaleY: 1, y: 0, opacity: 1, }}
+          transition={{ ease: "easeInOut", duration: 4, delay: 5}}
         />
 
          <motion.span 

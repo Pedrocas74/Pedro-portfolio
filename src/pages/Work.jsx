@@ -1,7 +1,5 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import styles from '../styles/work.module.css';
-import { Link } from 'react-router-dom';
 import workImg from "../assets/AnjodaFlecha_upscaled.png"; 
 
 export default function Work() {
@@ -23,9 +21,9 @@ export default function Work() {
           <motion.section 
             key={index} 
             className={styles.projects}
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.6, ease: "easeIn" }}
             viewport={{ once: true, amount: 0.5 }}
         >
@@ -37,7 +35,6 @@ export default function Work() {
           </motion.section>
         ))}
 
-        {/* <Link to={}>let's talk</Link> */}
       </div>
     </section>
   );

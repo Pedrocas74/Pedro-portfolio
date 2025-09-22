@@ -13,7 +13,6 @@
 }
 
 .menuList {
-    /* border: 2px solid rgb(6, 41, 14); */
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -24,7 +23,6 @@
 }
 
 .menuList h2, .menuList a {
-    /* border: 1px solid red; */
     width: 100%;
     font-size: 2.8rem;
     text-align: center;
@@ -45,7 +43,7 @@
     background: linear-gradient(0deg, #14162f, #F9A801);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 1px #F9A801;
+    text-shadow: 2px 1px #F9A801;
     transform: scale(1.1);
 }
 .menuList a:active {
@@ -63,5 +61,7 @@
 
 /* Extra Large Screens */
 @media (width >= 1600px) {
-    
+    .menuList h2, .menuList a {
+        font-size: 3.7rem;
+    }
 }

@@ -1,9 +1,3 @@
-import { motion } from "framer-motion";
-import { style } from "framer-motion/client";
-
-
-
-
 export default function BoatSVG ({ className = "", style = {} }) {
 
     return (

@@ -11,12 +11,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* border: 1px solid rgb(72, 165, 44); */
     font-family: "Montserrat", sans-serif;
 }
 
 .introContainer {
-    /* border: 1px solid rgb(84, 46, 153); */
     display: flex;
     flex-direction: column;
     height: 65%;
@@ -26,16 +24,13 @@
 }
 
 .boatContainer {
-    /* border: 1px solid; */
     margin: 0 auto;
     overflow: visible;
 }
 
 .linksContainer {
-    /* border: 2px solid rgb(23, 126, 28); */
     width: 100%;
     height: 100%;
-    /* margin: 0 auto; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -43,7 +38,6 @@
 }
 
 .links {
-    /* border: 1px solid black; */
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -62,7 +56,6 @@
     text-align: center;
     border-radius: 10px;
     width: 8.5em;
-    /* height: auto; */
     letter-spacing: 3px;
     transition: 
         letter-spacing 0.3s ease,
@@ -75,11 +68,9 @@
 
 
 .titleHome {
-    /* border: 1px solid red; */
     height: 50%;
     position: relative;
     bottom: 40px;
-    /* border-top: 2px solid #14162f; */
 }
 
 .titleRole, .titleDev {
@@ -106,7 +97,6 @@
     margin: 0 auto;
     width: 200px;
     height: auto;
-    /* border: 1px solid; */
 }
 
 

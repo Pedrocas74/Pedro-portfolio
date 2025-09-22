@@ -14,7 +14,7 @@ export default function Home(  ) {
           className={styles.boatContainer}
           initial={{ scaleY: 0 }}
           animate={{ scaleY: 1}}
-          transition={{ type: "spring", damping: 15, stiffness: 150, delay: 1 }}
+          transition={{ type: "spring", damping: 15, stiffness: 150, delay: 2 }}
           style={{ originY: 1 }} // pivot from bottom
         >
                  
@@ -27,7 +27,7 @@ export default function Home(  ) {
             className={styles.titleHome}
             initial={{  y: 20,  opacity: 0 }}
             animate={{  y: 0,  opacity: 1 }}
-            transition={{ type: "tween", ease: "easeIn" }}
+            transition={{ type: "tween", ease: "easeIn", delay: 1.5 }}
           >
             <h2 className={styles.titleRole}>frontend</h2>
             <h2 className={styles.titleDev}>developer</h2>             
@@ -37,7 +37,7 @@ export default function Home(  ) {
             className={styles.links}
             initial={{  y: 70,  opacity: 0 }}
             animate={{  y: 0,  opacity: 1 }}
-            transition={{ type: "spring", ease: "easeIn" }}
+            transition={{ type: "spring", ease: "easeIn", delay: 1 }}
           >
             <Link to="/contact">let's talk</Link>
             <Link to="/work">my work</Link>

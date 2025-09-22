@@ -13,14 +13,13 @@ export default function WavesSVG() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: "100%", opacity: 0 }}  
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              // style={{ willChange: "transform" }}
             >
             
           
             <motion.path 
               d="M0 282L47.7 287.3C95.3 292.7 190.7 303.3 285.8 312.5C381 321.7 476 329.3 571.2 331.2C666.3 333 761.7 329 857 326.7C952.3 324.3 1047.7 323.7 1143 325.2C1238.3 326.7 1333.7 330.3 1428.8 329.8C1524 329.3 1619 324.7 1714.2 317.8C1809.3 311 1904.7 302 1952.3 297.5L2000 293L2000 501L1952.3 501C1904.7 501 1809.3 501 1714.2 501C1619 501 1524 501 1428.8 501C1333.7 501 1238.3 501 1143 501C1047.7 501 952.3 501 857 501C761.7 501 666.3 501 571.2 501C476 501 381 501 285.8 501C190.7 501 95.3 501 47.7 501L0 501Z" 
               fill="#2d428dff" 
-              animate={{ y: [0, 12, 0] }}  //[original position, movement, original position again]
+              animate={{ y: [0, 12, 0] }}  
               transition={{
                 repeat: Infinity,
                 duration: 3,

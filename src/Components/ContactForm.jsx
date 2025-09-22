@@ -46,9 +46,9 @@ export default function ContactForm() {    //Powered by Formspree
       </label>
       <label htmlFor='message' className={styles.messageBox}>
         Message:
-        <textarea name="message" id='message' required />
+        <textarea name="message" id='message' placeholder='Drag down↘' required />
       </label>
-      <button type="submit">send</button>
+      <button type="submit">send me a message</button>
       {status && <p>{status}</p>}
     </motion.form>
   );

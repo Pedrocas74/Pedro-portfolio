@@ -1,3 +1,4 @@
+//dependencies
 import { AnimatePresence, motion } from 'framer-motion';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useState } from 'react';
@@ -27,6 +28,21 @@ export default function App() {
   //only show the sea when the location is the homepage or the navigation menu
   const showWaves = location.pathname === '/' || menuOpen;   
 
+  //to make the boat move slower on larger screens
+  const getBoatDuration = () => {
+  if (window.innerWidth >= 1600) return 45; // Extra large screens
+  if (window.innerWidth >= 1280) return 37; // Desktop M/L
+  if (window.innerWidth >= 1024) return 33; // Desktop S
+  return 17; // Default for smaller screens
+};
+
+  const getBoatCurves = () => {
+    if (window.innerWidth >= 1600) return ["20%", "10%", "20%"] ; // Extra large screens
+    if (window.innerWidth >= 1280) return ["-32%", "0%", "-32%"]; // Desktop M/L
+    if (window.innerWidth >= 1024) return ["-17%", "0%", "-17%"]; // Desktop S
+    return ["10%", "0%", "10%"]; // Default for smaller screens
+  }
+
 
   return (
       <>
@@ -51,9 +67,9 @@ export default function App() {
         {menuOpen && (
           <motion.div
             className="boatLayer"        
-            animate={{ x: ["-27vw", "112vw"], y: ["15%", "0%", "15%"] }}
+            animate={{ x: ["-35vw", "112vw"], y: getBoatCurves() }}
             transition={{
-              duration: 17,
+              duration: getBoatDuration(),
               ease: "linear",
               repeat: Infinity,
               repeatType: "loop",
@@ -62,10 +78,7 @@ export default function App() {
 
     <BoatSVG style={{ width: "100px", borderBottom: "1px solid #14162F" }} />
   </motion.div>
-)}
-
-
-
+        )}
       </>
   );
 }

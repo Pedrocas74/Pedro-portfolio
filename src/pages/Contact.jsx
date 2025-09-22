@@ -21,7 +21,9 @@ export default function Contact() {
                     <span>Socials</span>
                     <div className={styles.socialsIcons}>
                         <motion.a 
-                            href=""
+                            href="https://github.com/Pedrocas74"
+                            rel="noopener"  //security protection
+                            target="_blank"  //new tab
                             initial={{ scaleX: 0.5, opacity: 0 }}
                             animate={{ scaleX: 1, opacity: 1 }}
                             transition={{ duration: 0.6, delay: 0.6 }}

@@ -1,5 +1,3 @@
-//button to open/close it
-
 import { motion } from "framer-motion";
 
 

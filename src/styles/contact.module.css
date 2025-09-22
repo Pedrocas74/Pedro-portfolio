@@ -2,14 +2,13 @@
     width: 100vw;
     height: 100vh;
     background-color: #E2DDD7;
-    /* overflow: hidden; */
 }
 
 .title {
     writing-mode: vertical-lr;
     position: absolute;
     font-family: "Platypi", sans-serif;
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: #14162f;
     margin-top: 0.2em;
 }
@@ -17,7 +16,6 @@
 .contactsContainer {
     display: flex;
     flex-direction: column;
-    /* border: 10px solid purple; */
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -27,7 +25,6 @@
 }
 
 .contacts {
-    /* border: 1px solid blue; */
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -53,7 +50,6 @@
 
 .socialsIcons {
     display: flex;
-    /* border: 1px solid red; */
     width: 100%;
     justify-content: space-evenly;
     align-items: flex-end;
@@ -109,7 +105,6 @@
         width: 60%;
     }
 }
-
 
 /* Desktop M/L */
 @media (1280px <= width <= 1599px) {
