@@ -1,10 +1,9 @@
-import { motion } from 'framer-motion';
-import styles from '../styles/work.module.css';
-import workImg from "../assets/AnjodaFlecha_upscaled.png"; 
+import { motion } from "framer-motion";
+import styles from "../styles/work.module.css";
+import workImg from "../assets/AnjodaFlecha_upscaled.png";
 
 export default function Work() {
-
-    const projects = [
+  const projects = [
     { name: "Name", type: "Type of project", img: workImg },
     { name: "Name", type: "Type of project", img: workImg },
     { name: "Name", type: "Type of project", img: workImg },
@@ -12,34 +11,30 @@ export default function Work() {
     { name: "Name", type: "Type of project", img: workImg },
   ];
 
-
   return (
     <section className={styles.workPage}>
       <h1 className={styles.title}>WORK</h1>
       <div className={styles.workContainer}>
         {projects.map((project, index) => (
-          <motion.section 
-            key={index} 
+          <motion.article
+            key={index}
             className={styles.projects}
             initial={{ opacity: 0 }}
-            whileInView={{opacity: 1 }}
+            whileInView={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.6, ease: "easeIn" }}
             viewport={{ once: true, amount: 0.5 }}
-        >
-            <img src={project.img} alt="Work Cover" />
-            <section className={styles.projectsText}>
-              <h2>{project.name}</h2>
-              <h3>{project.type}</h3>
-            </section>
-          </motion.section>
+          >
+            <figure>
+              <img src={project.img} alt={`Cover image for ${project.name}`} />
+              <figcaption className={styles.projectsText}>
+                <h2>{project.name}</h2>
+                <h3>{project.type}</h3>
+              </figcaption>
+            </figure>
+          </motion.article>
         ))}
-
       </div>
     </section>
   );
-
-
 }
-
-

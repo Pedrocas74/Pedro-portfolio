@@ -41,17 +41,21 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+    border: 2px dashed #14162f;
+    background-color: #14162f;
 }
 .projects img {
     width: 50%;
     cursor: pointer;
 }
+.projects figure {
+    display: flex;
+    align-items: center;
+}
 
 .projectsText {
     width: 50%;
-    background-color: #14162f;
     color: #E2DDD7;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
