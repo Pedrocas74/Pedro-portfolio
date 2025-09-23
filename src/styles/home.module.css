@@ -155,6 +155,11 @@
         font-size: 2rem;
     }
 
+    .links {
+        position: relative;
+        bottom: 64px;
+    }
+
     .titleRole, .titleDev {
         font-size: 6rem;  
     }

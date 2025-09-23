@@ -1,7 +1,8 @@
-.contactSection {
+.contactMain {
     width: 100vw;
     height: 100vh;
     background-color: #E2DDD7;
+    font-family: "Montserrat", sans-serif;
 }
 
 .title {
@@ -19,7 +20,6 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-family: "Montserrat", sans-serif;
     color: #14162f;
     font-size: 0.9rem;
 }
@@ -38,14 +38,15 @@
     color: #E2DDD7;
     text-align: center;
     border-radius: 5px;
-    border-bottom: 2px solid #0f1024;
+    border-bottom: 2.5px solid #0f1024;
     border-left: 1.5px solid #0f1024;
     border-top: 1px solid #0f1024;
     border-right: 1px solid #0f1024;
     padding-top: 1em;
 }
-.socials span {
+.socials h2 {
     font-size: 1rem;
+    color: #E2DDD7;
 }
 
 .socialsIcons {
@@ -83,47 +84,13 @@
     font-size: 1rem;
 } */
 
-/* Mobile L */
-@media (600px <= width <= 767px) {
-    
-}
 
-/* Tablet */
-@media (768px <= width <= 1023px) {
+@media (width >= 768px) {
+     .contacts {
+        width: 60%;
+    }
     .socials {
         width: 60%;
     }
 }
 
-/* Desktop S */
-@media (1024px <= width <= 1279px) {
-    .socials {
-        width: 60%;
-    }
-
-    .contacts {
-        width: 60%;
-    }
-}
-
-/* Desktop M/L */
-@media (1280px <= width <= 1599px) {
-    .socials {
-        width: 60%;
-    }
-
-    .contacts {
-        width: 60%;
-    }
-}
-
-/* Extra Large Screens */
-@media (width >= 1600px) {
-    .socials {
-        width: 60%;
-    }
-
-    .contacts {
-        width: 60%;
-    }
-}

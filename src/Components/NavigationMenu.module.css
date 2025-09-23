@@ -25,6 +25,7 @@
     position: relative;
     bottom: 50px;
     row-gap: 15px;
+    padding: 0;
 }
 
 .menuList a {
@@ -32,10 +33,6 @@
     color: #14162F;
 }
 
-.menuList li {
-    transition: all 0.2s ease;
-    
-}
 .menuList li:hover {
     background: linear-gradient(0deg, #14162f, #F9A801);
     background-clip: text;

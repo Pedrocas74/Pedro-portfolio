@@ -22,8 +22,8 @@ export default function Work() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.6, ease: "easeIn" }}
-            viewport={{ once: true, amount: 0.5 }}
+            transition={{ ease: "easeIn" }}
+            viewport={{ once: false, amount: 0.6 }}
           >
             <figure>
               <img src={project.img} alt={`Cover image for ${project.name}`} />

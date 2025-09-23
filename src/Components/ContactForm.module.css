@@ -5,7 +5,7 @@
     background-color: #14162f;
     color: #E2DDD7;
     border-radius: 5px;
-    border-bottom: 2px solid #0f1024;
+    border-bottom: 2.5px solid #0f1024;
     border-left: 1.5px solid #0f1024;
     border-top: 1px solid #0f1024;
     border-right: 1px solid #0f1024;
@@ -21,6 +21,7 @@
     border-radius: 5px;
     padding: 0.3em;
     margin: 0 auto;
+    margin-bottom: 10px;
     letter-spacing: 3px;
     transition: letter-spacing 0.2s ease-in;
 }
@@ -51,4 +52,10 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 0.7em; 
+}
+/* MEDIA QUERIE */
+@media (width >= 768px) {
+     .form {
+        width: 60%;
+    }
 }

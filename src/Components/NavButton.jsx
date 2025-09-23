@@ -1,14 +1,12 @@
 import { motion } from "framer-motion";
 
-
 export default function NavButton({ menuOpen, setMenuOpen }) {
   const lineProps = {
-    stroke: "#14162F", 
+    stroke: "#14162F",
     strokeWidth: 3.5,
     strokeLinecap: "round",
     transition: { duration: 0.3, ease: "easeInOut" },
     transformOrigin: "center",
-
   };
 
   return (
@@ -24,15 +22,9 @@ export default function NavButton({ menuOpen, setMenuOpen }) {
         top: "20px",
         right: "20px",
         zIndex: 1000,
-        
       }}
-      
     >
-      <motion.svg
-        width="30"
-        height="24"
-        viewBox="0 0 30 24"
-      >
+      <motion.svg width="30" height="24" viewBox="0 0 30 24">
         {/* Top line */}
         <motion.line
           x1="3"
@@ -66,5 +58,3 @@ export default function NavButton({ menuOpen, setMenuOpen }) {
     </button>
   );
 }
-
-
