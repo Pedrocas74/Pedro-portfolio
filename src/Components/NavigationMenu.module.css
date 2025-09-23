@@ -13,55 +13,56 @@
 }
 
 .menuList {
-    padding: 0;
+    font-size: 2.8rem;
+    font-family: "Platypi", sans-serif; 
+    font-weight: 900;
+    list-style-type: none;
+    height: auto;
     display: flex;
     flex-direction: column;
-    height: 350px;
     justify-content: space-between;
+    align-items: center;
     position: relative;
     bottom: 50px;
-}
-
-.menuList h2, .menuList a {
-    width: 100%;
-    font-size: 2.8rem;
-    text-align: center;
-    font-family: "Platypi", sans-serif;
-    color: #14162F;
-    font-weight: 900;
-    position: relative;
-    z-index: 2;
+    row-gap: 15px;
 }
 
 .menuList a {
     text-decoration: none;
-    transition: all 0.2s ease; 
-    display: inline-block;
-    width: max-content;
+    color: #14162F;
 }
-.menuList a:hover {
+
+.menuList li {
+    transition: all 0.2s ease;
+    
+}
+.menuList li:hover {
     background: linear-gradient(0deg, #14162f, #F9A801);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 1px #F9A801;
-    transform: scale(1.1);
+    text-shadow: 1px 1px #F9A801;
 }
-.menuList a:active {
-    transform: scale(0.8);
+
+.activeLink {
+    background: linear-gradient(180deg, #F9A801, #14162F);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px #F9A801;
+    pointer-events: none;
 }
 
 
 /* ------------ MEDIA QUERIES ---------------------*/
 /* Desktop M/L */
 @media (1280px <= width <= 1599px) {
-    .menuList h2, .menuList a {
-        font-size: 3.4rem;
+    .menuList {
+        font-size: 3.1rem;
     }
 }
 
 /* Extra Large Screens */
 @media (width >= 1600px) {
-    .menuList h2, .menuList a {
+    .menuList {
         font-size: 3.7rem;
     }
 }

@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import styles from '../styles/home.module.css';
 import { Link } from 'react-router-dom';
 import BoatSVG from '../Components/BoatSVG';
-import { style } from 'framer-motion/client';
 
 
 export default function Home() {

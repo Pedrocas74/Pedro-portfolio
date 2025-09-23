@@ -47,7 +47,7 @@ export default function App() {
   return (
       <>
         <NavButton  menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <NavigationMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <NavigationMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} location={location} />
              
 
         <Routes>

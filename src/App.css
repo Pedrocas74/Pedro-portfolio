@@ -5,10 +5,10 @@
     margin: 0;
 }
 
-html {
+/* On mobile, when you tap a link or button, Safari/Chrome often shows a gray or blue highlight overlay. */
+html {  
   -webkit-tap-highlight-color: transparent; /* removes gray flash */
 }
-
 
 /* BOAT in NavMenu */
 .boatLayer {
