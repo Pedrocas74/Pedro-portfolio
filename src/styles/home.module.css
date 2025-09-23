@@ -25,7 +25,6 @@
 
 .boatContainer {
     margin: 0 auto;
-    overflow: visible;
 }
 
 .linksContainer {
@@ -67,10 +66,11 @@
 }
 
 
-.titleHome {
+.titleContainer {
     height: 50%;
     position: relative;
-    bottom: 40px;
+    bottom: 50px;
+    text-align: center;
 }
 
 .titleRole, .titleDev {
@@ -82,7 +82,7 @@
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 1px #F9A801;
     position: relative;
-    
+    /* border: 1px solid red; */
 }
 
 .titleDev {
@@ -94,12 +94,9 @@
 
 .logo {
     border-bottom: 2px solid #14162f;
-    margin: 0 auto;
     width: 200px;
     height: auto;
 }
-
-
 
 /* -------------MEDIA QUERIES----------- */
 

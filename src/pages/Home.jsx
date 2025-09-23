@@ -2,15 +2,16 @@ import { motion } from 'framer-motion';
 import styles from '../styles/home.module.css';
 import { Link } from 'react-router-dom';
 import BoatSVG from '../Components/BoatSVG';
+import { style } from 'framer-motion/client';
 
 
-export default function Home(  ) {
+export default function Home() {
 
     return (
-  <div className={styles.homePage}> 
-    <div className={styles.home}>   
+  <main className={styles.homePage}> 
+    <section className={styles.home}>   
       <div className={styles.introContainer}> 
-        <motion.div 
+        <motion.figure 
           className={styles.boatContainer}
           initial={{ scaleY: 0 }}
           animate={{ scaleY: 1}}
@@ -19,21 +20,24 @@ export default function Home(  ) {
         >
                  
             <BoatSVG className={styles.logo} />  
-        </motion.div>
+        </motion.figure>
             
         <div className={styles.linksContainer}>
           
-          <motion.section 
-            className={styles.titleHome}
+          <motion.header 
+            className={styles.titleContainer}
             initial={{  y: 20,  opacity: 0 }}
             animate={{  y: 0,  opacity: 1 }}
             transition={{ type: "tween", ease: "easeIn", delay: 1.5 }}
           >
-            <h2 className={styles.titleRole}>frontend</h2>
-            <h2 className={styles.titleDev}>developer</h2>             
-          </motion.section>
+            <h1>
+              <span className={styles.titleRole}>frontend</span><br />
+              <span className={styles.titleDev}>developer</span>
+            </h1>  
+          </motion.header>
 
-          <motion.div 
+          <motion.nav 
+            aria-label="Home page quick links"
             className={styles.links}
             initial={{  y: 70,  opacity: 0 }}
             animate={{  y: 0,  opacity: 1 }}
@@ -41,11 +45,11 @@ export default function Home(  ) {
           >
             <Link to="/contact">let's talk</Link>
             <Link to="/work">my work</Link>
-          </motion.div>
+          </motion.nav>
         </div>
       </div>     
-    </div>
-  </div>
+    </section>
+  </main>
     );
 }
 

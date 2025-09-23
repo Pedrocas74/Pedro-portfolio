@@ -96,7 +96,7 @@ export default function About() {
           alt="Pedro Avatar"
           initial={{ scaleY: 0.1, y: 300, opacity: 0, }}
           animate={{ scaleY: 1, y: 0, opacity: 1, }}
-          transition={{ ease: "easeInOut", duration: 4, delay: 5}}
+          transition={{ ease: "easeInOut", duration: 4, delay: 6}}
         />
 
          <motion.span 

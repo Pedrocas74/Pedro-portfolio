@@ -31,8 +31,8 @@ export default function App() {
   //to make the boat move slower on larger screens
   const getBoatDuration = () => {
   if (window.innerWidth >= 1600) return 45; // Extra large screens
-  if (window.innerWidth >= 1280) return 37; // Desktop M/L
-  if (window.innerWidth >= 1024) return 33; // Desktop S
+  if (window.innerWidth >= 1280) return 35; // Desktop M/L
+  if (window.innerWidth >= 1024) return 30; // Desktop S
   return 17; // Default for smaller screens
 };
 
@@ -60,14 +60,13 @@ export default function App() {
       
         {/* Presence handles enter/exit only when showSea flips true/false */}
       <AnimatePresence mode="wait" >
-        {showWaves && <WavesSVG  key="sea"/>} 
-        {/* key is constant while in sea context → no remount when toggling Home/Menu */}
+        {showWaves && <WavesSVG />} 
       </AnimatePresence>
       
         {menuOpen && (
           <motion.div
             className="boatLayer"        
-            animate={{ x: ["-35vw", "112vw"], y: getBoatCurves() }}
+            animate={{ x: ["-30vw", "112vw"], y: getBoatCurves() }}
             transition={{
               duration: getBoatDuration(),
               ease: "linear",
