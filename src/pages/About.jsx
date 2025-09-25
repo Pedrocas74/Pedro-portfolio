@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "../styles/about.module.css";
 import avatarImg from "../assets/Avatar_noBackground_blue_upscaled.webp";
+import resumePDF from '../assets/CV_Pedro_Magalhaes_EN.pdf';
 
 export default function About() {
   return (
@@ -146,7 +147,7 @@ export default function About() {
           transition={{ duration: 1, delay: 3.5 }}
         >
           <a
-            href="/CV_Pedro_Magalhaes_EN.pdf"
+            href={resumePDF}
             download="Pedro_Magalhaes_resume.pdf"
             aria-label="View Pedro’s Resume"
           >
