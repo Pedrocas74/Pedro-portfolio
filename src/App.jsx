@@ -2,16 +2,13 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useState } from "react";
-
 //style
 import "./App.css";
-
 //components
 import NavButton from "./Components/NavButton.jsx";
 import NavigationMenu from "./Components/NavigationMenu.jsx";
 import WavesSVG from "./Components/WavesSVG.jsx";
 import BoatSVG from "./Components/BoatSVG.jsx";
-
 //pages
 import Home from "./pages/Home.jsx";
 import Work from "./pages/Work.jsx";
@@ -32,14 +29,14 @@ export default function App() {
     if (window.innerWidth >= 1024) return 22; // desktop S
     return 17; // default for smaller screens
   };
-
+  //to make the boat move up and down
   const getBoatCurves = () => {
     if (window.innerWidth >= 1600) return ["10%", "0%", "10%"];
     if (window.innerWidth >= 1280) return ["-30%", "0%", "-30%"];
     if (window.innerWidth >= 1024) return ["-17%", "0%", "-17%"];
     return ["8%", "0%", "8%"];
   };
-
+  //to make the boat enter quickly on screen according to viewport width
   const getBoatEntrance = () => {
     if (window.innerWidth >= 1600) return ["-7vw", "107vw"];
     if (window.innerWidth >= 1280) return ["-9vw", "109vw"];
@@ -50,11 +47,7 @@ export default function App() {
   return (
     <>
       <NavButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <NavigationMenu
-        menuOpen={menuOpen}
-        setMenuOpen={setMenuOpen}
-        location={location}
-      />
+      <NavigationMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
       <Routes>
         <Route

@@ -15,9 +15,9 @@
 
 .form button {
     width: fit-content;
-    background-color: #14162f;
+    background-color: #E2DDD7;
     border: 2px solid #E2DDD7;
-    color: #E2DDD7;
+    color: #14162f;
     border-radius: 5px;
     padding: 0.3em;
     margin: 0 auto;
@@ -30,8 +30,8 @@
     letter-spacing: 0px;
 }
 .form button:active {
-    background-color: #E2DDD7;
-    color: #14162f;
+    background-color: #14162f;
+    color: #E2DDD7;
     scale: 0.9;
 }
 

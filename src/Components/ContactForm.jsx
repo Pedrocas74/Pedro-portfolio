@@ -3,7 +3,6 @@ import styles from "./ContactForm.module.css";
 import { useState } from "react";
 
 export default function ContactForm() {
-  //Powered by Formspree
   const [status, setStatus] = useState("");
 
   const handleSubmit = async (e) => {

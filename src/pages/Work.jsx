@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styles from "../styles/work.module.css";
-import workImg from "../assets/AnjodaFlecha_upscaled.png";
+import workImg from "../assets/AnjodaFlecha_upscaled.webp";
 
 export default function Work() {
   const projects = [

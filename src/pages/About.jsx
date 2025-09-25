@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styles from "../styles/about.module.css";
-import avatarImg from "../assets/Avatar_noBackground_blue_upscaled.png";
+import avatarImg from "../assets/Avatar_noBackground_blue_upscaled.webp";
 
 export default function About() {
   return (
@@ -130,6 +130,7 @@ export default function About() {
         </section>
 
         <motion.img
+          loading="lazy"
           className={styles.avatar}
           src={avatarImg}
           alt="Avatar of Pedro"
@@ -144,7 +145,11 @@ export default function About() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 3.5 }}
         >
-          <a href="" aria-label="View Pedro’s Resume">
+          <a
+            href="../public/CV Pedro Magalhães (EN).pdf"
+            download="Pedro_Magalhaes_resume.pdf"
+            aria-label="View Pedro’s Resume"
+          >
             see resume
           </a>
         </motion.span>

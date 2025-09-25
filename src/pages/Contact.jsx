@@ -22,27 +22,21 @@ export default function Contact() {
           >
             <h2 id="socials-title">Socials</h2>
             <div className={styles.socialsIcons}>
-              <motion.a
+              <a
                 href="https://github.com/Pedrocas74"
                 rel="noopener noreferrer"
                 target="_blank"
-                initial={{ scaleX: 0.5, opacity: 0 }}
-                animate={{ scaleX: 1, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
               >
                 <img src={githubIcon} alt="" role="presentation" />
-              </motion.a>
-              <motion.a
-                href="https://linkedin.com/in/yourusername"
+              </a>
+              <a
+                href="https://www.linkedin.com/in/pedro-magalh%C3%A3es-1a3651334/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit Pedro’s LinkedIn profile"
-                initial={{ scaleX: 0.5, opacity: 0 }}
-                animate={{ scaleX: 1, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
               >
                 <img src={linkedinIcon} alt="" role="presentation" />
-              </motion.a>
+              </a>
             </div>
           </motion.section>
         </div>

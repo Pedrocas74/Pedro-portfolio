@@ -34,20 +34,21 @@
 }
 
 .projects {
-    height: 12.5rem;
+    height: 12.5em;
     border-radius: 10px;
     margin-top: 5em;
     margin-bottom: 20em;
     overflow: hidden;
     display: flex;
     align-items: center;
-    border: 2px dashed #14162f;
+    border: 2px solid #14162f;
     background-color: #14162f;
 }
 .projects img {
     width: 50%;
     cursor: pointer;
 }
+
 .projects figure {
     display: flex;
     align-items: center;
