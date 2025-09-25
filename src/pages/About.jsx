@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "../styles/about.module.css";
-import avatarImg from "../assets/Avatar_noBackground_blue_upscaled.webp";
-import resumePDF from "../assets/CV_Pedro_Magalhaes_EN.pdf";
+import avatarImg from "/assets/Avatar_noBackground_blue_upscaled.webp";
+import resumePDF from '/assets/CV_Pedro_Magalhaes_EN.pdf';
 
 export default function About() {
   return (

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "../styles/contact.module.css";
-import githubIcon from "../assets/github-mark-white.png";
-import linkedinIcon from "../assets/InBug-White.png";
+import githubIcon from "/assets/github-mark-white.png";
+import linkedinIcon from "/assets/InBug-White.png";
 import ContactForm from "../Components/ContactForm";
 
 export default function Contact() {

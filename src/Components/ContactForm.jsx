@@ -61,7 +61,7 @@ export default function ContactForm() {
         Message:
         <textarea name="message" id="message" placeholder="" required />
       </label>
-      <button type="submit">send me a message</button>
+      <button type="submit">Send me a message</button>
       {status && (
         <p
           role="status"

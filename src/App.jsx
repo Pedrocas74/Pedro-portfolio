@@ -1,9 +1,9 @@
+//style
+import "./App.css";
 //dependencies
 import { AnimatePresence, motion } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useState } from "react";
-//style
-import "./App.css";
 //components
 import NavButton from "./Components/NavButton.jsx";
 import NavigationMenu from "./Components/NavigationMenu.jsx";
