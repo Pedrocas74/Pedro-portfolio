@@ -146,7 +146,7 @@ export default function About() {
           transition={{ duration: 1, delay: 3.5 }}
         >
           <a
-            href="../public/CV Pedro Magalhães (EN).pdf"
+            href="/CV_Pedro_Magalhaes_EN.pdf"
             download="Pedro_Magalhaes_resume.pdf"
             aria-label="View Pedro’s Resume"
           >
