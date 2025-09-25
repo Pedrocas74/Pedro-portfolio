@@ -31,10 +31,10 @@ export default function App() {
   };
   //to make the boat move up and down
   const getBoatCurves = () => {
-    if (window.innerWidth >= 1600) return ["10%", "0%", "10%"];
+    if (window.innerWidth >= 1600) return ["17%", "7%", "17%"];
     if (window.innerWidth >= 1280) return ["-30%", "0%", "-30%"];
     if (window.innerWidth >= 1024) return ["-17%", "0%", "-17%"];
-    return ["8%", "0%", "8%"];
+    return ["9%", "0%", "9%"];
   };
   //to make the boat enter quickly on screen according to viewport width
   const getBoatEntrance = () => {

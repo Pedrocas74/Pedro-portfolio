@@ -13,7 +13,7 @@
 }
 
 .menuList {
-    font-size: 2.8rem;
+    font-size: clamp(2.8rem, 4vw, 6rem);
     font-family: "Platypi", sans-serif; 
     font-weight: 900;
     list-style-type: none;
@@ -27,7 +27,6 @@
     row-gap: 15px;
     padding: 0;
 }
-
 .menuList a {
     text-decoration: none;
     color: #14162F;
@@ -46,20 +45,4 @@
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px #F9A801;
     pointer-events: none;
-}
-
-
-/* ------------ MEDIA QUERIES ---------------------*/
-/* Desktop M/L */
-@media (1280px <= width <= 1599px) {
-    .menuList {
-        font-size: 3.1rem;
-    }
-}
-
-/* Extra Large Screens */
-@media (width >= 1600px) {
-    .menuList {
-        font-size: 3.7rem;
-    }
 }
