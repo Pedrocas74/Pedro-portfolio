@@ -9,7 +9,7 @@
     writing-mode: vertical-lr;
     position: absolute;
     font-family: "Platypi", sans-serif;
-    font-size: 2rem;
+    font-size: clamp(2rem, 3vw, 3.5rem);
     color: #14162f;
     margin-top: 0.2em;
 }
@@ -51,6 +51,7 @@
 .resume a {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
+    font-size: clamp(0.9rem, 1.5vw, 1.3rem);
     color: #E2DDD7;
     text-decoration: none;
     border-bottom: 3px solid #0f1024;
@@ -64,7 +65,7 @@
     padding: 0.3em;
     text-align: center;
     border-radius: 10px;
-    width: 8.5em;
+    width: 9em;
     letter-spacing: 3px;
     transition: 
         letter-spacing 0.3s ease,
@@ -134,11 +135,7 @@
         width: 82%;
         margin-top: 8em;
     }
-    .resume a {
-        font-size: 1rem;
-    }
 }
-
 
 /* Desktop M/L */
 @media (1280px <= width <= 1599px) {
@@ -151,9 +148,6 @@
         font-size: 1.4rem;
         width: 60%;
         margin-top: 6em;
-    }
-    .resume a {
-        font-size: 1.1rem;
     }
 }
 
@@ -169,7 +163,5 @@
         width: 60%;
         margin-top: 8em;
     }
-    .resume a {
-        font-size: 1.3rem;
-    }
+
 }

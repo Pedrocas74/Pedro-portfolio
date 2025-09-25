@@ -9,7 +9,7 @@
     writing-mode: vertical-lr;
     position: absolute;
     font-family: "Platypi", sans-serif;
-    font-size: 2rem;
+    font-size: clamp(2rem, 3vw, 3.5rem);
     color: #14162f;
     margin-top: 0.2em;
 }
@@ -65,8 +65,6 @@
 .socialsIcons a:active {
     scale: 0.9;
 }
-
-
 
 /* -------------MEDIA QUERIES----------- */
 
