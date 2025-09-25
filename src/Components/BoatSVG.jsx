@@ -1,6 +1,7 @@
-export default function BoatSVG({ style = {} }) {
+export default function BoatSVG({ className = "", style = {} }) {
   return (
     <svg
+      className={className}
       style={style}
       viewBox="0 0 11 7"
       xmlns="http://www.w3.org/2000/svg"
