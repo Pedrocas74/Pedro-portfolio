@@ -10,6 +10,10 @@ html {
   -webkit-tap-highlight-color: transparent; /* removes gray flash */
 }
 
+body {
+    background-color: #E2DDD7;
+}
+
 /* BOAT in NavMenu */
 .boatLayer {
   position: fixed;

@@ -1,6 +1,6 @@
 .contactMain {
     width: 100vw;
-    height: 100vh;
+    min-height: 100dvh; 
     background-color: #E2DDD7;
     font-family: "Montserrat", sans-serif;
 }

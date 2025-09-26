@@ -9,6 +9,7 @@
 
 .workPage {
     background-color: #E2DDD7;
+    min-height: 100dvh; 
 }
 
 .workContainer {
