@@ -1,29 +1,86 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/work.module.css";
-import workPlaceholderImg from "/assets/AnjodaFlecha_upscaled.webp";
+
+//images
+import workPlaceholderImg from "/assets/AnjodaFlecha_upscaled.webp"; //placeholder
+//Moo-MovieFinder
+import mooLogo_day from "/assets/work-images/Moo-MovieFinder/Logo_day_upscaled.webp";
+import mooLogo_night from "/assets/work-images/Moo-MovieFinder/Logo_night_upscaled.webp";
+
+
 
 export default function Work() {
   const [openIndex, setOpenIndex] = useState(null);
-  const [isOpen, setIsOpen] = useState(false); //to make the pictures rotate (NEXT)
+  const [activeImageIndexes, setActiveImageIndexes] = useState([]);
 
   const projects = [
     {
       name: "Moo",
       type: "Movie Finder",
-      img: workPlaceholderImg,
-      description: "A responsive web app that allows users to search for movies, view details, and manage a list of favorites.",
+      imgs: [mooLogo_day, mooLogo_night],
+      description:
+        "A responsive web app that allows users to search for movies, view details, and manage a list of favorites.",
       tech: ["React", "Vite", "CSS Modules", "Framer Motion", "TMDB API"],
+      link: "https://moo-finder.vercel.app/",
     },
-    { name: "Name", type: "Type of project", img: workPlaceholderImg },
-    { name: "Name", type: "Type of project", img: workPlaceholderImg },
-    { name: "Name", type: "Type of project", img: workPlaceholderImg },
-    { name: "Name", type: "Type of project", img: workPlaceholderImg },
+    {
+      name: "Name",
+      type: "Type of project",
+      imgs: [workPlaceholderImg],
+      description: "",
+      tech: [],
+      link: "",
+    },
+    {
+      name: "Coming Soon",
+      type: "",
+      imgs: [workPlaceholderImg],
+      description: "",
+      tech: [],
+      link: "",
+    },
+    {
+      name: "Coming Soon",
+      type: "",
+      imgs: [workPlaceholderImg],
+      description: "",
+      tech: [],
+      link: "",
+    },
+    {
+      name: "Coming Soon",
+      type: "",
+      imgs: [workPlaceholderImg],
+      description: "",
+      tech: [],
+      link: "",
+    },
   ];
+
+  // initialize image indexes once
+  useEffect(() => {
+    setActiveImageIndexes(new Array(projects.length).fill(0));
+  }, []);
 
   const toggleCard = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  useEffect(() => {
+    if (openIndex === null) return;
+
+    const interval = setInterval(() => {
+      setActiveImageIndexes((prev) => {
+        const updated = [...prev];
+        const total = projects[openIndex].imgs.length;
+        updated[openIndex] = (prev[openIndex] + 1) % total;
+        return updated;
+      });
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, [openIndex]);
 
   return (
     <section className={styles.workPage}>
@@ -43,16 +100,24 @@ export default function Work() {
               <figure
                 onClick={() => {
                   toggleCard(index);
-                  setIsOpen(true); //only open one card at a time
                 }}
               >
-                <img
-                  src={project.img}
+                <motion.img
+                  key={activeImageIndexes[index]} // only this card re-renders
+                  src={
+                    index === openIndex
+                      ? project.imgs[activeImageIndexes[index]]
+                      : project.imgs[0]
+                  }
                   alt={`Cover image for ${project.name}`}
+                  initial={{ opacity: 0.5 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
                 />
                 <figcaption className={styles.projectsText}>
                   <h2>{project.name}</h2>
                   <h3>{project.type}</h3>
+                  <span>{openIndex === index ? "-" : "+"}</span>
                 </figcaption>
               </figure>
             </motion.article>
@@ -74,8 +139,6 @@ export default function Work() {
                     y: "-100%",
                     opacity: 0.9,
                   }}
-                  // whileInView={{ opacity: 1 }}
-                  // viewport={{ once: false, amount: 0.1 }}
                 >
                   <section className={styles.tech}>
                     <h4>Tech Stack</h4>
@@ -88,7 +151,16 @@ export default function Work() {
                   <section className={styles.description}>
                     <h4>Description</h4>
                     <p>{project.description}</p>
-                    <button>see</button>
+                    <button type="button">
+                      <a
+                        style={{ textDecoration: "none", color: "#14162f" }}
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        see
+                      </a>
+                    </button>
                   </section>
                 </motion.div>
               )}

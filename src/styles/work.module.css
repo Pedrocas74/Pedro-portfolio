@@ -40,6 +40,7 @@
     margin-top: 5em;
     padding-bottom: 12em;
     position: relative;
+    margin-bottom: 12em;
 }
 
 .projects {
@@ -55,11 +56,14 @@
         cursor: pointer;
 }
 .projects img {
+    border-radius: 3px;
     width: 50%;
+    /* border: 1px solid rgb(195, 0, 255); */
 }
 .projects figure {
     display: flex;
     align-items: center;
+    /* border: 1px solid red; */
 }
 
 .projectsText {
@@ -72,6 +76,11 @@
     font-family: "Montserrat", sans-serif;
     font-size: clamp(0.7rem, 1.5vw, 1.2rem);
     line-height: 2;
+}
+.projectsText span {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
 }
 
 .extraCard {
@@ -132,7 +141,7 @@
 }
 
 .description h4, .tech h4 {
-    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-size: clamp(0.8rem, 1.5vw, 1.1rem);
     text-align: center;
     margin-top: 0.2em;
 }
@@ -143,17 +152,20 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    align-items: center;
+}
+.tech h4 {
+    flex-grow: 1;
 }
 .tech ul {
-    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+    font-size: clamp(0.7rem, 1.5vw, 1rem);
     padding: 0.5em;
     list-style-type: none;
     text-align: center;
-    flex-grow: 1;
+    flex-grow: 2;
 }
 .tech li {
-    border-bottom: 3px double #E2DDD7;
+    border-bottom: 3px ridge #E2DDD7;
     padding: 0.2em;
     width: fit-content;
     margin: 0 auto;
