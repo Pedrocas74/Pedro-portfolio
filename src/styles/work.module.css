@@ -13,6 +13,7 @@
 }
 
 .workContainer {
+    /* border: 1px solid red; */
     height: 100vh;
     width: 75%;
     margin: 0 auto;
@@ -34,22 +35,28 @@
     background: #E2DDD7; /* Scrollbar track */
 }
 
-.projects {
-    height: 12.5em;
-    border-radius: 10px;
+.projectContainer {
+    /* border: 2px solid rgb(128, 0, 85); */
     margin-top: 5em;
-    margin-bottom: 20em;
+    padding-bottom: 12em;
+    position: relative;
+}
+
+.projects {
+    position: relative;
+    z-index: 1;
+    height: 12em;
+    border-radius: 10px;
     overflow: hidden;
     display: flex;
     align-items: center;
     border: 2px solid #14162f;
     background-color: #14162f;
+        cursor: pointer;
 }
 .projects img {
     width: 50%;
-    cursor: pointer;
 }
-
 .projects figure {
     display: flex;
     align-items: center;
@@ -67,5 +74,87 @@
     line-height: 2;
 }
 
+.extraCard {
+    height: 12em;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 5px solid #E2DDD7;
+    background-color: #14162f;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    color: #E2DDD7;
+    font-family: "Montserrat", sans-serif;
+}
 
+.description {
+    width: 50%;
+    height: 100%;
+    border-left: 0.5px dashed #E2DDD7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.description p {
+    font-size: clamp(0.7rem, 1.5vw, 1rem);
+    padding: 0 3vw;
+    text-align: center;
+}
+.description button {
+    width: 80px;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-bottom: 0.2em;
+    font-family: "Montserrat", sans-serif;
+    border-bottom: 3px solid #0f1024;
+    border-left: 2px solid #0f1024;
+    border-right: 0.5px solid #0f1024;
+    border-top: 0.5px solid #0f1024;
+    padding: 0.3em 0;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    transition: 
+        letter-spacing 0.3s ease,
+        transform 0.3s cubic-bezier(0.4,0,0.2,1);   
+}
+.description button:hover {
+     letter-spacing: 0px;
+    transform: scale(1.07);
+}
+.description button:active {
+    transform: scale(0.9);
+}
 
+.description h4, .tech h4 {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    text-align: center;
+    margin-top: 0.2em;
+}
+
+.tech {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.tech ul {
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+    padding: 0.5em;
+    list-style-type: none;
+    text-align: center;
+    flex-grow: 1;
+}
+.tech li {
+    border-bottom: 3px double #E2DDD7;
+    padding: 0.2em;
+    width: fit-content;
+    margin: 0 auto;
+}
