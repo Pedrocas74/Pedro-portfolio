@@ -7,7 +7,9 @@ import workPlaceholderImg from "/assets/AnjodaFlecha_upscaled.webp"; //placehold
 //Moo-MovieFinder
 import mooLogo_day from "/assets/work-images/Moo-MovieFinder/Logo_day_upscaled.webp";
 import mooLogo_night from "/assets/work-images/Moo-MovieFinder/Logo_night_upscaled.webp";
-
+//portfolio
+import logoPedro from "/assets/work-images/Portfolio/Logo_portfolio.webp";
+import portfolio_frontpage from "/assets/work-images/Portfolio/portfolio_frontpage.webp"
 
 
 export default function Work() {
@@ -21,19 +23,27 @@ export default function Work() {
       imgs: [mooLogo_day, mooLogo_night],
       description:
         "A responsive web app that allows users to search for movies, view details, and manage a list of favorites.",
-      tech: ["React", "Vite", "CSS Modules", "Framer Motion", "TMDB API"],
+      tech: ["React", "Vite", "CSS Modules", "Framer Motion", "TMDB API", "Figma (Logo design)"],
       link: "https://moo-finder.vercel.app/",
     },
     {
-      name: "Name",
-      type: "Type of project",
+      name: "Pedro",
+      type: "Personal Portfolio",
+      imgs: [logoPedro, portfolio_frontpage],
+      description: "A portfolio website designed and built to present my journey as a frontend developer. It showcases my personal projects and includes my resume, social links, and a contact form, all wrapped in a clean, modern interface with responsive design.",
+      tech: ["React", "React Router", "Vite", "CSS Modules", "Framer Motion", "Figma (logo design)"],
+      link: "https://pedromagalhaes.vercel.app/",
+    },
+    {
+      name: "Untitled",
+      type: "Coming Soon",
       imgs: [workPlaceholderImg],
       description: "",
       tech: [],
       link: "",
     },
     {
-      name: "Coming Soon",
+      name: "Untitled",
       type: "",
       imgs: [workPlaceholderImg],
       description: "",
@@ -41,15 +51,7 @@ export default function Work() {
       link: "",
     },
     {
-      name: "Coming Soon",
-      type: "",
-      imgs: [workPlaceholderImg],
-      description: "",
-      tech: [],
-      link: "",
-    },
-    {
-      name: "Coming Soon",
+      name: "Untitled",
       type: "",
       imgs: [workPlaceholderImg],
       description: "",
@@ -110,9 +112,9 @@ export default function Work() {
                       : project.imgs[0]
                   }
                   alt={`Cover image for ${project.name}`}
-                  initial={{ opacity: 0.5 }}
+                  initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 1.5 }}
                 />
                 <figcaption className={styles.projectsText}>
                   <h2>{project.name}</h2>
