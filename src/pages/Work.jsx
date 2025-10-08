@@ -30,7 +30,7 @@ export default function Work() {
       name: "Pedro",
       type: "Personal Portfolio",
       imgs: [logoPedro, portfolio_frontpage],
-      description: "A portfolio website designed and built to present my journey as a frontend developer. It showcases my personal projects and includes my resume, social links, and a contact form, all wrapped in a clean, modern interface with responsive design.",
+      description: "A responsive portfolio with clean branding, built to showcase my journey as a frontend developer.",
       tech: ["React", "React Router", "Vite", "CSS Modules", "Framer Motion", "Figma (logo design)"],
       link: "https://pedromagalhaes.vercel.app/",
     },

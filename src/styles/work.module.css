@@ -2,7 +2,7 @@
     writing-mode: vertical-lr;
     position: absolute;
     font-family: "Platypi", sans-serif;
-    font-size: clamp(2rem, 3vw, 3.5rem);
+    font-size: clamp(1.5rem, 3vw, 3.5rem);
     color: #14162f;
     margin-top: 0.2em;
 }
@@ -74,8 +74,15 @@
     justify-content: center;
     align-items: center;
     font-family: "Montserrat", sans-serif;
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
-    line-height: 2;
+    text-align: center;
+}
+.projectsText h2 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+.projectsText h3 {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    margin-top: 0.5em;
+    font-weight: 200;
 }
 .projectsText span {
     position: absolute;
@@ -113,9 +120,10 @@
     align-items: center;
 }
 .description p {
-    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
-    padding: 0 3vw;
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    padding: 0 0.3em;
     text-align: center;
+    overflow-y: auto;
 }
 .description button {
     width: 80px;
@@ -155,6 +163,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 .tech h4 {
     flex-grow: 1;
@@ -164,10 +173,9 @@
     padding: 0.5em;
     list-style-type: none;
     text-align: center;
-    flex-grow: 2;
+    flex-grow: 2; 
 }
 .tech li {
-    border-bottom: 3px ridge #E2DDD7;
     padding: 0.2em;
     width: fit-content;
     margin: 0 auto;

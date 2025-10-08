@@ -9,28 +9,32 @@
     writing-mode: vertical-lr;
     position: absolute;
     font-family: "Platypi", sans-serif;
-    font-size: clamp(2rem, 3vw, 3.5rem);
+    font-size: clamp(1.5rem, 3vw, 3.5rem);
     color: #14162f;
     margin-top: 0.2em;
 }
 
 .avatar {
-    max-width: 300px;
+    /* width: 25vw; */
+    width: 60%;
     height: auto;
     position: fixed;
-    left: -67px;
-    bottom: -45px;
+    left: -15vw;
+    bottom: -5vh;
+    /* border: 1px solid blue; */
 }
 
 .text {
     display: flex;
     flex-direction: column;
-    width: 89%;
+    width: 85%;
+    height: auto;
+    /* border: 1px solid red; */
     text-align: right;
     position: relative;
-    right: 20px;
-    margin-top: 11em;
-    font-size: 1rem;
+    right: 5vw;
+    margin-top: 20vh;
+     font-size: clamp(0.9rem, 1.7vw, 1.7rem);
     font-family: "Montserrat", sans-serif;
     color: #14162f;
     z-index: 10;
@@ -51,7 +55,7 @@
 .resume a {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
-    font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
     color: #E2DDD7;
     text-decoration: none;
     border-bottom: 3px solid #0f1024;
@@ -61,7 +65,7 @@
     background-color: #14162f;
     position: absolute;
     bottom: 1.5em;
-    right: 20px;
+    right: 5vw;
     padding: 0.3em;
     text-align: center;
     border-radius: 10px;
@@ -81,87 +85,37 @@
 
 /* -------------MEDIA QUERIES---------- */
 
-/* DEFAULT */
-
-/*AVATAR
-    width: 65%;
-    height: auto;
-    position: fixed;
-    left: -75px;
-    bottom: -50px; */
-
-/* TEXT
-    width: 89%;
-    margin-top: 11em;
-    font-size: 0.9rem; */
-
-/* Mobile L */
-@media (600px <= width <= 767px) {
-    .avatar {
-        left: -83px;
-        bottom: -65px;
-        max-width: 380px;
-    }
-    .text {
-        font-size: 1.1rem;
-        width: 83%;
-        margin-top: 9em;
-    }
-}
-
 /* Tablet */
 @media (768px <= width <= 1023px) {
     .avatar {
-        left: -105px;
-        bottom: -80px;
-        max-width: 460px;
-    }
-    .text {
-        font-size: 1.2rem;
-        width: 82%;
-        margin-top: 7em;
+        left: -15vw;
+        bottom: -10vw;
     }
 }
 
 /* Desktop S */
 @media (1024px <= width <= 1279px) {
     .avatar {
-        left: -135px;
-        bottom: -100px;
-        max-width: 550px;
-    }
-    .text {
-        font-size: 1.2rem;
-        width: 82%;
-        margin-top: 8em;
+        left: -12vw;
+        bottom: -10vw;
+        width: 55%;
     }
 }
 
 /* Desktop M/L */
 @media (1280px <= width <= 1599px) {
     .avatar {
-        left: -140px;
-        bottom: -100px;
-        max-width: 600px;
-    }
-    .text {
-        font-size: 1.4rem;
-        width: 60%;
-        margin-top: 6em;
+        left: -10vw;
+        bottom: -10vw;
+        width: 50%;
     }
 }
 
 /* Extra Large Screens */
 @media (width >= 1600px) {
     .avatar {
-        left: -140px;
-        bottom: -100px;
-        max-width: 600px;
+        left: -10vw;
+        bottom: -10vw;
+        
     }
-    .text {
-        font-size: 1.6rem;
-        width: 60%;
-        margin-top: 8em;
-    }
-
 }
