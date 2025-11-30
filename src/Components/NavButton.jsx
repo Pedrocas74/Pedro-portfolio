@@ -18,10 +18,8 @@ export default function NavButton({ menuOpen, setMenuOpen }) {
         border: "none",
         padding: 0,
         cursor: "pointer",
-        position: "fixed",
-        top: "20px",
-        right: "20px",
-        zIndex: 1000,
+        width: 30,
+        height: 24
       }}
     >
       <motion.svg width="30" height="24" viewBox="0 0 30 24">

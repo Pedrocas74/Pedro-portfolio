@@ -5,10 +5,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useState } from "react";
 //components
-import NavButton from "./Components/NavButton.jsx";
+import Navbar from "./Components/Navbar.jsx";
 import NavigationMenu from "./Components/NavigationMenu.jsx";
 import WavesSVG from "./Components/WavesSVG.jsx";
 import BoatSVG from "./Components/BoatSVG.jsx";
+import ProjectDetails from "./Components/ProjectDetails.jsx";
 //pages
 import Home from "./pages/Home.jsx";
 import Work from "./pages/Work.jsx";
@@ -46,7 +47,7 @@ export default function App() {
 
   return (
     <>
-      <NavButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <NavigationMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
       <Routes>
@@ -55,6 +56,7 @@ export default function App() {
           element={<Home menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
         />
         <Route path="/work" element={<Work />} />
+        <Route path="/work/:slug" element={<ProjectDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

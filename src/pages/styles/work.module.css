@@ -1,0 +1,29 @@
+.workSection {
+    display: flex;
+    justify-content: center;
+}
+.workContainer {
+    /* border: 1px solid red; */
+    position: absolute;
+    bottom: 0;
+    min-height: 60%;
+    width: 85%;
+}
+.title {
+    font-size: var(--fs-menu);
+}
+.firstLine {
+    border-bottom: 1.5px solid var(--clr-primary);
+    font-size: var(--fs-xl);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.projectRow {
+    border-bottom: var(--border-list);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+}

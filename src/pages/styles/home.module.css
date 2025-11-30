@@ -1,0 +1,43 @@
+.homePage {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* centralize the main home content */
+}
+.homeSection {
+    min-height: 50%;
+    max-height: 60%;
+    width: 85%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: var(--lh-small);
+}
+@media (width >= 850px) {
+    .homeSection {
+        width: 65%;
+    }
+}
+
+.mainTitle {
+    font-size: var(--fs-xl);
+    margin-bottom: 0.2em;
+    /* text-align: center; */
+}
+.secondaryTitle {
+    font-size: var(--fs-lg);
+    /* text-align: justify; */
+}
+.mainTitle span,
+.secondaryTitle span {
+    font-weight: 400;
+}
+
+
+.linksContainer {
+    display: flex;
+    justify-content: space-around;
+}

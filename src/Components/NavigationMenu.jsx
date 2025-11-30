@@ -43,19 +43,20 @@ export default function NavigationMenu({ menuOpen, setMenuOpen }) {
                 }}
               >
                 <NavLink
+                  id="navLinks"
                   to={item.path}
                   onClick={() => setMenuOpen(false)}
                   className={({ isActive }) =>
                     isActive ? styles.activeLink : ""
                   }
                   children={({ isActive }) => (
-                    <motion.span
+                    <motion.h3
                       whileHover={!isActive ? { scale: 1.1 } : {}}
                       whileTap={!isActive ? { scale: 0.8 } : {}}
                       style={{ display: "inline-block" }}
                     >
                       {item.name}
-                    </motion.span>
+                    </motion.h3>
                   )}
                 />
               </motion.li>

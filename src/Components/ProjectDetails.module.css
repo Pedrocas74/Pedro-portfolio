@@ -1,0 +1,81 @@
+.projectSection {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+}
+/* .projectContainer {
+    min-height: 60%;
+} */
+.mainImage {
+    margin-top: 15vh;
+    margin-bottom: 7vh;
+    overflow: hidden;
+}
+.mainImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: var(--radius-large);
+}
+
+.header {
+    border-bottom: 1.5px solid var(--clr-primary);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}
+.header h1 {
+    font-size: var(--fs-xl);
+    color: var(--project-color);
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15vh;
+    margin-bottom: 2em;
+}
+.row {
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.row h2 {
+    font-size: var(--fs-lg);
+}
+.row p {
+    text-align: right;
+}
+.header p,
+.row p {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+}
+
+.projectDescription {
+    font-size: var(--fs-md);
+    margin-bottom: 5vh;
+}
+.projectDescription p {
+    margin-bottom: 1em;
+    line-height: var(--lh-small);
+}
+
+/* .sectionPhotos {
+
+} */
+.sectionPhotos h3 {
+    text-align: center;
+    margin: 4em 0 0.5em ;
+}
+.photo {  /*Photo container*/
+    overflow: hidden;
+    margin:0 0 2em 0;
+}
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

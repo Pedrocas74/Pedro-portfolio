@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import styles from "../styles/contact.module.css";
-import githubIcon from "/assets/github-mark-white.png";
-import linkedinIcon from "/assets/InBug-White.png";
+import styles from "./styles/contact.module.css";
+import githubIcon from "/assets/icons/github-mark-white.png";
+import linkedinIcon from "/assets/icons/InBug-White.png";
 import ContactForm from "../Components/ContactForm";
 
 export default function Contact() {
@@ -27,7 +27,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <img src={githubIcon} alt="" role="presentation" />
+                <img src={githubIcon} alt="Github link" role="presentation" />
               </a>
               <a
                 href="https://www.linkedin.com/in/pedro-magalh%C3%A3es-1a3651334/"
@@ -35,7 +35,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 aria-label="Visit Pedro’s LinkedIn profile"
               >
-                <img src={linkedinIcon} alt="" role="presentation" />
+                <img src={linkedinIcon} alt="Linkedin link" role="presentation" />
               </a>
             </div>
           </motion.section>
