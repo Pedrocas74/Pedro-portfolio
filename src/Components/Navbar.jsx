@@ -3,18 +3,18 @@ import NavButton from "./NavButton";
 import { Link } from "react-router-dom";
 
 export default function Navbar({ menuOpen, setMenuOpen }) {
+  
   return (
-    <div className={styles.navbarContainer}>
+    <div className={styles.navbarContainer} style={{pointerEvents: menuOpen ? "none" : "auto"}}>
       <Link to="/" id="navLinks">
         <svg
-          width="30"
-          height="24"
+        //30 24 default
+          className={styles.logoSVG}
           viewBox="0 0 11 9"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g id="Frame 4" clipPath="url(#clip0_56_2)">
-            {/* <rect width="11" height="9" fill="transparent" /> */}
             <g id="logo">
               <path
                 id="flag"

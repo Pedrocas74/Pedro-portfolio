@@ -40,15 +40,16 @@ h2 {
     --fs-xs: clamp(0.75rem, 1vw, 0.9rem);
     --fs-sm: clamp(0.85rem, 1.2vw, 1rem);
     --fs-md: clamp(1rem, 2vw, 1.3rem);
-    --fs-lg: clamp(1.4rem, 3vw, 3rem);
-    --fs-xl: clamp(2.7rem, 5vw, 5.5rem);
-    --fs-menu: clamp(3.3rem, 3vw, 6rem);
+    --fs-lg: clamp(1.3rem, 3vw, 2rem);
+    --fs-xl: clamp(2.4rem, 4.5vw, 5.5rem);
+    --fs-menu: clamp(3.5rem, 5vw, 8rem);
 
     /* padding  */
     --pd-button: 0.5em 0.7em;
 
     /* borders */
     --border-list: 1.5px dashed var(--clr-primary);
+    --border-bottom: 1.5px solid var(--clr-primary);
     
     /* line height  */
     --lh-small: 1.5;
@@ -84,9 +85,11 @@ h2 {
     --z-menu: 300;
     --z-nav-button: 1000;
     --z-modal: 1100;
-    
 }
 
+h1:not(#mainTitle) {
+   font-size: var(--fs-menu);
+}
 h1:not(#mainTitle),
 h3 {
     font-family: var(--ff-heading);
@@ -133,22 +136,7 @@ a .buttonPrimary:hover {
 a .buttonPrimary:active {
 
 }
-/* Button Secondary () */
-.buttonSecondary {
 
-}.buttonSecondary:hover {
-
-}.buttonSecondary:active {
-
-}
-
-.buttonTertiary {
-
-}.buttonTertiary:hover {
-
-}.buttonTertiary:active {
-
-}
 
 
 .textShadow {

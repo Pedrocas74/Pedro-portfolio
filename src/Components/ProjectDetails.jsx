@@ -15,15 +15,14 @@ export default function ProjectDetails() {
     );
   }
 
+  const currentIndex = projects.findIndex((p) => p.slug === slug);
+  const nextIndex = (currentIndex + 1) % projects.length;
+  const nextProjectSlug = projects[nextIndex].slug;
+
   const middleImages = project.imgs.slice(1, -1); //take off the first and last photo of the project images array
 
-  const projectColor = project.color || "var(--clr-primary)";
-
   return (
-    <section
-      className={styles.projectSection}
-      style={{ "--project-color": projectColor }}
-    >
+    <section className={styles.projectSection}>
       {/* MAIN IMAGE  */}
       <div className={styles.mainImage}>
         <img src={project.cover} alt="" />
@@ -80,10 +79,21 @@ export default function ProjectDetails() {
           </div>
         </section>
 
-        <Link className={styles.back} to="/work">
-          ← back to work
-        </Link>
-        <Link>next project</Link>
+        <div className={styles.lastLinks}>
+          <Link id="navLinks" className={styles.back} to="/work">
+            ← back to work
+          </Link>
+
+          {project.type !== "Personal Portfolio" && (
+            <Link
+              id="navLinks"
+              className={styles.next}
+              to={`/work/${nextProjectSlug}`}
+            >
+              next project
+            </Link>
+          )}
+        </div>
       </div>
     </section>
   );

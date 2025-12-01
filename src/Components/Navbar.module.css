@@ -11,3 +11,15 @@
     transform: translateX(-50%);
     z-index: var(--z-nav-button);
 }
+
+.logoSVG {
+    width: clamp(30px, 4vw, 60px);
+    height: auto;
+    display: block;
+}
+
+@media (width >= 768px) {
+    .navbarContainer {
+        height: 25vh;
+    }
+}

@@ -1,0 +1,5 @@
+.navButton {
+    width: clamp(30px, 4vw, 70px); 
+  height: auto;                  
+  display: block; 
+}

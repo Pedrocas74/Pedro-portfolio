@@ -1,68 +1,28 @@
 // import { AnimatePresence, motion } from "framer-motion";
-// import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./styles/work.module.css";
 import { projects } from "../data/projects";
 import { Link } from "react-router-dom";
 
 export default function Work() {
-  // const projects = [
-  //   {
-  //     name: "Moo",
-  //     type: "Movie Finder",
-  //     imgs: [mooLogo_day, mooLogo_night],
-  //     description:
-  //       "A responsive web app that allows users to search for movies, view details, and manage a list of favorites.",
-  //     tech: ["React", "Vite", "CSS Modules", "Framer Motion", "TMDB API", "Figma (Logo design)"],
-  //     link: "https://moo-finder.vercel.app/",
-  //   },
-  //   {
-  //     name: "Pedro",
-  //     type: "Personal Portfolio",
-  //     imgs: [logoPedro, portfolio_frontpage],
-  //     description: "A responsive portfolio with clean branding, built to showcase my journey as a frontend developer.",
-  //     tech: ["React", "React Router", "Vite", "CSS Modules", "Framer Motion", "Figma (logo design)"],
-  //     link: "https://pedromagalhaes.vercel.app/",
-  //   },
-  //   {
-  //     name: "Untitled",
-  //     type: "Coming Soon",
-  //     imgs: [workPlaceholderImg],
-  //     description: "",
-  //     tech: [],
-  //     link: "",
-  //   },
-  //   {
-  //     name: "Untitled",
-  //     type: "",
-  //     imgs: [workPlaceholderImg],
-  //     description: "",
-  //     tech: [],
-  //     link: "",
-  //   },
-  //   {
-  //     name: "Untitled",
-  //     type: "",
-  //     imgs: [workPlaceholderImg],
-  //     description: "",
-  //     tech: [],
-  //     link: "",
-  //   },
-  // ];
+  const [activeProject, setActiveProject] = useState(projects[0]);
 
   return (
     <section className={styles.workSection}>
       <div className={styles.workContainer}>
+        <div className={styles.workRight}>
         <div className={styles.firstLine}>
-          <h1 className={styles.title}>WORK</h1>
-          <span style={{ fontWeight: 900 }}>{projects.length}</span>
+          <h1>WORK</h1>
+          <span style={{ fontWeight: 100 }}>{projects.length}</span>
         </div>
-
+        
         {projects.map((p, i) => (
           <Link
             key={p.slug}
             to={`/work/${p.slug}`}
             className={styles.projectRow}
             id="navLinks"
+            onMouseEnter={() => setActiveProject(p)}
           >
             <div>
               <h2>{p.name}</h2>
@@ -70,6 +30,10 @@ export default function Work() {
             <p>{p.type}</p>
           </Link>
         ))}
+        </div>
+        <div className={styles.workLeft}>
+          <img src={activeProject.cover} alt={activeProject.name} />
+        </div>
       </div>
     </section>
   );

@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <main className={styles.homePage}>
       <section className={styles.homeSection}>
-      <div>
+      <div className={styles.textContainer}>
         <h1 id="mainTitle" className={styles.mainTitle}><span>Hey, I'm </span>Pedro Magalhães.</h1>
-        <h2 className={styles.secondaryTitle}><span>A</span> frontend developer <span> always keen to push the limits.</span></h2>
+        <h2 className={styles.secondaryTitle}><span>A</span> frontend developer <span> crafting interfaces with purpose.</span></h2>
       </div>
 
       <div className={styles.linksContainer}>

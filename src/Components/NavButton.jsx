@@ -1,3 +1,4 @@
+import styles from './NavButton.module.css';
 import { motion } from "framer-motion";
 
 export default function NavButton({ menuOpen, setMenuOpen }) {
@@ -18,11 +19,10 @@ export default function NavButton({ menuOpen, setMenuOpen }) {
         border: "none",
         padding: 0,
         cursor: "pointer",
-        width: 30,
-        height: 24
+
       }}
     >
-      <motion.svg width="30" height="24" viewBox="0 0 30 24">
+      <motion.svg className={styles.navButton} viewBox="0 0 30 24">
         {/* Top line */}
         <motion.line
           x1="3"

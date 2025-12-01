@@ -1,12 +1,11 @@
 .projectSection {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 85%;
     margin: 0 auto;
+    overflow-y: hidden;
 }
-/* .projectContainer {
-    min-height: 60%;
-} */
 .mainImage {
     margin-top: 15vh;
     margin-bottom: 7vh;
@@ -19,29 +18,48 @@
     border-radius: var(--radius-large);
 }
 
+@media (width >= 768px) {
+    .projectContainer {
+        width: 80%;
+    }
+    .mainImage {
+        margin-top: 0;
+        width: 80%;
+        height: 60vh;
+        /* border: 1px solid red; */
+    }
+    .mainImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+}
+
+
 .header {
-    border-bottom: 1.5px solid var(--clr-primary);
+    border-bottom: var(--border-bottom);
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    margin-bottom: 1.5em;
+    margin-bottom: 2.5em;
 }
 .header h1 {
-    font-size: var(--fs-xl);
-    color: var(--project-color);
+    font-size: var(--fs-menu);
 }
 
 .table {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 15vh;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 .row {
     display:  flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1.5em;
 }
 .row h2 {
     font-size: var(--fs-lg);
@@ -62,20 +80,29 @@
     margin-bottom: 1em;
     line-height: var(--lh-small);
 }
+.projectDescription a {
+    all: unset;
+}
 
-/* .sectionPhotos {
-
-} */
 .sectionPhotos h3 {
     text-align: center;
-    margin: 4em 0 0.5em ;
+    margin: 3em 0 0.5em ;
+    font-size: var(--fs-lg);
 }
 .photo {  /*Photo container*/
     overflow: hidden;
-    margin:0 0 2em 0;
+    margin:0 0 2.5em 0;
 }
 .photo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.lastLinks {
+    font-size: var(--fs-sm);
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5vh;
 }
