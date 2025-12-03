@@ -8,7 +8,7 @@ import sol_productDetails from "/assets/work-images/Sol/Sol-ProductDetails.webp"
 import sol_reviews from "/assets/work-images/Sol/Reviews-Sol.webp";
 import sol_cart from "/assets/work-images/Sol/Cart-Sol.webp";
 import sol_checkout from "/assets/work-images/Sol/Checkout-Sol.webp";
-import sol_mobile from "/assets/work-images/Sol/Sol-mobileMock.webp";
+import sol_mobile from "/assets/work-images/Sol/Sol-mobileMock.jpg";
 // MOO 
 import mooLogo_day from "/assets/work-images/Moo-MovieFinder/Logo_day_upscaled.png";
 import mooLogo_night from "/assets/work-images/Moo-MovieFinder/Logo_night_upscaled.webp";

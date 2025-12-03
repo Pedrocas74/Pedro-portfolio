@@ -24,7 +24,7 @@ h2 {
     /* colors */
     --clr-bg: #E2DDD7;
     --clr-bg-light: hsl(33, 16%, 96%);
-    --clr-bg-dark: hsl(33, 16%, 76%);
+    --clr-bg-dark: hsl(33, 16%, 70%);
 
     --clr-primary: #14162f;
     --clr-primary-light: hsl(236, 40%, 23%);
@@ -37,7 +37,7 @@ h2 {
     --ff-heading: "Tac One", serif;
     --ff-body: "Montserrat", sans-serif;
     /* font sizes  */
-    --fs-xs: clamp(0.75rem, 1vw, 0.9rem);
+    --fs-xs: clamp(0.75rem, 1vw, 0.85rem);
     --fs-sm: clamp(0.85rem, 1.2vw, 1rem);
     --fs-md: clamp(1rem, 2vw, 1.3rem);
     --fs-lg: clamp(1.3rem, 3vw, 2rem);
@@ -81,10 +81,9 @@ h2 {
     --z-back: -1;
     --z-base: 1;
     --z-header: 100;
-    --z-waves: 200;
-    --z-menu: 300;
-    --z-nav-button: 1000;
-    --z-modal: 1100;
+    --z-menu: 200;
+    --z-nav-button: 300;
+    --z-waves: 400;
 }
 
 h1:not(#mainTitle) {

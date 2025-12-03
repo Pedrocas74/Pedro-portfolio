@@ -28,9 +28,18 @@
     font-size: var(--fs-lg);
     margin-bottom: 1.5em;
 }
-.mainTitle span,
-.secondaryTitle span {
+.mainTitle,
+.secondaryTitle {
     font-weight: 400;
+}
+.name, 
+.job {
+    font-weight: 800;
+    cursor: pointer;
+}
+.name:hover,
+.job:hover {
+    text-decoration: var(--clr-primary) wavy underline;
 }
 
 .linksContainer {

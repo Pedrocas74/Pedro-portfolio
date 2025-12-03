@@ -4,6 +4,6 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 500;     /* above menu (menu is 100) */
+    z-index: var(--z-waves);  /*500*/
     pointer-events: none; 
 }

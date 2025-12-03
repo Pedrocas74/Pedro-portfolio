@@ -3,7 +3,6 @@
 }
 
 .title {
-    font-size: var(--fs-xl);
     width: 85%;
     margin: 40vh auto 0 auto;
     border-bottom: var(--border-bottom);
@@ -31,13 +30,11 @@
     width: 40%;
 } 
 .gridRow a {
-    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-    /* width: max-content; */
+    font-size: var(--fs-md);
 }
 .socials {
     display: flex;
     flex-direction: column;
-    
 }
 
 

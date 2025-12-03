@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://itspedro.com/sitemap.xml
+Sitemap: https://pedromagalhaes.vercel.app/sitemap.xml

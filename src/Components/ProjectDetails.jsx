@@ -2,10 +2,11 @@ import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import styles from "./ProjectDetails.module.css";
 
+
 export default function ProjectDetails() {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
-
+  
   if (!project) {
     return (
       <div className={styles.notFound}>
@@ -53,9 +54,14 @@ export default function ProjectDetails() {
           <p>{project.descriptionLong}</p>
 
           {/* LINK TO WEB + GITHUB */}
-          <a href={project.live} target="_blank" rel="noopener noreferrer">
-            view the website
-          </a>
+          <div>
+            <a href={project.live} target="_blank" rel="noopener noreferrer">
+              view the website
+            </a>
+            <a href={project.repo} target="_blank" rel="noopener noreferrer">
+              see github repo
+            </a>
+          </div>
         </div>
 
         <section className={styles.sectionPhotos}>
@@ -89,6 +95,7 @@ export default function ProjectDetails() {
               id="navLinks"
               className={styles.next}
               to={`/work/${nextProjectSlug}`}
+              onClick={() => window.scroll(top)}
             >
               next project
             </Link>

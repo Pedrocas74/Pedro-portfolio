@@ -45,31 +45,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-
-      {/* <section className={styles.socials} aria-labelledby="socials-title">
-            <h2 id="socials-title">Socials</h2>
-            <div className={styles.socialsIcons}>
-              <a
-                href="https://github.com/Pedrocas74"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <img src={githubIcon} alt="Github link" role="presentation" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/pedro-magalh%C3%A3es-1a3651334/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Pedro’s LinkedIn profile"
-              >
-                <img
-                  src={linkedinIcon}
-                  alt="Linkedin link"
-                  role="presentation"
-                />
-              </a>
-            </div>
-          </section> */}
     </section>
   );
 }

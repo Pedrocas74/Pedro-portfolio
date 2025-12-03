@@ -1,0 +1,46 @@
+.mainContainer {
+    position: fixed;
+    bottom: 10vh;
+    display: flex;
+    width: 100vw;
+    height: fit-content;
+    left: 0;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 600;
+    z-index: 1;
+    padding: 0 2%;
+}
+.skillContainer {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainContainer svg {
+    width: clamp(27px, 5vw, 55px);
+    height: clamp(27px, 5vw, 55px);
+}
+.label {
+  position: absolute;
+  top: -20px; 
+  font-size: var(--fs-xs);
+  pointer-events: none; 
+  color: var(--clr-primary);
+}
+
+@media(width >= 550px) {
+    .mainContainer {
+        bottom: 16vh;
+    }
+}
+@media (width >= 1025px) {
+    .mainContainer {
+        bottom: 3.5vh;
+        z-index: 1000;
+    }
+    .label {
+        top: -12.5px;
+        color: var(--clr-bg-light);
+    }
+}

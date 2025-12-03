@@ -1,14 +1,25 @@
 import styles from "./Navbar.module.css";
 import NavButton from "./NavButton";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function Navbar({ menuOpen, setMenuOpen }) {
-  
+  const location = useLocation();
+  const handleLogoClick = () => {
+    if (menuOpen && location.pathname === "/") {
+      setMenuOpen(false);
+      return;
+    } else if (menuOpen && location.pathname !== "/") {
+      setMenuOpen(false);
+      return;
+    }
+  };
+
   return (
-    <div className={styles.navbarContainer} style={{pointerEvents: menuOpen ? "none" : "auto"}}>
-      <Link to="/" id="navLinks">
+    <div className={styles.navbarContainer}>
+      <Link to="/" id="navLinks" onClick={handleLogoClick}>
         <svg
-        //30 24 default
+          //30 24 default
           className={styles.logoSVG}
           viewBox="0 0 11 9"
           fill="none"
