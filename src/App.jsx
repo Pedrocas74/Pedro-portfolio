@@ -50,16 +50,18 @@ export default function App() {
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <NavigationMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-      <Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
         <Route
           path="/"
           element={<Home menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
         />
-        <Route path="/work" element={<Work />} />
-        <Route path="/work/:slug" element={<ProjectDetails />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/work" element={<Work menuOpen={menuOpen}/>} />
+        <Route path="/work/:slug" element={<ProjectDetails menuOpen={menuOpen}/>} />
+        <Route path="/about" element={<About menuOpen={menuOpen}/>} />
+        <Route path="/contact" element={<Contact menuOpen={menuOpen}/>} />
       </Routes>
+    </AnimatePresence>
 
       {/* presence handles enter/exit only when showSea flips true/false */}
       <AnimatePresence mode="wait">{showWaves && <WavesSVG />}</AnimatePresence>

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Skills from "../Components/Skills";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { fade, staggerContainer } from "../animations/motionPresets";
 
 export default function Home({ menuOpen }) {
   const navigate = useNavigate();
@@ -11,37 +12,44 @@ export default function Home({ menuOpen }) {
 
   return (
     <main className={styles.homePage}>
-      <section className={styles.homeSection}>
+      
+      <motion.section
+        className={styles.homeSection}
+        variants={staggerContainer}
+        initial="hidden"
+        animate={menuOpen ? "exit" : "visible"}
+        exit="exit"
+      >
         <div className={styles.textContainer}>
-          <h1 id="mainTitle" className={styles.mainTitle}>
+          <motion.h1 variants={fade} id="mainTitle" className={styles.mainTitle}>
             <span>Hey, I'm </span>
 
             <span className={styles.name} onClick={() => navigate("/about")}>
               Pedro Magalhães.
             </span>
-          </h1>
-          <h2 className={styles.secondaryTitle}>
+          </motion.h1>
+          <motion.h2 variants={fade} className={styles.secondaryTitle}>
             <span>A</span>{" "}
-            <motion.span
+            <span
               className={styles.job}
               onClick={() => setShowSkills(!showSkills)}
             >
               frontend developer
-            </motion.span>{" "}
+            </span>{" "}
             <span> crafting interfaces with purpose.</span>
-          </h2>
+          </motion.h2>
         </div>
 
-        <div className={styles.linksContainer}>
+        <motion.div variants={fade} className={styles.linksContainer}>
           <Link className="buttonPrimary" to="/work">
             my work
           </Link>
           <Link className="buttonPrimary" to="/contact">
             let's talk
           </Link>
-        </div>
-      </section>
-
+        </motion.div>
+      </motion.section>
+     
       <AnimatePresence>
         {showSkills && !menuOpen && <Skills key="skills-bar" />}
       </AnimatePresence>

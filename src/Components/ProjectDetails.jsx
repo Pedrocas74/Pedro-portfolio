@@ -1,15 +1,26 @@
 import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import styles from "./ProjectDetails.module.css";
+import { motion } from "framer-motion";
+import { fade, staggerContainer } from "../animations/motionPresets";
 
-
-export default function ProjectDetails() {
+export default function ProjectDetails({ menuOpen }) {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
-  
+
   if (!project) {
     return (
-      <div className={styles.notFound}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "100vh",
+        }}
+        className={styles.notFound}
+      >
         <h1>Project not found</h1>
         <Link to="/work">← Back to work</Link>
       </div>
@@ -23,12 +34,18 @@ export default function ProjectDetails() {
   const middleImages = project.imgs.slice(1, -1); //take off the first and last photo of the project images array
 
   return (
-    <section className={styles.projectSection}>
+    <motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      animate={menuOpen ? "exit" : "visible"}
+      exit="exit"
+      className={styles.projectSection}
+    >
       {/* MAIN IMAGE  */}
-      <div className={styles.mainImage}>
+      <motion.div variants={fade} className={styles.mainImage}>
         <img src={project.cover} alt="" />
-      </div>
-      <div className={styles.projectContainer}>
+      </motion.div>
+      <motion.div variants={fade} className={styles.projectContainer}>
         <div className={styles.header}>
           <h1>{project.name}</h1>
           <p className={styles.type}>{project.type}</p>
@@ -101,7 +118,7 @@ export default function ProjectDetails() {
             </Link>
           )}
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

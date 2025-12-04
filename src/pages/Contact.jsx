@@ -1,14 +1,22 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./styles/contact.module.css";
+import { fade, staggerContainer } from "../animations/motionPresets";
 
-export default function Contact() {
+export default function Contact({ menuOpen }) {
   return (
-    <section className={styles.contactSection} aria-labelledby="contact-title">
-      <h1 className={styles.title} id="contact-title">
+    <motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      animate={menuOpen ? "exit" : "visible"}
+      exit="exit"
+      className={styles.contactSection}
+      aria-labelledby="contact-title"
+    >
+      <motion.h1 variants={fade} className={styles.title} id="contact-title">
         CONTACT
-      </h1>
+      </motion.h1>
 
-      <div className={styles.grid}>
+      <motion.div variants={fade} className={styles.grid}>
         <div className={styles.gridRow}>
           <h2>Mail</h2>
           <a
@@ -44,7 +52,7 @@ export default function Contact() {
             </a>
           </div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

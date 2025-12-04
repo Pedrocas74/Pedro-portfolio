@@ -1,40 +1,60 @@
-// import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import styles from "./styles/work.module.css";
+import { easeIn, motion } from "framer-motion";
 import { projects } from "../data/projects";
 import { Link } from "react-router-dom";
+import { fadeWork, staggerContainer } from "../animations/motionPresets";
 
-export default function Work() {
-  const [activeProject, setActiveProject] = useState(projects[0]);
+export default function Work({ menuOpen }) {
+  const [activeProject, setActiveProject] = useState(projects[2]);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   return (
-    <section className={styles.workSection}>
+    <motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      animate={menuOpen ? "exit" : "visible"}
+      exit="exit"
+      className={styles.workSection}
+      onAnimationStart={() => setIsAnimating(true)}
+      onAnimationComplete={() => setIsAnimating(false)}
+    >
       <div className={styles.workContainer}>
         <div className={styles.workRight}>
-        <div className={styles.firstLine}>
-          <h1>WORK</h1>
-          <span style={{ fontWeight: 100 }}>{projects.length}</span>
+          <motion.div variants={fadeWork} className={styles.firstLine}>
+            <h1>WORK</h1>
+            <span style={{ fontWeight: 100 }}>{projects.length}</span>
+          </motion.div>
+
+          {projects.map((p, i) => (
+            <motion.div variants={fadeWork}>
+              <Link
+                key={p.slug}
+                to={`/work/${p.slug}`}
+                className={styles.projectRow}
+                id="navLinks"
+                onMouseEnter={() => {
+                  if (isAnimating) return;
+                  setActiveProject(p);
+                }}
+              >
+                <div>
+                  <h2>{p.name}</h2>
+                </div>
+                <p>{p.type}</p>
+              </Link>
+            </motion.div>
+          ))}
         </div>
-        
-        {projects.map((p, i) => (
-          <Link
-            key={p.slug}
-            to={`/work/${p.slug}`}
-            className={styles.projectRow}
-            id="navLinks"
-            onMouseEnter={() => setActiveProject(p)}
-          >
-            <div>
-              <h2>{p.name}</h2>
-            </div>
-            <p>{p.type}</p>
-          </Link>
-        ))}
-        </div>
-        <div className={styles.workLeft}>
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 1, ease: easeIn, type: "spring" }}
+          className={styles.workLeft}
+        >
           <img src={activeProject.cover} alt={activeProject.name} />
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
