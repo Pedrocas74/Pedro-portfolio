@@ -22,11 +22,11 @@
 }
 .mainTitle {
     font-size: var(--fs-xl);
-    margin-bottom: 0.3em;
+    margin-bottom: 1rem;
 }
 .secondaryTitle {
     font-size: var(--fs-lg);
-    margin-bottom: 1.5em;
+    margin-bottom: 3rem;
 }
 .mainTitle,
 .secondaryTitle {

@@ -5,16 +5,16 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useState } from "react";
 //components
-import Navbar from "./Components/Navbar.jsx";
-import NavigationMenu from "./Components/NavigationMenu.jsx";
-import WavesSVG from "./Components/WavesSVG.jsx";
-import BoatSVG from "./Components/BoatSVG.jsx";
-import ProjectDetails from "./Components/ProjectDetails.jsx";
+import Navbar from "./Components/layout/Navbar";
+import NavigationMenu from "./Components/ui/NavigationMenu.jsx";
+import WavesSVG from "./Components/decoration/Waves";
+import BoatSVG from "./Components/decoration/BoatSVG";
+import ProjectDetails from "./Components/layout/ProjectDetails";
 //pages
-import Home from "./pages/Home.jsx";
-import Work from "./pages/Work.jsx";
-import About from "./pages/About.jsx";
-import Contact from "./pages/Contact.jsx";
+import Home from "./pages/Home";
+import Work from "./pages/Work";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -1,0 +1,24 @@
+.themeBtn {
+    all: unset;
+    cursor: pointer;
+    padding: var(--pd-icon);
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    
+}
+.themeBtn:hover {
+    background: var(--clr-hover);
+    /* scale: 1.1; */
+}
+/* .themeBtn:active,
+.themeBtn:focus {
+    scale: 0.95;
+} */
+
+.themeIcon {
+    width: clamp(24px, 2vw, 35px); 
+    height: clamp(24px, 2vw, 35px);   
+}

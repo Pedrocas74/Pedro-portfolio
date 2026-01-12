@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function NavButton({ menuOpen, setMenuOpen }) {
   const lineProps = {
-    stroke: "#14162F",
+    stroke: "var(--clr-text)",
     strokeWidth: 3.5,
     strokeLinecap: "round",
     transition: { duration: 0.3, ease: "easeInOut" },

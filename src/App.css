@@ -5,33 +5,45 @@
     margin: 0;
 }
 
-html {  
-  -webkit-tap-highlight-color: transparent; 
-}
-
-body {
-    background: var(--clr-bg);
-    font-family: var(--ff-body);
-    color: var(--clr-primary);
-}
-
-/* h1,
-h2 {
-    font-family: var(--ff-heading);
-} */
-
 :root {
-    /* colors */
-    --clr-bg: #E2DDD7;
-    --clr-bg-light: hsl(33, 16%, 96%);
-    --clr-bg-dark: hsl(33, 16%, 70%);
+    /* LIGHT MODE  */
+    --bg: hsl(33, 16%, 85%);
+    --bg-light: hsl(33, 16%, 96%);
+    --bg-dark: hsl(33, 16%, 70%);
 
-    --clr-primary: #14162f;
-    --clr-primary-light: hsl(236, 40%, 23%);
-    --clr-primary-dark: hsl(236, 40%, 03%);
+    --primary-blue: hsl(236, 40%, 13%);
+    --primary-blue-l: hsl(236, 40%, 23%);
+    --primary-blue-d: hsl(236, 40%, 03%);
 
-    --clr-secondary: #F9A801;
+    --secondary-l: #F9A801;
+
+    --bottom-wave: var(--primary-blue);
+    --middle-wave: #253368;
+    --top-wave: #2d428dff;
+
+    --hover-l: hsla(36, 9%, 58%, 0.5);
     --white: #fff;
+
+    /* DARK MODE  */
+    --bg-d: hsl(236, 40%, 13%);
+    --bg-dl: hsl(236, 40%, 23%);
+    --bg-dd: hsl(236, 40%, 03%);
+
+    --primary-d: hsl(33, 16%, 85%);
+    --primary-dl: hsl(33, 16%, 96%);
+    --primary-dd: hsl(33, 16%, 70%);
+
+    --secondary-l: #F9A801;
+
+    --bottom-wave-d: var(--bg-dark);
+    --middle-wave-d: var(--bg);
+    --top-wave-d: var(--bg-light);
+
+
+    --hover-d: hsla(35, 26%, 82%, 0.3);
+    --black: #000;
+
+    /* ------------------------------------------- */
 
     /* font families */
     --ff-heading: "Tac One", serif;
@@ -45,7 +57,9 @@ h2 {
     --fs-menu: clamp(3.5rem, 5vw, 8rem);
 
     /* padding  */
-    --pd-button: 0.5em 0.7em;
+    --pd-button: 0.6rem 0.85rem;
+    --pd-icon: 0.5rem;
+
 
     /* borders */
     --border-list: 1.5px dashed var(--clr-primary);
@@ -59,6 +73,7 @@ h2 {
     --radius-small: 3px;
     --radius-button: 6px;
     --radius-large: 18px;
+    --radius-max: 999px;
     --radius-full: 50%;
 
     /* box shadows */
@@ -74,7 +89,7 @@ h2 {
     /* transitions  */
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --ease-bounce: cubic-bezier(.34,1.56,.64,1);
-    --transition-fast: 0.3s var(--ease-in-out);
+    --transition: 0.3s var(--ease-in-out);
     --transition-slow: 0.7s var(--ease-in-out);
 
     /* zindex */ 
@@ -86,6 +101,54 @@ h2 {
     --z-waves: 400;
 }
 
+
+/* LIGHT MODE (DEFAULT)  */
+:root {
+    --clr-bg: var(--bg);
+    --clr-text: var(--primary-blue);
+    --clr-primary: var(--primary-blue);
+    --clr-primary-light: var(--primary-blue-l);
+    --clr-primary-dark: var(--primary-blue-d);
+    --clr-secondary: var(--secondary-l);
+    --clr-border: var(--bg-dark);
+    --clr-hover: var(--hover-l);
+    --clr-button-text: var(--bg-light);
+    --clr-bottom-wave: var(--bottom-wave);
+    --clr-middle-wave: var(--middle-wave);
+    --clr-top-wave: var(--top-wave);
+    --clr-boatWood: var(--white);
+}
+/* DARK MODE  */
+:root.dark {
+    --clr-bg: var(--bg-d);
+    --clr-text: var(--primary-d);
+    --clr-primary: var(--primary-d);
+    --clr-primary-light: var(--primary-dl);
+    --clr-primary-dark: var(--primary-dd);
+    --clr-secondary: var(--secondary-l);
+    --clr-border: var(--bg-dd);
+    --clr-hover: var(--hover-d);
+    --clr-button-text: var(--bg-dl);
+    --clr-middle-wave: var(--middle-wave-d);
+    --clr-top-wave: var(--top-wave-d);
+    --clr-bottom-wave: var(--bottom-wave-d);
+    --clr-boatWood: var(--black);
+}
+
+
+
+
+html {  
+  -webkit-tap-highlight-color: transparent; 
+}
+
+body {
+    background: var(--clr-bg);
+    font-family: var(--ff-body);
+    color: var(--clr-text);
+}
+
+
 h1:not(#mainTitle) {
    font-size: var(--fs-menu);
 }
@@ -96,6 +159,8 @@ h3 {
 
 p {
     font-size: var(--fs-md);
+    line-height: var(--lh-small);
+    max-width: 74ch;
 }
 
 #navLinks {
@@ -108,7 +173,7 @@ a:not(#navLinks) {
     padding: var(--pd-button);
     border-radius: var(--radius-button);
     letter-spacing: var(--ls);
-    transition: var(--transition-fast);
+    transition: var(--transition);
     font-weight: 600;
     text-decoration: none;
     width: fit-content;
@@ -124,17 +189,18 @@ a:not(#navLinks) {
 .buttonPrimary,
 a.buttonPrimary {
     background: transparent;
-    border: 2px solid var(--clr-bg-dark);
+    border: 2px solid var(--clr-border);
     box-shadow: var(--shadow-inverse);
     color: var(--clr-primary);
 }.buttonPrimary:hover,
 a .buttonPrimary:hover {
     background: var(--clr-primary);
-    color: var(--white);
-}.buttonPrimary:active,
+    color: var(--clr-button-text);
+}
+/* .buttonPrimary:active,
 a .buttonPrimary:active {
 
-}
+} */
 
 
 

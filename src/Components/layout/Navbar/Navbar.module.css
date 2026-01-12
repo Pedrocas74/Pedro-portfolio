@@ -12,14 +12,21 @@
     z-index: var(--z-nav-button); 
 }
 
+@media (width >= 768px) {
+    .navbarContainer {
+        align-items: end;
+    }
+}
+
 .logoSVG {
     width: clamp(30px, 4vw, 60px);
     height: auto;
     display: block;
 }
 
-@media (width >= 768px) {
-    .navbarContainer {
-        align-items: end;
-    }
+.rightIcons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: clamp(100px, 10vw, 200px);
 }

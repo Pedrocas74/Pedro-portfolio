@@ -1,10 +1,10 @@
-import styles from "./styles/home.module.css";
+import styles from "./home.module.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Skills from "../Components/Skills";
+import Skills from "../../Components/decoration/Skills";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { fade, staggerContainer } from "../animations/motionPresets";
+import { fade, staggerContainer } from "../../animations/motionPresets";
 
 export default function Home({ menuOpen }) {
   const navigate = useNavigate();

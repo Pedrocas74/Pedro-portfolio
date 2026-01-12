@@ -1,9 +1,9 @@
+import styles from "./work.module.css";
 import { useState } from "react";
-import styles from "./styles/work.module.css";
 import { easeIn, motion } from "framer-motion";
-import { projects } from "../data/projects";
+import { projects } from "../../data/projects";
 import { Link } from "react-router-dom";
-import { fadeWork, staggerContainer } from "../animations/motionPresets";
+import { fadeWork, staggerContainer } from "../../animations/motionPresets";
 
 export default function Work({ menuOpen }) {
   const [activeProject, setActiveProject] = useState(projects[2]);

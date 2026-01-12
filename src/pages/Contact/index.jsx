@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
-import styles from "./styles/contact.module.css";
-import { fade, staggerContainer } from "../animations/motionPresets";
+import styles from "./contact.module.css";
+import { fade, staggerContainer } from "../../animations/motionPresets";
 
 export default function Contact({ menuOpen }) {
   return (

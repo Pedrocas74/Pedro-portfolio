@@ -1,8 +1,8 @@
 import { useParams, Link } from "react-router-dom";
-import { projects } from "../data/projects";
+import { projects } from "../../../data/projects";
 import styles from "./ProjectDetails.module.css";
 import { motion } from "framer-motion";
-import { fade, staggerContainer } from "../animations/motionPresets";
+import { fade, staggerContainer } from "../../../animations/motionPresets";
 
 export default function ProjectDetails({ menuOpen }) {
   const { slug } = useParams();

@@ -1,8 +1,9 @@
-import styles from "./styles/about.module.css";
+import styles from "./about.module.css";
 import resumePDF from "/assets/CV_Pedro_Magalhaes_EN.pdf";
 import portrait2 from "/assets/portrait2.jpeg";
 import { motion } from "framer-motion";
-import { fade, staggerContainer } from "../animations/motionPresets";
+import { fade, staggerContainer } from "../../animations/motionPresets";
+
 export default function About({ menuOpen }) {
   return (
     <motion.section
