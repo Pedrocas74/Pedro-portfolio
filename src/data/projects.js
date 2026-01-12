@@ -2,20 +2,18 @@
 // SOL 
 import sol_logo from "/assets/work-images/Sol/LogoSOL.jpg";
 import sol_hero from "/assets/work-images/Sol/Hero-Sol.webp";
-import sol_categories from "/assets/work-images/Sol/Categories-Sol.webp";
-import sol_productsList from "/assets/work-images/Sol/ProductsList-Sol.webp";
-import sol_productDetails from "/assets/work-images/Sol/Sol-ProductDetails.webp";
-import sol_reviews from "/assets/work-images/Sol/Reviews-Sol.webp";
-import sol_cart from "/assets/work-images/Sol/Cart-Sol.webp";
-import sol_checkout from "/assets/work-images/Sol/Checkout-Sol.webp";
 import sol_mobile from "/assets/work-images/Sol/Sol-mobileMock.jpg";
 // MOO 
 import mooLogo_day from "/assets/work-images/Moo-MovieFinder/Logo_day_upscaled.png";
+import mooHero from "/assets/work-images/Moo-MovieFinder/Moo-hero.webp";
+import mooMobile from "/assets/work-images/Moo-MovieFinder/Moo-mobile.png";
 import mooLogo_night from "/assets/work-images/Moo-MovieFinder/Logo_night_upscaled.webp";
 // PORTFOLIO 
-import logoPedro from "/assets/work-images/Portfolio/Logo_portfolio.webp";
-import portfolio_frontpage from "/assets/work-images/Portfolio/portfolio_frontpage.webp";
+import portfolio_hero from "/assets/work-images/Portfolio/Portfolio-hero.webp";
 import logoPedroBlue from "/assets/work-images/Portfolio/logoPedroBlue.png";
+import portfolioMobile from "/assets/work-images/Portfolio/Portfolio-mobile.png";
+import portfolioDarkMode from "/assets/work-images/Portfolio/Portfolio-darkMode.webp";
+
 
 export const projects = [
     { //SOL E-COMMERCE STORE
@@ -24,9 +22,9 @@ export const projects = [
     type: "E-Commerce",
     category: "Web Development",
     cover: sol_logo,
-    imgs: [sol_hero, sol_categories, sol_productsList, sol_productDetails, sol_reviews, sol_cart, sol_checkout, sol_mobile],
+    imgs: [sol_hero, sol_mobile],
     descriptionLong: 
-        "SOL is a modern e-commerce experience built with Next.js (App Router) and Redux. Instead of a static storefront, every browser reload simulates a significant time jump, automatically recalculating the stock of all 20 products—just as if thousands of customers had been shopping in the meantime. This creates a living, always-changing inventory where items fluctuate, sell out, and restock dynamically.",
+        "SOL is an experimental e-commerce platform built with Next.js (App Router) and Redux that treats inventory as a living system. \nEvery page reload represents a leap forward in time, recalculating product stock as if real shoppers had been buying in the background. \nItems sell out, recover, and fluctuate organically, creating a storefront that never feels frozen or predictable.",
     tech: [
       "Next.js",
       "App Router",
@@ -34,9 +32,11 @@ export const projects = [
       "CSS Modules",
       "Framer Motion",
     ],
-    live: "https://pedromagalhaes.vercel.app/",
-    repo: null,
+    live: "https://sol-shop.vercel.app/",
+    repo: "https://github.com/Pedrocas74/redux-shop",
     year: 2025,
+    mobile: true,
+    darkMode: false,
   },
 
   { //MOO - MOVIE FINDER
@@ -45,9 +45,9 @@ export const projects = [
     type: "Movie Finder",
     category: "Web Development",
     cover: mooLogo_day,
-    imgs: [mooLogo_day, mooLogo_night],
+    imgs: [mooHero, mooLogo_night, mooMobile],
     descriptionLong:
-      "Moo is a movie-searching platform built with a focus on responsiveness, accessibility, and smooth UI animations. It integrates the TMDB API to fetch movie data, includes dark/light mode branding, and offers a clean user flow for adding and removing favorite films.",
+      "Moo is a web app designed for people who love cinema and don’t want to lose track of the movies that matter to them. Instead of scattered notes or forgotten lists, Moo let's you build a personal movie history. \nSave films to a watchlist, mark your favorites, and keep track of what you’ve already watched — all in one place.\nMore than just a movie discovery tool, Moo is a space to curate your taste, revisit your choices, and shape your own cinematic identity.",
     tech: [
       "React",
       "Vite",
@@ -57,8 +57,10 @@ export const projects = [
       "Figma (Logo design)"
     ],
     live: "https://moo-finder.vercel.app/",
-    repo: null, //add later
+    repo: "https://github.com/Pedrocas74/MoovieFinder", //add later
     year: 2025,
+    mobile: true,
+    darkMode: true
   },
 
   { //PEDRO PORTFOLIO
@@ -67,7 +69,7 @@ export const projects = [
     type: "Personal Portfolio",
     category: "Web Development",
     cover: logoPedroBlue,
-    imgs: [logoPedro, portfolio_frontpage],
+    imgs: [portfolio_hero, portfolioDarkMode, portfolioMobile],
     descriptionLong:
       "This portfolio was designed from scratch in Figma, with custom branding and smooth page transitions. It highlights my work, skills, and contact information using React Router navigation and modern UI design patterns.",
     tech: [
@@ -79,8 +81,10 @@ export const projects = [
       "Framer Motion",
       "Figma (Logo design)"
     ],
-    live: "https://pedromagalhaes.vercel.app/",
-    repo: null,
+    live: null,
+    repo: "https://github.com/Pedrocas74/Pedro-portfolio",
     year: 2025,
+    mobile: true,
+    darkMode: true
   }
 ];

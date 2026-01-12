@@ -35,12 +35,12 @@
 
     --secondary-l: #F9A801;
 
-    --bottom-wave-d: var(--bg-dark);
+    --bottom-wave-d: hsl(34, 10%, 61%);
     --middle-wave-d: var(--bg);
-    --top-wave-d: var(--bg-light);
+    --top-wave-d: hsl(42, 52%, 94%);
 
 
-    --hover-d: hsla(35, 26%, 82%, 0.3);
+    --hover-d: hsla(37, 6%, 57%, 0.507);
     --black: #000;
 
     /* ------------------------------------------- */
@@ -52,12 +52,12 @@
     --fs-xs: clamp(0.75rem, 1vw, 0.85rem);
     --fs-sm: clamp(0.85rem, 1.2vw, 1rem);
     --fs-md: clamp(1rem, 2vw, 1.3rem);
-    --fs-lg: clamp(1.3rem, 3vw, 2rem);
+    --fs-lg: clamp(1.3rem, 3vw, 1.8rem);
     --fs-xl: clamp(2.4rem, 4.5vw, 5.5rem);
     --fs-menu: clamp(3.5rem, 5vw, 8rem);
 
     /* padding  */
-    --pd-button: 0.6rem 0.85rem;
+    --pd-button: 0.7rem 1.5rem;
     --pd-icon: 0.5rem;
 
 
@@ -105,6 +105,7 @@
 /* LIGHT MODE (DEFAULT)  */
 :root {
     --clr-bg: var(--bg);
+    --clr-bg-light: var(--bg-light);
     --clr-text: var(--primary-blue);
     --clr-primary: var(--primary-blue);
     --clr-primary-light: var(--primary-blue-l);
@@ -121,6 +122,7 @@
 /* DARK MODE  */
 :root.dark {
     --clr-bg: var(--bg-d);
+    --clr-bg-light: var(--bg-dl);
     --clr-text: var(--primary-d);
     --clr-primary: var(--primary-d);
     --clr-primary-light: var(--primary-dl);
@@ -178,6 +180,7 @@ a:not(#navLinks) {
     text-decoration: none;
     width: fit-content;
     font-size: var(--fs-md);
+    cursor: pointer;
 }
 @media (width >= 1600px) {
     button, a {
@@ -254,4 +257,50 @@ a .buttonPrimary:active {
 }
 
 
+/* wave text underline animation  */
+.waveText {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+/* wave underline */
+.waveText::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2em;
 
+  width: 100%;
+  height: 8px;
+
+  background-color: var(--clr-primary);
+
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8'><path d='M0 4 Q 10 0 20 4 T 40 4 T 60 4 T 80 4 T 100 4 T 120 4' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round'/></svg>");
+  -webkit-mask-repeat: repeat-x;
+  -webkit-mask-size: 120px 8px;
+
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8'><path d='M0 4 Q 10 0 20 4 T 40 4 T 60 4 T 80 4 T 100 4 T 120 4' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round'/></svg>");
+  mask-repeat: repeat-x;
+  mask-size: 120px 8px;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-in-out);
+  pointer-events: none;
+}
+
+.waveText:hover::after {
+  transform: scaleX(1);
+  animation: waveMove 1.5s linear infinite;
+}
+
+@keyframes waveMove {
+  from {
+    -webkit-mask-position-x: 0;
+    mask-position-x: 0;
+  }
+  to {
+    -webkit-mask-position-x: 120px;
+    mask-position-x: 120px;
+  }
+}

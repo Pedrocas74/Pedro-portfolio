@@ -1,10 +1,14 @@
 import styles from "./about.module.css";
 import resumePDF from "/assets/CV_Pedro_Magalhaes_EN.pdf";
 import portrait2 from "/assets/portrait2.jpeg";
+import portrait2_dark from "/assets/portrait2-dark.jpeg";
 import { motion } from "framer-motion";
 import { fade, staggerContainer } from "../../animations/motionPresets";
+import { useTheme } from "../../context/ThemeContext";
 
 export default function About({ menuOpen }) {
+  const { isDark } = useTheme();
+
   return (
     <motion.section
       variants={staggerContainer}
@@ -15,7 +19,20 @@ export default function About({ menuOpen }) {
       aria-labelledby="about-title"
     >
       <motion.div variants={fade} className={styles.aboutRight}>
-        <img className={styles.portrait} src={portrait2} alt="Portrait Pedro" />
+        {isDark ? (
+          <img
+            className={styles.portrait}
+            src={portrait2_dark}
+            alt="Portrait Pedro"
+          />
+        ) : (
+          <img
+            className={styles.portrait}
+            src={portrait2}
+            alt="Portrait Pedro"
+          />
+        )}
+        {/* <img className={styles.portrait} src={portrait2} alt="Portrait Pedro" /> */}
       </motion.div>
 
       <div className={styles.aboutLeft}>
@@ -38,7 +55,7 @@ export default function About({ menuOpen }) {
           aria-label="View Pedro’s Resume"
           variants={fade}
         >
-          download my resume
+          <span className="waveText">download my resume</span>
         </motion.a>
       </div>
     </motion.section>

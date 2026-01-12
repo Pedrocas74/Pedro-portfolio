@@ -24,14 +24,14 @@ export default function Home({ menuOpen }) {
           <motion.h1 variants={fade} id="mainTitle" className={styles.mainTitle}>
             <span>Hey, I'm </span>
 
-            <span className={styles.name} onClick={() => navigate("/about")}>
+            <span className={`${styles.name} waveText`} onClick={() => navigate("/about")}>
               Pedro Magalhães.
             </span>
           </motion.h1>
           <motion.h2 variants={fade} className={styles.secondaryTitle}>
             <span>A</span>{" "}
             <span
-              className={styles.job}
+              className={`${styles.job} waveText`}
               onClick={() => setShowSkills(!showSkills)}
             >
               frontend developer

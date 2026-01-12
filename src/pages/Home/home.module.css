@@ -33,18 +33,16 @@
     font-weight: 400;
 }
 
-
 .name, 
 .job {
     font-weight: 800;
     cursor: pointer;
-}
-.name:hover,
-.job:hover {
-    text-decoration: var(--clr-primary) wavy underline;
 }
 
 .linksContainer {
     display: flex;
     justify-content: space-around;
 }
+
+
+

@@ -1,5 +1,11 @@
 .navButton {
-  width: clamp(30px, 4vw, 70px); 
+  width: clamp(45px, 4vw, 70px); 
   height: auto;
   display: block; 
+  padding: var(--pd-icon);
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+}
+.navButton:hover {
+  background: var(--clr-hover);
 }

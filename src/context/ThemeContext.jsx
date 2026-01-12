@@ -1,15 +1,14 @@
-import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 const ThemeContext = createContext(null);
 
-const STORAGE_KEY = "theme"; //light or dark
+const STORAGE_KEY = "theme"; 
 
 function getInitialTheme() {
-  //saved preference
+
   const saved = localStorage.getItem(STORAGE_KEY);
   if (saved === "light" || saved === "dark") return saved;
 
-  //system preference
   const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)")?.matches;
   return prefersDark ? "dark" : "light";
 }

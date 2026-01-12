@@ -11,6 +11,7 @@
 }
 .themeBtn:hover {
     background: var(--clr-hover);
+    /* color: var(--clr-); */
     /* scale: 1.1; */
 }
 /* .themeBtn:active,

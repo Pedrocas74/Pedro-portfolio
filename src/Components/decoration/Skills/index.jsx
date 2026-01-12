@@ -1,28 +1,31 @@
 import styles from "./Skills.module.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
+
 export default function Skills() {
   const [activeKey, setActiveKey] = useState(null);
 
-  const isMobile = typeof window !== "undefined" && window.innerWidth <= 1024;
+  const isTouchDevice =
+  typeof window !== "undefined" &&
+  window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+
 
   const handleEnter = (key) => {
-    if (!isMobile) setActiveKey(key);
+    if (!isTouchDevice) setActiveKey(key);
   };
   const handleLeave = () => {
-    if (!isMobile) setActiveKey(null);
+    if (!isTouchDevice) setActiveKey(null);
   };
   const handleClick = (key) => {
-    if (isMobile) {
+    if (isTouchDevice) {
       setActiveKey((prev) => (prev === key ? null : key));
     }
   };
-
   const getFill = (key) => {
     if (activeKey === key) {
-      return isMobile ? "var(--clr-primary)" : "var(--clr-bg-light)";
+      return isTouchDevice ? "var(--clr-primary)" : "var(--clr-bg)";
     }
-    return "var(--clr-bg-dark)";
+    return "var(--clr-border)";
   };
 
   const containerVariants = {
@@ -41,7 +44,7 @@ export default function Skills() {
       opacity: 0,
       y: 15,
       transition: {
-        duration: 0.35,
+        duration: 0.25,
         ease: "easeIn",
         staggerChildren: 0.05,
         staggerDirection: -1,
@@ -120,7 +123,7 @@ export default function Skills() {
             onHoverEnd={handleLeave}
             onClick={() => handleClick("react")}
             variants={iconVariants}
-            {...(!isMobile && {
+            {...(!isTouchDevice && {
               initial: "hidden",
               animate: ["visible", "float1"],
               exit: "exit",
@@ -156,7 +159,7 @@ export default function Skills() {
             onHoverEnd={handleLeave}
             onClick={() => handleClick("ts")}
             variants={iconVariants}
-            {...(!isMobile && {
+            {...(!isTouchDevice && {
               initial: "hidden",
               animate: ["visible", "float2"],
               exit: "exit",
@@ -189,7 +192,7 @@ export default function Skills() {
             onHoverEnd={handleLeave}
             onClick={() => handleClick("gsap")}
             variants={iconVariants}
-            {...(!isMobile && {
+            {...(!isTouchDevice && {
               initial: "hidden",
               animate: ["visible", "float1"],
               exit: "exit",
@@ -225,7 +228,7 @@ export default function Skills() {
             onHoverEnd={handleLeave}
             onClick={() => handleClick("html")}
             variants={iconVariants}
-            {...(!isMobile && {
+            {...(!isTouchDevice && {
               initial: "hidden",
               animate: ["visible", "float2"],
               exit: "exit",
@@ -258,7 +261,7 @@ export default function Skills() {
             onHoverEnd={handleLeave}
             onClick={() => handleClick("git")}
             variants={iconVariants}
-            {...(!isMobile && {
+            {...(!isTouchDevice && {
               initial: "hidden",
               animate: ["visible", "float1"],
               exit: "exit",
@@ -291,7 +294,7 @@ export default function Skills() {
             onHoverEnd={handleLeave}
             onClick={() => handleClick("motion")}
             variants={iconVariants}
-            {...(!isMobile && {
+            {...(!isTouchDevice && {
               initial: "hidden",
               animate: ["visible", "float2"],
               exit: "exit",
@@ -327,7 +330,7 @@ export default function Skills() {
             onHoverEnd={handleLeave}
             onClick={() => handleClick("css")}
             variants={iconVariants}
-            {...(!isMobile && {
+            {...(!isTouchDevice && {
               initial: "hidden",
               animate: ["visible", "float1"],
               exit: "exit",
@@ -360,7 +363,7 @@ export default function Skills() {
             onHoverEnd={handleLeave}
             onClick={() => handleClick("node")}
             variants={iconVariants}
-            {...(!isMobile && {
+            {...(!isTouchDevice && {
               initial: "hidden",
               animate: ["visible", "float2"],
               exit: "exit",
@@ -393,7 +396,7 @@ export default function Skills() {
             onHoverEnd={handleLeave}
             onClick={() => handleClick("js")}
             variants={iconVariants}
-            {...(!isMobile && {
+            {...(!isTouchDevice && {
               initial: "hidden",
               animate: ["visible", "float1"],
               exit: "exit",
@@ -426,7 +429,7 @@ export default function Skills() {
             onHoverEnd={handleLeave}
             onClick={() => handleClick("next")}
             variants={iconVariants}
-            {...(!isMobile && {
+            {...(!isTouchDevice && {
               initial: "hidden",
               animate: ["visible", "float2"],
               exit: "exit",

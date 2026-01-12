@@ -20,11 +20,11 @@
 
 @media (width >= 768px) {
     .projectContainer {
-        width: 80%;
+        width: 70%;
     }
     .mainImage {
         margin-top: 0;
-        width: 80%;
+        width: 70%;
         height: 60vh;
         /* border: 1px solid red; */
     }
@@ -79,6 +79,7 @@
 .projectDescription p {
     margin-bottom: 1em;
     line-height: var(--lh-small);
+    white-space: pre-line;
 }
 .projectDescription a {
     all: unset;
@@ -101,7 +102,6 @@
 
 .lastLinks {
     font-size: var(--fs-sm);
-    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     margin-bottom: 5vh;

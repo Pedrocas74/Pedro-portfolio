@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import styles from "./contact.module.css";
 import { fade, staggerContainer } from "../../animations/motionPresets";
 
@@ -21,11 +21,13 @@ export default function Contact({ menuOpen }) {
           <h2>Mail</h2>
           <a
             id="navLinks"
-            href="http://"
+            href="mailto:pmig.magalhaes@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            pmig.magalhaes
+            <span className="waveText" style={{ fontWeight: 400 }}>
+              pmig.magalhaes
+            </span>
           </a>
         </div>
 
@@ -38,7 +40,9 @@ export default function Contact({ menuOpen }) {
               rel="noopener noreferrer"
               target="_blank"
             >
-              github
+              <span className="waveText" style={{ fontWeight: 400 }}>
+                github
+              </span>
             </a>
 
             <a
@@ -48,7 +52,9 @@ export default function Contact({ menuOpen }) {
               rel="noopener noreferrer"
               aria-label="Visit Pedro’s LinkedIn profile"
             >
-              linkedin
+              <span className="waveText" style={{ fontWeight: 400 }}>
+                linkedin
+              </span>
             </a>
           </div>
         </div>

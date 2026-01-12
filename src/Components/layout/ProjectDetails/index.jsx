@@ -68,38 +68,54 @@ export default function ProjectDetails({ menuOpen }) {
         {/* DESCRIPTION  */}
 
         <div className={styles.projectDescription}>
-          <p>{project.descriptionLong}</p>
+          <p className={styles.description}>{project.descriptionLong}</p>
 
           {/* LINK TO WEB + GITHUB */}
           <div>
-            <a href={project.live} target="_blank" rel="noopener noreferrer">
-              view the website
-            </a>
+            {project.live !== null && (
+              <a href={project.live} target="_blank" rel="noopener noreferrer" >
+                <span className="waveText" style={{ fontWeight: 600}}>
+                view the website
+                </span>
+              </a>
+            )}
+
             <a href={project.repo} target="_blank" rel="noopener noreferrer">
-              see github repo
+              <span className="waveText" style={{ fontWeight: 600}}>
+                see github repo
+                </span>
             </a>
           </div>
         </div>
 
         <section className={styles.sectionPhotos}>
           {/* PHOTOS */}
-          {/* EVERY PAGE + DARK MODE + MOBILE w/ titles */}
+          {/* HOMEPAGE + DARK MODE + MOBILE w/ titles */}
           <h3>HOMEPAGE</h3>
           <div className={styles.photo}>
             <img src={project.imgs[0]} alt="" />
           </div>
 
-          <h3>OTHER PAGES</h3>
-          {middleImages.map((img, i) => (
-            <div className={styles.photo} key={i}>
-              <img src={img} alt={`${project.name} ${i + 1}`} />
-            </div>
-          ))}
+          {project.darkMode && (
+            <>
+              <h3>DARK MODE</h3>
+              <div className={styles.photo}>
+              <img
+                src={project.imgs[1]}
+                alt={`Dark mode from project ${project.name}`}
+              />
+              </div>
+            </>
+          )}
 
-          <h3>MOBILE</h3>
-          <div className={styles.photo}>
-            <img src={project.imgs[project.imgs.length - 1]} alt="" />
-          </div>
+          {project.mobile && (
+            <>
+              <h3>MOBILE</h3>
+              <div className={styles.photo}>
+                <img src={project.imgs[project.imgs.length - 1]} alt="Mobile " />
+              </div>
+            </>
+          )}
         </section>
 
         <div className={styles.lastLinks}>
