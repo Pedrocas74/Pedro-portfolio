@@ -22,8 +22,6 @@ export default function Contact({ menuOpen }) {
           <a
             id="navLinks"
             href="mailto:pmig.magalhaes@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <span className="waveText" style={{ fontWeight: 400 }}>
               pmig.magalhaes

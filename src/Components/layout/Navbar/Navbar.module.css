@@ -22,6 +22,12 @@
     width: clamp(30px, 4vw, 60px);
     height: auto;
     display: block;
+    transition: var(--transition);
+}.logoSVG:hover {
+    scale: 1.1;
+}
+.logoSVG:active {
+    scale: 0.95;
 }
 
 .rightIcons {

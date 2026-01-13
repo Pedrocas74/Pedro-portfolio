@@ -200,10 +200,10 @@ a .buttonPrimary:hover {
     background: var(--clr-primary);
     color: var(--clr-button-text);
 }
-/* .buttonPrimary:active,
+.buttonPrimary:active,
 a .buttonPrimary:active {
-
-} */
+    background-color: var(--clr-primary-dark);
+}
 
 
 

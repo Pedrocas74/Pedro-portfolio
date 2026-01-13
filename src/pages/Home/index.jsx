@@ -42,7 +42,9 @@ export default function Home({ menuOpen }) {
 
         <motion.div variants={fade} className={styles.linksContainer}>
           <Link className="buttonPrimary" to="/work">
+            {/* <span> */}
             my work
+            {/* </span> */}
           </Link>
           <Link className="buttonPrimary" to="/contact">
             let's talk
