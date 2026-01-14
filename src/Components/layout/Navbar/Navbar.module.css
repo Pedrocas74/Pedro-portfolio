@@ -57,6 +57,7 @@
     height: auto;
     display: block;
     transition: var(--transition);
+    
 }.logoSVG:hover {
     scale: 1.1;
 }

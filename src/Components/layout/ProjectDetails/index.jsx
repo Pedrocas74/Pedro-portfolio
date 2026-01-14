@@ -71,7 +71,7 @@ export default function ProjectDetails({ menuOpen }) {
           <p className={styles.description}>{project.descriptionLong}</p>
 
           {/* LINK TO WEB + GITHUB */}
-          <div>
+          <div className={styles.linksContainer}>
             {project.live !== null && (
               <a href={project.live} target="_blank" rel="noopener noreferrer" >
                 <span className="waveText" style={{ fontWeight: 600}}>
@@ -80,7 +80,7 @@ export default function ProjectDetails({ menuOpen }) {
               </a>
             )}
 
-            <a href={project.repo} target="_blank" rel="noopener noreferrer">
+            <a  href={project.repo} target="_blank" rel="noopener noreferrer">
               <span className="waveText" style={{ fontWeight: 600}}>
                 see github repo
                 </span>

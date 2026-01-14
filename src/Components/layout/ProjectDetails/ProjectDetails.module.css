@@ -77,17 +77,20 @@
     margin-bottom: 5vh;
 }
 .projectDescription p {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     line-height: var(--lh-small);
     white-space: pre-line;
 }
 .projectDescription a {
     all: unset;
 }
+.linksContainer span {
+    margin-bottom: 1rem;
+}
 
 .sectionPhotos h3 {
     text-align: center;
-    margin: 3em 0 0.5em ;
+    margin: 3rem 0 0.5rem ;
     font-size: var(--fs-lg);
 }
 .photo {  /*Photo container*/

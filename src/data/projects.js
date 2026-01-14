@@ -71,7 +71,7 @@ export const projects = [
     cover: logoPedroBlue,
     imgs: [portfolio_hero, portfolioDarkMode, portfolioMobile],
     descriptionLong:
-      "This portfolio was designed from scratch in Figma, with custom branding and smooth page transitions. It highlights my work, skills, and contact information using React Router navigation and modern UI design patterns.",
+      "This portfolio is a custom-designed web application built with React, following an initial design phase in Figma. \nIt presents my skills, contact and selected work through clear structure, subtle animations, and intuitive navigation. \nThe project uses React Router for client-side routing and Framer Motion for smooth, unobtrusive transitions, with a focus on responsiveness and maintainable front-end architecture.",
     tech: [
       "React",
       "React Router",

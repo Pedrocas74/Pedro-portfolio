@@ -144,7 +144,6 @@ html {
   -webkit-tap-highlight-color: transparent; 
 }
 
-
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--clr-primary) transparent;
@@ -156,7 +155,7 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--clr-primary);
-  border-radius: 999px;
+  border-radius: var(--radius-max);
 }
 
 ::-webkit-scrollbar-thumb:hover {
