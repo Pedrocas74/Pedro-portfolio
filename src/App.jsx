@@ -2,11 +2,11 @@
 import "./App.css";
 //dependencies
 import { AnimatePresence, motion } from "framer-motion";
-import { Routes, Route, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { Routes, Route, useLocation, useMatch } from "react-router-dom";
+import { useState, useEffect } from "react";
 //components
 import Navbar from "./Components/layout/Navbar";
-import NavigationMenu from "./Components/ui/NavigationMenu.jsx";
+import NavigationMenu from "./Components/ui/NavigationMenu";
 import WavesSVG from "./Components/decoration/Waves";
 import BoatSVG from "./Components/decoration/BoatSVG";
 import ProjectDetails from "./Components/layout/ProjectDetails";
@@ -19,6 +19,23 @@ import Contact from "./pages/Contact";
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+
+  const isProjectDetails = useMatch("/work/:slug") && !menuOpen;
+  const isInAbout = useMatch("/about") && !menuOpen;
+
+  useEffect(() => {
+    document.documentElement.classList.toggle(
+      "route-project-details",
+      Boolean(isProjectDetails)
+    );
+  }, [isProjectDetails]);
+
+    useEffect(() => {
+    document.documentElement.classList.toggle(
+      "route-about",
+      Boolean(isInAbout)
+    );
+  }, [isInAbout]);
 
   //only show the sea when the location is the homepage or the navigation menu
   const showWaves = location.pathname === "/" || menuOpen;

@@ -1,7 +1,6 @@
 import styles from "./ThemeToggle.module.css";
-import { useTheme } from "../../context/ThemeContext";
+import { useTheme } from "../../../context/ThemeContext";
 import { Sun, Moon } from "lucide-react";
-// import { useLocation } from "react-router-dom";
 
 export default function ThemeToggle() {
   const { isDark, toggleTheme } = useTheme();

@@ -24,7 +24,7 @@ export const projects = [
     cover: sol_logo,
     imgs: [sol_hero, sol_mobile],
     descriptionLong: 
-        "SOL is an experimental e-commerce platform built with Next.js (App Router) and Redux that treats inventory as a living system. \nEvery page reload represents a leap forward in time, recalculating product stock as if real shoppers had been buying in the background. \nItems sell out, recover, and fluctuate organically, creating a storefront that never feels frozen or predictable.",
+        "SOL is an experimental e-commerce platform built with Next.js and Redux that treats inventory as a living system. \nEvery page reload represents a leap forward in time, recalculating product stock as if real shoppers had been buying in the background. \nItems sell out, recover, and fluctuate organically, creating a storefront that never feels frozen or predictable.",
     tech: [
       "Next.js",
       "App Router",

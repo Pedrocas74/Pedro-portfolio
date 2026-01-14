@@ -4,6 +4,7 @@ import ThemeToggle from "../../ui/ThemeToggle";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
+
 export default function Navbar({ menuOpen, setMenuOpen }) {
   const location = useLocation();
 
@@ -16,6 +17,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
       return;
     }
   };
+
 
   return (
     <div className={styles.navbarContainer}>

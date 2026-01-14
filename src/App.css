@@ -144,6 +144,26 @@ html {
   -webkit-tap-highlight-color: transparent; 
 }
 
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-primary) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-primary);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--clr-secondary);
+}
+
+
 body {
     background: var(--clr-bg);
     font-family: var(--ff-body);
@@ -204,8 +224,6 @@ a .buttonPrimary:hover {
 a .buttonPrimary:active {
     background-color: var(--clr-primary-dark);
 }
-
-
 
 .textShadow {
     background: linear-gradient(0deg, #14162f, #F9A801);
