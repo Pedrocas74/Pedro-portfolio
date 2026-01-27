@@ -1,6 +1,6 @@
 // images 
 // SOL 
-import sol_logo from "/assets/work-images/Sol/LogoSOL.jpg";
+import sol_logo from "/assets/work-images/Sol/LogoSOL.webp";
 import sol_hero from "/assets/work-images/Sol/Hero-Sol.webp";
 import sol_mobile from "/assets/work-images/Sol/Sol-mobileMock.jpg";
 // MOO 
