@@ -57,7 +57,7 @@ export const projects = [
       "Figma (Logo design)"
     ],
     live: "https://moo-finder.vercel.app/",
-    repo: "https://github.com/Pedrocas74/MoovieFinder", //add later
+    repo: "https://github.com/Pedrocas74/MoovieFinder", 
     year: 2025,
     mobile: true,
     darkMode: true
@@ -77,7 +77,6 @@ export const projects = [
       "React Router",
       "Vite",
       "CSS Modules",
-      "GSAP",
       "Framer Motion",
       "Figma (Logo design)"
     ],

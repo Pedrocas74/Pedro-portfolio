@@ -21,6 +21,7 @@ export default function Home({ menuOpen }) {
         exit="exit"
       >
         <div className={styles.textContainer}>
+          
           <motion.h1 variants={fade} id="mainTitle" className={styles.mainTitle}>
             <span>Hey, I'm </span>
 
@@ -28,6 +29,7 @@ export default function Home({ menuOpen }) {
               Pedro Magalhães.
             </span>
           </motion.h1>
+          <div style={{ overflow: "hidden" }}>
           <motion.h2 variants={fade} className={styles.secondaryTitle}>
             <span>A</span>{" "}
             <span
@@ -38,18 +40,19 @@ export default function Home({ menuOpen }) {
             </span>{" "}
             <span> crafting interfaces with purpose.</span>
           </motion.h2>
+          </div>
         </div>
 
+      <div style={{ overflow: "hidden" }}>
         <motion.div variants={fade} className={styles.linksContainer}>
           <Link className="buttonPrimary" to="/work">
-            {/* <span> */}
             my work
-            {/* </span> */}
           </Link>
           <Link className="buttonPrimary" to="/contact">
             let's talk
           </Link>
         </motion.div>
+      </div>
       </motion.section>
      
       <AnimatePresence>

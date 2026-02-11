@@ -33,8 +33,6 @@
     --primary-dl: hsl(33, 16%, 96%);
     --primary-dd: hsl(33, 16%, 70%);
 
-    --secondary-l: #F9A801;
-
     --bottom-wave-d: hsl(34, 10%, 61%);
     --middle-wave-d: var(--bg);
     --top-wave-d: hsl(42, 52%, 94%);
@@ -235,7 +233,6 @@ a .buttonPrimary:active {
 
 
 
-
 /* BOAT in NavMenu */
 .boatLayer {
   position: fixed;
@@ -317,6 +314,7 @@ a .buttonPrimary:active {
   transform: scaleX(1);
   animation: waveMove 1.5s linear infinite;
 }
+
 
 @keyframes waveMove {
   from {

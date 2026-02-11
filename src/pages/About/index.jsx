@@ -3,7 +3,7 @@ import resumePDF from "/assets/CV_Pedro_Magalhaes_EN.pdf";
 import portrait2 from "/assets/portrait2.jpeg";
 import portrait2_dark from "/assets/portrait2-dark.jpeg";
 import { motion } from "framer-motion";
-import { fade, staggerContainer } from "../../animations/motionPresets";
+import { fade, revealLR, staggerContainer } from "../../animations/motionPresets";
 import { useTheme } from "../../context/ThemeContext";
 
 export default function About({ menuOpen }) {
@@ -32,14 +32,16 @@ export default function About({ menuOpen }) {
             alt="Portrait Pedro"
           />
         )}
-        {/* <img className={styles.portrait} src={portrait2} alt="Portrait Pedro" /> */}
       </motion.div>
 
       <div className={styles.aboutLeft}>
-        <motion.h1 variants={fade} className={styles.title} id="about-title">
+        <div style={{ overflow: "hidden" }}>
+        <motion.h1 variants={revealLR} className={styles.title} id="about-title">
           ABOUT
         </motion.h1>
-
+        </div>
+        
+        <div style={{ overflow: "hidden" }}>
         <motion.p variants={fade} className={styles.text}>
           Hey, I'm Pedro, a frontend developer from Portugal. I'm focused on
           growing my skills and building a meaningful path in web development. I
@@ -48,6 +50,7 @@ export default function About({ menuOpen }) {
           in music, immersed in videogames, or capturing moments through
           photography.{" "}
         </motion.p>
+        </div>
         <motion.a
           className={styles.resume}
           href={resumePDF}
