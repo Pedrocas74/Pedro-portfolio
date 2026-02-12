@@ -126,7 +126,7 @@
     --clr-primary-light: var(--primary-dl);
     --clr-primary-dark: var(--primary-dd);
     --clr-secondary: var(--secondary-l);
-    --clr-border: var(--bg-dd);
+    --clr-border: var(--bg-dl);
     --clr-hover: var(--hover-d);
     --clr-button-text: var(--bg-dl);
     --clr-middle-wave: var(--middle-wave-d);

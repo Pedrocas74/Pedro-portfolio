@@ -53,13 +53,15 @@
 }
 
 .logoSVG {
-    width: clamp(30px, 4vw, 60px);
+    width: clamp(30px, 4vw, 40px);
     height: auto;
     display: block;
     transition: var(--transition);
+    margin-left: var(--pd-icon);
+    margin-bottom: var(--pd-icon);
     
 }.logoSVG:hover {
-    scale: 1.1;
+    scale: 1.15;
 }
 .logoSVG:active {
     scale: 0.95;

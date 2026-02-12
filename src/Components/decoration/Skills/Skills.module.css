@@ -1,46 +1,14 @@
-.mainContainer {
-    position: fixed;
-    bottom: 10vh;
-    display: flex;
-    width: 100vw;
-    height: fit-content;
-    left: 0;
-    justify-content: space-between;
-    align-items: flex-end;
-    z-index: 600;
-    z-index: 1;
-    padding: 0 2%;
-}
-.skillContainer {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-.mainContainer svg {
-    width: clamp(27px, 5vw, 50px);
-    height: clamp(27px, 5vw, 50px);
-}
-.label {
-  position: absolute;
-  top: -20px; 
-  font-size: var(--fs-xs);
-  pointer-events: none; 
-  color: var(--clr-primary);
- 
+
+.techWrapper {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.7;
 }
 
-@media(width >= 550px) {
-    .mainContainer {
-        bottom: 16vh;
-    }
-}
 @media (width >= 1024px) {
-    .mainContainer {
-        bottom: 3.5vh;
-        z-index: 1000;
-    }
-    .label {
-        color: var(--clr-bg);
+    .techWrapper svg {
+        width: 30px;
+        height: 30px;
     }
 }

@@ -8,6 +8,7 @@ import { useLocation } from "react-router-dom";
 export default function Navbar({ menuOpen, setMenuOpen }) {
   const location = useLocation();
 
+  //close the navigation menu whenever it's open and the logo is clicked
   const handleLogoClick = () => {
     if (menuOpen && location.pathname === "/") {
       setMenuOpen(false);

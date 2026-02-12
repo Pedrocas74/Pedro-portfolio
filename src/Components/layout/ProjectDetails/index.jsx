@@ -3,6 +3,7 @@ import { projects } from "../../../data/projects";
 import styles from "./ProjectDetails.module.css";
 import { motion } from "framer-motion";
 import { fade, staggerContainer } from "../../../animations/motionPresets";
+import Skills from "../../decoration/Skills";
 
 export default function ProjectDetails({ menuOpen }) {
   const { slug } = useParams();
@@ -31,8 +32,6 @@ export default function ProjectDetails({ menuOpen }) {
   const nextIndex = (currentIndex + 1) % projects.length;
   const nextProjectSlug = projects[nextIndex].slug;
 
-  const middleImages = project.imgs.slice(1, -1); //take off the first and last photo of the project images array
-
   return (
     <motion.section
       variants={staggerContainer}
@@ -44,6 +43,7 @@ export default function ProjectDetails({ menuOpen }) {
       {/* MAIN IMAGE  */}
       <motion.div variants={fade} className={styles.mainImage}>
         <img src={project.cover} alt="" />
+        <Skills />
       </motion.div>
       <motion.div variants={fade} className={styles.projectContainer}>
         <div className={styles.header}>
@@ -130,7 +130,7 @@ export default function ProjectDetails({ menuOpen }) {
               to={`/work/${nextProjectSlug}`}
               onClick={() => window.scroll(top)}
             >
-              next project
+              next project →
             </Link>
           )}
         </div>

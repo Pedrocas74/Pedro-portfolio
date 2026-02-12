@@ -1,4 +1,4 @@
-export default function BoatSVG({ className = "", style = {} }) {
+export default function BoatSVG({ className = "", style={} }) {
   return (
     <svg
       className={className}

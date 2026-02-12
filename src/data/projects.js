@@ -13,6 +13,7 @@ import portfolio_hero from "/assets/work-images/Portfolio/Portfolio-hero.webp";
 import logoPedroBlue from "/assets/work-images/Portfolio/logoPedroBlue.png";
 import portfolioMobile from "/assets/work-images/Portfolio/Portfolio-mobile.png";
 import portfolioDarkMode from "/assets/work-images/Portfolio/Portfolio-darkMode.webp";
+import { color } from "framer-motion";
 
 
 export const projects = [
@@ -24,12 +25,14 @@ export const projects = [
     cover: sol_logo,
     imgs: [sol_hero, sol_mobile],
     descriptionLong: 
-        "SOL is an experimental e-commerce platform built with Next.js and Redux that treats inventory as a living system. \nEvery page reload represents a leap forward in time, recalculating product stock as if real shoppers had been buying in the background. \nItems sell out, recover, and fluctuate organically, creating a storefront that never feels frozen or predictable.",
+        "SOL is an experimental e-commerce platform that treats inventory as a living system. \nEvery page reload represents a leap forward in time, recalculating product stock as if real shoppers had been buying in the background. \nItems sell out, recover, and fluctuate organically, creating a storefront that never feels frozen or predictable.",
     tech: [
-      "Next.js",
+      "Next",
+      "Redux", 
       "App Router",
+      "TypeScript",
       "Vite",
-      "CSS Modules",
+      "CSS",
       "Framer Motion",
     ],
     live: "https://sol-shop.vercel.app/",
@@ -37,6 +40,7 @@ export const projects = [
     year: 2025,
     mobile: true,
     darkMode: false,
+    color: "#fd9116"
   },
 
   { //MOO - MOVIE FINDER
@@ -50,17 +54,19 @@ export const projects = [
       "Moo is a web app designed for people who love cinema and don’t want to lose track of the movies that matter to them. Instead of scattered notes or forgotten lists, Moo let's you build a personal movie history. \nSave films to a watchlist, mark your favorites, and keep track of what you’ve already watched — all in one place.\nMore than just a movie discovery tool, Moo is a space to curate your taste, revisit your choices, and shape your own cinematic identity.",
     tech: [
       "React",
+      "React Router",
+      "Javascript",
       "Vite",
-      "CSS Modules",
+      "CSS",
       "Framer Motion",
-      "TMDB API",
-      "Figma (Logo design)"
+      "Figma"
     ],
     live: "https://moo-finder.vercel.app/",
     repo: "https://github.com/Pedrocas74/MoovieFinder", 
     year: 2025,
     mobile: true,
-    darkMode: true
+    darkMode: true,
+    color: "#991C1B"
   },
 
   { //PEDRO PORTFOLIO
@@ -75,15 +81,17 @@ export const projects = [
     tech: [
       "React",
       "React Router",
+      "Javascript",
       "Vite",
-      "CSS Modules",
+      "CSS",
       "Framer Motion",
-      "Figma (Logo design)"
+      "Figma"
     ],
     live: null,
     repo: "https://github.com/Pedrocas74/Pedro-portfolio",
     year: 2025,
     mobile: true,
-    darkMode: true
+    darkMode: true,
+    color: "var(--primary-blue)"
   }
 ];
