@@ -25,11 +25,13 @@
     color: var(--clr-primary);
     font-size: var(--fs-menu);
 }
-.menuList li:hover {
+@media (hover: hover) and (pointer: fine) {
+    .menuList li:hover {
     background: linear-gradient(0deg, #14162f, #F9A801);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 1px 1px #F9A801;
+}
 }
 
 .activeLink {

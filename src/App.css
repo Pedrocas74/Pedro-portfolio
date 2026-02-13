@@ -207,17 +207,20 @@ a:not(#navLinks) {
     }
 }
 
-/* Button Primary (line border, get's drowned by waves on hover) */
+/* Button Primary */
 .buttonPrimary,
 a.buttonPrimary {
     background: transparent;
     border: 2px solid var(--clr-border);
     box-shadow: var(--shadow-inverse);
     color: var(--clr-primary);
-}.buttonPrimary:hover,
+}
+@media (hover: hover) and (pointer: fine) { /*to remove sticky hover*/
+    .buttonPrimary:hover,
 a .buttonPrimary:hover {
     background: var(--clr-primary);
     color: var(--clr-button-text);
+}
 }
 .buttonPrimary:active,
 a .buttonPrimary:active {
@@ -306,7 +309,7 @@ a .buttonPrimary:active {
 
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.4s var(--ease-in-out);
+  transition: transform 0.5s var(--ease-in-out);
   pointer-events: none;
 }
 
