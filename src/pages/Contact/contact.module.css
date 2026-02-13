@@ -9,11 +9,10 @@
 }
 
 .grid {
-    /* border: 1px solid red; */
     display: grid;
     grid-template-rows: 1fr 1fr;
     width: 85%;
-    margin: 3em auto;
+    margin: var(--space-xxl) auto;
     overflow: hidden;
 }
 .gridRow {
@@ -22,11 +21,10 @@
     align-items: center;
     justify-content: start; 
     line-height: var(--lh-big); 
-    margin-bottom: 1em;
+    margin-bottom: var(--space-s);
 }
 .gridRow h2 {
     font-size: var(--fs-md);
-    /* margin-right: 35%; */
     width: 40%;
 } 
 .gridRow a {

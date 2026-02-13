@@ -21,7 +21,7 @@
     --middle-wave: #253368;
     --top-wave: #2d428dff;
 
-    --hover-l: hsla(36, 9%, 58%, 0.5);
+    --hover-l: hsla(36, 9%, 58%, 0.2);
     --white: #fff;
 
     /* DARK MODE  */
@@ -38,7 +38,7 @@
     --top-wave-d: hsl(42, 52%, 94%);
 
 
-    --hover-d: hsla(37, 6%, 57%, 0.507);
+    --hover-d: hsla(37, 6%, 57%, 0.2);
     --black: #000;
 
     /* ------------------------------------------- */
@@ -53,6 +53,15 @@
     --fs-lg: clamp(1.3rem, 3vw, 1.8rem);
     --fs-xl: clamp(2.4rem, 4.5vw, 5.5rem);
     --fs-menu: clamp(3.5rem, 5vw, 8rem);
+
+    /* spacing  */
+    --space-xxs: 0.25rem;
+    --space-xs: 0.5rem;
+    --space-s: 1rem;
+    --space-m: 1.5rem;
+    --space-l: 2rem;
+    --space-xl: 2.5rem;
+    --space-xxl: 3rem;
 
     /* padding  */
     --pd-button: 0.7rem 1.5rem;
@@ -226,15 +235,6 @@ a .buttonPrimary:hover {
 a .buttonPrimary:active {
     background-color: var(--clr-primary-dark);
 }
-
-.textShadow {
-    background: linear-gradient(0deg, #14162f, #F9A801);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 1px #F9A801;
-}
-
-
 
 /* BOAT in NavMenu */
 .boatLayer {

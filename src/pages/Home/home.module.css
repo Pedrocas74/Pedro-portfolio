@@ -9,11 +9,9 @@
     min-height: 50%;
     max-height: 70%;
     width: 85%;
-    /* border: 1px solid rgb(41, 8, 119); */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-        
+    justify-content: center;      
 }
 @media (width >= 850px) {
     .homeSection {
@@ -25,12 +23,13 @@
 }
 .mainTitle {
     font-size: var(--fs-xl);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-s);
     
 }
 .secondaryTitle {
     font-size: var(--fs-lg);
-    margin-bottom: 3rem;
+    margin-bottom: var(--space-xxl);
+    line-height: 1.5;
 }
 .mainTitle,
 .secondaryTitle {
@@ -39,7 +38,7 @@
 
 .name, 
 .job {
-    font-weight: 800;
+    font-weight: 700;
     cursor: pointer;
 }
 
