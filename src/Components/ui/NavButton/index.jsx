@@ -1,9 +1,15 @@
 import styles from './NavButton.module.css';
+//motion
 import { motion } from "framer-motion";
+//hooks
+import { useLocation } from 'react-router-dom';
 
 export default function NavButton({ menuOpen, setMenuOpen }) {
+  const location = useLocation();
+  const inAbout = location.pathname === "/about";
+  
   const lineProps = {
-    stroke: "var(--clr-text)",
+    stroke: inAbout ?  "var(--clr-navButton)" : "var(--clr-text)",
     strokeWidth: 3.5,
     strokeLinecap: "round",
     transition: { duration: 0.3, ease: "easeInOut" },
@@ -19,7 +25,6 @@ export default function NavButton({ menuOpen, setMenuOpen }) {
         border: "none",
         padding: 0,
         cursor: "pointer",
-
       }}
     >
       <motion.svg className={styles.navButton} viewBox="0 0 30 24">

@@ -20,7 +20,7 @@ export default function Home({ menuOpen }) {
         <div className={styles.textContainer}>
           
           <motion.h1 variants={fade} id="mainTitle" className={styles.mainTitle}>
-            <span>Hey, I'm </span>
+            <span className={styles.rest}>Hey, I'm </span>
 
             <span className={`${styles.name} waveText`} onClick={() => navigate("/about")}>
               Pedro Magalhães.
@@ -28,14 +28,14 @@ export default function Home({ menuOpen }) {
           </motion.h1>
           <div style={{ overflow: "hidden" }}>
           <motion.h2 variants={fade} className={styles.secondaryTitle}>
-            <span>A</span>{" "}
+            <span className={styles.rest}>A</span>{" "}
             <span
               className={`${styles.job} waveText`}
               onClick={() => navigate("/about")}
             >
               frontend developer
             </span>{" "}
-            <span> crafting interfaces with purpose.</span>
+            <span className={styles.rest}> crafting interfaces with purpose.</span>
           </motion.h2>
           </div>
         </div>

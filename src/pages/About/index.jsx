@@ -1,9 +1,13 @@
 import styles from "./about.module.css";
+//files
 import resumePDF from "/assets/CV_Pedro_Magalhaes_EN.pdf";
+//images
 import portrait2 from "/assets/portrait2.jpeg";
 import portrait2_dark from "/assets/portrait2-dark.jpeg";
+//motion
 import { motion } from "framer-motion";
 import { fade, revealLR, staggerContainer } from "../../animations/motionPresets";
+//hooks
 import { useTheme } from "../../context/ThemeContext";
 
 export default function About({ menuOpen }) {

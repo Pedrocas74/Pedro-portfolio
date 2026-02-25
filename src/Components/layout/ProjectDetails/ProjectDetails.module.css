@@ -9,7 +9,7 @@
 .mainImage {
     margin-top: 15vh;
     margin-bottom: var(--space-xl);
-    position: relative;  /*SKILLS component is absolute positioned */
+    position: relative;  /*SKILLS -> absolute */
 }
 .mainImage img {
     width: 100%;
@@ -76,22 +76,26 @@
     margin-bottom: var(--space-l);
 }
 .projectDescription p {
-    margin-bottom: var(--space-m);
+    margin-bottom: var(--space-l);
     line-height: var(--lh-small);
     white-space: pre-line;
+    opacity: var(--oh);
 }
 .projectDescription a {
     all: unset;
 }
-.linksContainer span {
+.linksContainer {
     margin-bottom: var(--space-xxl);
+}
+.linksContainer span {
+    margin-bottom: var(--space-s);
 }
 
 .sectionPhotos h3 {
     text-align: center;
     margin-bottom: var(--space-xs) ;
     font-size: var(--fs-lg);
-    letter-spacing: 3px;
+    letter-spacing: var(--ls-big);
 }
 .photo {  /*Photo container*/
     overflow: hidden;
@@ -108,4 +112,17 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: var(--space-xxl);
+    transition: var(--transition);
+}
+.lastLinks a {
+    padding: var(--pd-button);
+    border-radius: var(--radius-small);
+}
+@media (hover: hover) and (pointer: fine) {
+    .lastLinks a:hover {
+        background: var(--clr-hover);
+    }
+}
+.lastLinks a:active {
+    background: var(--clr-active);
 }

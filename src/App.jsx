@@ -26,14 +26,14 @@ export default function App() {
   useEffect(() => {
     document.documentElement.classList.toggle(
       "route-project-details",
-      Boolean(isProjectDetails)
+      Boolean(isProjectDetails),
     );
   }, [isProjectDetails]);
 
-    useEffect(() => {
+  useEffect(() => {
     document.documentElement.classList.toggle(
       "route-about",
-      Boolean(isInAbout)
+      Boolean(isInAbout),
     );
   }, [isInAbout]);
 
@@ -64,21 +64,24 @@ export default function App() {
 
   return (
     <>
-      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <NavigationMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-    <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route
-          path="/"
-          element={<Home menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
-        />
-        <Route path="/work" element={<Work menuOpen={menuOpen}/>} />
-        <Route path="/work/:slug" element={<ProjectDetails menuOpen={menuOpen}/>} />
-        <Route path="/about" element={<About menuOpen={menuOpen}/>} />
-        <Route path="/contact" element={<Contact menuOpen={menuOpen}/>} />
-      </Routes>
-    </AnimatePresence>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route
+            path="/"
+            element={<Home menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
+          />
+          <Route path="/work" element={<Work menuOpen={menuOpen} />} />
+          <Route
+            path="/work/:slug"
+            element={<ProjectDetails menuOpen={menuOpen} />}
+          />
+          <Route path="/about" element={<About menuOpen={menuOpen} />} />
+          <Route path="/contact" element={<Contact menuOpen={menuOpen} />} />
+        </Routes>
+      </AnimatePresence>
 
       {/* presence handles enter/exit only when showSea flips true/false */}
       <AnimatePresence mode="wait">{showWaves && <WavesSVG />}</AnimatePresence>

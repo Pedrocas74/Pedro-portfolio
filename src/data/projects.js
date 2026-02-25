@@ -13,8 +13,6 @@ import portfolio_hero from "/assets/work-images/Portfolio/Portfolio-hero.webp";
 import logoPedroBlue from "/assets/work-images/Portfolio/logoPedroBlue.png";
 import portfolioMobile from "/assets/work-images/Portfolio/Portfolio-mobile.png";
 import portfolioDarkMode from "/assets/work-images/Portfolio/Portfolio-darkMode.webp";
-import { color } from "framer-motion";
-
 
 export const projects = [
     { //SOL E-COMMERCE STORE
@@ -25,7 +23,7 @@ export const projects = [
     cover: sol_logo,
     imgs: [sol_hero, sol_mobile],
     descriptionLong: 
-        "SOL is an experimental e-commerce platform that treats inventory as a living system. \nEvery page reload represents a leap forward in time, recalculating product stock as if real shoppers had been buying in the background. \nItems sell out, recover, and fluctuate organically, creating a storefront that never feels frozen or predictable.",
+        "SOL is an experimental e-commerce platform that treats inventory as a living system. \nEvery page reload represents a leap forward in time, recalculating product stock as if real shoppers had been buying in the background. \nItems sell out, recover, and fluctuate organically, creating a store that never feels frozen or predictable.",
     tech: [
       "Next",
       "Redux", 

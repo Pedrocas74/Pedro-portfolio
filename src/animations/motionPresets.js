@@ -31,13 +31,13 @@ export const fadeWork = {
 export const revealLR = {
   hidden: {
     opacity: 0,
-    x: -16,                       // optional: remove if you want ZERO slide
-    clipPath: "inset(0 100% 0 0)"  // fully clipped from the right
+    x: -16,                   
+    clipPath: "inset(0 100% 0 0)"  //fully clipped from the right
   },
   visible: {
     opacity: 1,
     x: 0,
-    clipPath: "inset(0 0% 0 0)",   // fully revealed
+    clipPath: "inset(0 0% 0 0)",   //fully revealed
     transition: { duration: 0.6, ease: "easeInOut" }
   },
   exit: {

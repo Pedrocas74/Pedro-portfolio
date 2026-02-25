@@ -56,7 +56,9 @@
     padding: var(--space-m) var(--space-xs);
     transition: var(--transition-slow);
 }
-.projectRow:hover,
-.projectRow:active {
+.projectRow:hover {
     background-color: var(--clr-hover);
+}
+.projectRow:active {
+    background-color: var(--clr-active);
 }

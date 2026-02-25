@@ -1,8 +1,12 @@
-import { useParams, Link } from "react-router-dom";
-import { projects } from "../../../data/projects";
 import styles from "./ProjectDetails.module.css";
+//built in
+import { useParams, Link } from "react-router-dom";
+//custom data
+import { projects } from "../../../data/projects";
+//motion
 import { motion } from "framer-motion";
 import { fade, staggerContainer } from "../../../animations/motionPresets";
+//custom components
 import Skills from "../../decoration/Skills";
 
 export default function ProjectDetails({ menuOpen }) {
@@ -42,9 +46,12 @@ export default function ProjectDetails({ menuOpen }) {
     >
       {/* MAIN IMAGE  */}
       <motion.div variants={fade} className={styles.mainImage}>
-        <img src={project.cover} alt="" />
+        <img onLoad src={project.cover} alt="" />
+        {/* SKILLS ON THE RIGHT BOTTOM CORNER OF THE IMG  */}
         <Skills />
       </motion.div>
+
+      {/* TEXT-PRESENTATION  */}
       <motion.div variants={fade} className={styles.projectContainer}>
         <div className={styles.header}>
           <h1>{project.name}</h1>
@@ -73,20 +80,22 @@ export default function ProjectDetails({ menuOpen }) {
           {/* LINK TO WEB + GITHUB */}
           <div className={styles.linksContainer}>
             {project.live !== null && (
-              <a href={project.live} target="_blank" rel="noopener noreferrer" >
-                <span className="waveText" style={{ fontWeight: 600}}>
-                view the website
+              <a href={project.live} target="_blank" rel="noopener noreferrer">
+                <span className="waveText" style={{ fontWeight: 900 }}>
+                  website
                 </span>
               </a>
             )}
 
-            <a  href={project.repo} target="_blank" rel="noopener noreferrer">
-              <span className="waveText" style={{ fontWeight: 600}}>
-                see github repo
-                </span>
+            <a href={project.repo} target="_blank" rel="noopener noreferrer">
+              <span className="waveText" style={{ fontWeight: 900 }}>
+                github repo
+              </span>
             </a>
           </div>
         </div>
+            
+            <hr style={{ marginBottom: "var(--space-xxl)"}} />
 
         <section className={styles.sectionPhotos}>
           {/* PHOTOS */}
@@ -100,10 +109,10 @@ export default function ProjectDetails({ menuOpen }) {
             <>
               <h3>DARK MODE</h3>
               <div className={styles.photo}>
-              <img
-                src={project.imgs[1]}
-                alt={`Dark mode from project ${project.name}`}
-              />
+                <img
+                  src={project.imgs[1]}
+                  alt={`Dark mode from project ${project.name}`}
+                />
               </div>
             </>
           )}
@@ -112,7 +121,10 @@ export default function ProjectDetails({ menuOpen }) {
             <>
               <h3>MOBILE</h3>
               <div className={styles.photo}>
-                <img src={project.imgs[project.imgs.length - 1]} alt="Mobile " />
+                <img
+                  src={project.imgs[project.imgs.length - 1]}
+                  alt="Mobile "
+                />
               </div>
             </>
           )}
