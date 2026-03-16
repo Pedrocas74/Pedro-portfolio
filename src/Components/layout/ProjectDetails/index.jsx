@@ -15,20 +15,14 @@ export default function ProjectDetails({ menuOpen }) {
 
   if (!project) {
     return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%",
-          height: "100vh",
-        }}
-        className={styles.notFound}
-      >
-        <h1>Project not found</h1>
-        <Link to="/work">← Back to work</Link>
-      </div>
+      <main className={styles.notFound}>
+        <section aria-labelledby="projectNotFound-title">
+          <h1 id="projectNotFound-title">Project not found</h1>
+          <Link to="/work" className="buttonPrimary">
+            back to work
+          </Link>
+        </section>
+      </main>
     );
   }
 
@@ -94,8 +88,8 @@ export default function ProjectDetails({ menuOpen }) {
             </a>
           </div>
         </div>
-            
-            <hr style={{ marginBottom: "var(--space-xxl)"}} />
+
+        <hr style={{ marginBottom: "var(--space-xxl)" }} />
 
         <section className={styles.sectionPhotos}>
           {/* PHOTOS */}
