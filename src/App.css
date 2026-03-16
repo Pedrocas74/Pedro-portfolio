@@ -34,9 +34,9 @@
   --primary-dl: hsl(33, 16%, 96%);
   --primary-dd: hsl(33, 16%, 70%);
 
-  --bottom-wave-d: hsl(34, 10%, 61%);
+  --bottom-wave-d: hsl(34, 10%, 55%);
   --middle-wave-d: var(--bg);
-  --top-wave-d: hsl(42, 52%, 94%);
+  --top-wave-d: hsl(45, 22%, 94%);
 
   --hover-d: hsla(37, 6%, 57%, 0.2);
   --active-d: hsla(40, 7%, 82%, 0.2);
@@ -206,13 +206,14 @@ p {
   max-width: 74ch;
 }
 
-#navLinks {
+#navLinks,
+.logoLink {
   text-decoration: none;
   color: var(--clr-primary);
 }
 
 button,
-a:not(#navLinks) {
+a:not(#navLinks, .logoLink) {
   padding: var(--pd-button);
   border-radius: var(--radius-button);
   letter-spacing: var(--ls);

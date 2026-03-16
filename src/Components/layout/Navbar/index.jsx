@@ -22,7 +22,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
 
   return (
     <div className={styles.navbarContainer}>
-      <Link to="/" id="navLinks" onClick={handleLogoClick}>
+      <Link to="/" className="logoLink" onClick={handleLogoClick}>
         <svg
           //30 24 default
           className={styles.logoSVG}
@@ -48,7 +48,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
       </Link>
 
       <div className={styles.rightIcons}>
-        <ThemeToggle />
+        <ThemeToggle menuOpen={menuOpen} />
         <NavButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       </div>
     </div>

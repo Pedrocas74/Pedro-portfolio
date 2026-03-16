@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 
 export default function NavButton({ menuOpen, setMenuOpen }) {
   const location = useLocation();
-  const inAbout = location.pathname === "/about";
+  const inAbout = location.pathname === "/about" && !menuOpen;
   
   const lineProps = {
     stroke: inAbout ?  "var(--clr-navButton)" : "var(--clr-text)",
