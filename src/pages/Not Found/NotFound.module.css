@@ -1,0 +1,29 @@
+.main {
+  height: 100dvh;
+}
+
+.section {
+  margin: 40vh auto 0 auto;
+  min-height: 40vh;
+  min-width: fit-content;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.section h1 {
+  border-bottom: var(--border-bottom);
+}
+.section p {
+  margin: var(--space-m) 0 var(--space-m) 0;
+  opacity: var(--oh);
+  line-height: var(--lh-big);
+}
+
+.anchor {
+  opacity: var(--ol);
+  position: absolute;
+  bottom: 15px;
+  right: -10px;
+}

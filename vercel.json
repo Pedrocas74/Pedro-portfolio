@@ -1,5 +1,13 @@
+//Browser requests /work/my-project
+// Vercel rewrites it to /
+// index.html loads
+// React Router reads the URL
+
+// Your route works:
+// <Route path="/work/:slug" element={<ProjectDetails />} />
+
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]
-}
+} 

@@ -15,6 +15,7 @@ import Home from "./pages/Home";
 import Work from "./pages/Work";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/Not Found";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -80,6 +81,8 @@ export default function App() {
           />
           <Route path="/about" element={<About menuOpen={menuOpen} />} />
           <Route path="/contact" element={<Contact menuOpen={menuOpen} />} />
+          
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
 
