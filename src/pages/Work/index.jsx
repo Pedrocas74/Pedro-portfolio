@@ -23,10 +23,10 @@ export default function Work({ menuOpen }) {
         <div className={styles.workRight}>
           <motion.div variants={fadeWork} className={styles.firstLine}>
             <h1>WORK</h1>
-            <span style={{ fontWeight: 100 }}>{projects.length}</span>
+            <span style={{ fontWeight: 200 }}>{projects.length}</span>
           </motion.div>
 
-          {projects.map((p, i) => (
+          {projects.map((p) => (
             <motion.div variants={fadeWork}>
               <Link
                 key={p.slug}

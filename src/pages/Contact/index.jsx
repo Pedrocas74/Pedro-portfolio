@@ -30,7 +30,12 @@ export default function Contact({ menuOpen }) {
         <div style={{ overflow: "hidden" }}>
           <motion.div variants={fade} className={styles.gridRow}>
             <h2>Mail</h2>
-            <a id="navLinks" href="mailto:pmig.magalhaes@gmail.com">
+            <a
+              id="navLinks"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=pmig.magalhaes@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="waveText" style={{ fontWeight: 400 }}>
                 pmig.magalhaes
               </span>
