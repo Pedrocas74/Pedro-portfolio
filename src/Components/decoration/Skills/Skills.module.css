@@ -5,6 +5,10 @@
     right: 10px;
     opacity: 0.7;
 }
+.techWrapper svg {
+    margin-left: 10px;
+    cursor: pointer;
+}
 
 @media (width >= 1024px) {
     .techWrapper svg {

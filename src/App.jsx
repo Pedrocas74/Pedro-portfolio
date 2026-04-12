@@ -88,7 +88,7 @@ export default function App() {
 
       {/* presence handles enter/exit only when showSea flips true/false */}
       <AnimatePresence mode="wait">{showWaves && <WavesSVG />}</AnimatePresence>
-
+      
       {menuOpen && (
         <motion.div
           className="boatLayer"
@@ -101,7 +101,7 @@ export default function App() {
           }}
         >
           <BoatSVG
-            style={{ width: "100px", borderBottom: "1px solid #14162F" }}
+            style={{ width: "100px", borderBottom: "1px solid var(--clr-primary)" }}
           />
         </motion.div>
       )}
