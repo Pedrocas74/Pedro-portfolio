@@ -4,6 +4,7 @@ import "./App.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { Routes, Route, useLocation, useMatch } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 //components
 import Navbar from "./Components/layout/Navbar";
 import NavigationMenu from "./Components/ui/NavigationMenu";
@@ -65,6 +66,7 @@ export default function App() {
 
   return (
     <>
+      <Analytics />
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <NavigationMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
